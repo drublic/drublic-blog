@@ -1,0 +1,83 @@
+/* iPad */
+@media only screen and (max-width: 768px),
+only screen and (max-device-width: 768px) {
+  
+  
+  
+  /* Images */
+  img { max-width: 100%; }
+
+
+
+  /* Header */
+  #inner-header { width: 718px; padding: 0 20px; }
+  
+  
+  
+  /* Main */
+  #main { width: 748px; }
+  
+  
+  article { margin: 30px 20px; }
+  article::after { left: 10px; right: 10px; }
+  article header { margin: 30px 0; padding: 0 0 10px; }
+  
+  
+  
+  /* Footer */
+  footer .inner { width: 748px; }
+  .col-1, .col-2, .col-3, .col-4 { width: 165px; }
+
+}
+
+
+
+/* Phones */
+@media only screen and (max-width: 480px),
+only screen and (max-device-width: 480px) {
+  
+  /* Headlines */
+  h1 { font-size: 2em; }
+  h2 { font-size: 1.5em; margin-top: 10px; }
+  h3 { font-size: 1.2em; margin-top: 5px; }
+  h4 { font-size: 1.1em; }
+  
+
+  /* Images */
+  img { max-width: 100%; }
+
+
+
+  /* Header */
+  #inner-header { width: auto; padding: 0 20px; }
+  
+  
+  
+  /* Main */
+  #main { width: 100%; }
+  
+  
+  article { margin: 30px 20px; }
+  article::after { left: 10px; right: 10px; }
+  article header { margin: 30px 0; padding: 0 0 10px; }
+  article .comment-count { padding: 10px 10px 0; }
+  
+  
+  
+  /* Footer */
+  footer .inner { width: 100%; }
+  .col-1, .col-2, .col-3, .col-4 { float: none; display: block; width: auto; margin-bottom: 40px; }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
