@@ -10,7 +10,7 @@ body { font: 15px/2 sans-serif; }
 /* Headlines */
 h1 { font-size: 3em; }
 h2 { font-size: 2em; margin-top: 20px; }
-h3 { font-size: 1.5em; margin-top: 15px; }
+h3 { font-size: 1.5em; margin-top: 18px; }
 h4 { font-size: 1.2em; }
 
 
@@ -162,16 +162,18 @@ input, textarea,
 
 
 /* Articles */
-article { margin: 30px 180px; padding-bottom: 20px; }
-article:after {
+article,
+#comments { margin: 30px 180px 80px; padding-bottom: 20px; }
+article:after,
+#comments:after {
   position: absolute; left: 4em; right: 4em;
   display: block; content: "";
-  margin-top: -1px; border-bottom: 1px solid #b2b0a4;
+  margin-top: 50px; border-bottom: 1px solid #b2b0a4;
 }
 
 article header { position: relative; margin: 30px -100px; border-bottom: 1px solid #ddd; padding: 0 100px 10px; }
 article .comment-count {
-  position: absolute; top: -50px; right: 0;
+  position: absolute; top: -49px; right: 0;
   border: 1px solid #c9c8c0; border-top: 0; padding: 20px 18px 10px;
   background: #f1efe8;
   font-size: 1.1em; text-shadow: 1px 1px 1px #fff;
@@ -185,14 +187,40 @@ article .comment-count {
   -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
 }
 article:hover .comment-count { opacity: 1; border-bottom-color: #c9c8c0; }
-article header h1 { line-height: 1.5; }
-article time, article .tags { font-size: 0.8em; color: #888; }
+article header h1 { line-height: 1.2; margin-bottom: 20px; }
+article time, article .tags, article .author { font-size: 0.8em; color: #888; }
 article .tags { float: right; padding-top: 4px; }
 
 
 .readmore { margin: 10px 0 80px; }
 .readmore span { font: 1.3em Georgia, "Times New Roman", Times, serif; padding-right: 3px; }
 
+
+
+
+/* Comments */
+#comments { margin-bottom: 100px; }
+
+#comments label { float: left; display: inline; width: 140px; margin: 2px 20px 0 0; }
+
+#comments input,
+#comments textarea {
+  width: 300px;
+  border-color: #ccc;
+  border-bottom-color: #aaa;
+  background: rgba(255,255,255,.2);
+  color: #444;
+}
+#comments textarea { width: 100%; }
+
+#comments input:focus,
+#comments textarea:focus {
+  border-color: #aaa;
+  background: rgba(255,255,255,1);
+     -moz-box-shadow: 0 0 10px #ddd;
+  -webkit-box-shadow: 0 0 10px #ddd;
+          box-shadow: 0 0 10px #ddd;
+}
 
 
 
@@ -328,7 +356,12 @@ footer .inner { width: 960px; margin: 0 auto; }
 
 footer ul { margin: 0 0 20px; list-style: none; border-top: 1px solid #ddd; }
 footer ul a,
-footer ul a:visited { display: block; border-bottom: 1px solid #ddd !important; }
+footer ul a:visited {
+  display: block;
+  border-bottom: 1px solid #ddd !important;
+  white-space: nowrap;
+  overflow: hidden; text-overflow: ellipsis;
+}
 footer ul a:hover { background: #fff; border-color: #ddd !important; color: #222; padding-left: 10px; }
 
 
