@@ -387,13 +387,18 @@ function drublic_comment_form() {
     	             '</fieldset>',
     	'email'  => '<fieldset>' .
     	               '<label for="email">' . __( 'E-Mail' ) . '<span class="required">*</span>' . '</label> ' .
-    	               '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '"' . $aria_req . '>' .
+    	               '<input id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '"' . $aria_req . '>' .
     	            '</fieldset>',
     	'url'    => '<fieldset>' .
     	               '<label for="url">' . __( 'Website' ) . '</label>' .
     	               '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '">' .
     	             '</fieldset>',
     ),
+    'comment_field' => '<fieldset>' .
+                          '<label for="comment">' . _x( 'Comment', 'noun' ) . '</label>' .
+                          '<textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>' .
+                        '</fieldset>',
+    'comment_notes_before' => '<p>Remember what your mother told you: Be friendly. <small>Your email address will not be published.</small></p>',
     'comment_notes_after' => '',
     'title_reply' => __('Leave a Comment')
   ) );
@@ -402,6 +407,10 @@ function drublic_comment_form() {
 
 
 endif;
+
+
+
+
 
 
 

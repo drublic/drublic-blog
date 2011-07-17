@@ -16,9 +16,8 @@
 <section id="comments">
 
 <?php if ( have_comments() ) : ?>
-  <ol class="commentlist">
-		<?php wp_list_comments( array( 'callback' => 'twentyten_comment' ) ); ?>
-  </ol>
+  
+  <?php wp_list_comments( array( 'callback' => 'twentyten_comment' ) ); ?>
   
   <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 		<div class="navigation">
