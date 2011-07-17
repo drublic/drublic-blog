@@ -198,31 +198,125 @@ article .tags { float: right; padding-top: 4px; }
 .readmore span { font: 1.3em Georgia, "Times New Roman", Times, serif; padding-right: 3px; }
 
 
+.page-title { margin-bottom: 50px; text-align: center; }
+.page-title:after { margin: 0; }
+
+
+/* Search Results */
+.search-results article header { margin: 10px -100px; }
+.search-results article h1 { font-size: 2em; margin-bottom: 0; }
+
 
 
 /* Comments */
-#comments { margin-bottom: 100px; }
+#comments { margin-bottom: 20px; }
+#comments:after { border-bottom-color: #d9d8d2; }
 
-#comments label { float: left; display: inline; width: 140px; margin: 2px 20px 0 0; }
+#respond p { margin-bottom: 20px; }
 
-#comments input,
-#comments textarea {
+#respond fieldset { margin-bottom: 2px; }
+#respond label { position: relative; float: left; display: inline; width: 140px; margin: 2px 20px 0 0; }
+
+#respond input,
+#respond textarea {
   width: 300px;
   border-color: #ccc;
   border-bottom-color: #aaa;
   background: rgba(255,255,255,.2);
   color: #444;
 }
-#comments textarea { width: 100%; }
+#respond textarea { width: 579px; }
 
-#comments input:focus,
-#comments textarea:focus {
+#respond input:focus,
+#respond textarea:focus {
   border-color: #aaa;
   background: rgba(255,255,255,1);
      -moz-box-shadow: 0 0 10px #ddd;
   -webkit-box-shadow: 0 0 10px #ddd;
           box-shadow: 0 0 10px #ddd;
 }
+
+.form-submit { text-align: right; margin: 20px 0; }
+#respond .form-submit input {
+  width: auto; padding: 10px 20px;
+  background: url(../img/bg-dark.png);
+  text-shadow: 0 0 1px #aaa;
+     -moz-box-shadow: 0 1px 3px #aaa;
+  -webkit-box-shadow: 0 1px 3px #aaa;
+          box-shadow: 0 1px 3px #aaa;
+}
+#respond .form-submit input:hover {
+     -moz-box-shadow: 0 1px 5px rgba(0,0,0,.4);
+  -webkit-box-shadow: 0 1px 5px rgba(0,0,0,.4);
+          box-shadow: 0 1px 7px rgba(0,0,0,.4);
+}
+
+#author {
+     -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+          border-radius: 5px 5px 0 0;
+}
+
+#email {
+     -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+}
+
+.required { position: absolute; right: -9px; }
+
+#reply-title:before {
+  float: left; content: "";
+  position: relative; top: 5px;
+  width: 28px; height: 29px;
+  margin-right: 10px;
+  background: url(../img/new.png);
+}
+
+
+/* Single Comment */
+.comment { position: relative; margin-bottom: 50px; }
+.comment:after { margin-top: 20px; border-bottom-color: #e8e8e5; }
+
+.avatar {
+  position: absolute; top: 0; left: -50px;
+     -moz-border-radius: 33px;
+  -webkit-border-radius: 33px;
+          border-radius: 33px;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+
+.comment .author { font-size: 1.3em; }
+.comment time,
+.comment-awaiting-moderation,
+.comment-edit-link { font-size: .8em; }
+
+.reply { text-align: right; }
+#reply-title small { float: right; margin-top: 8px; font-weight: normal; font-size: .7em; }
+
+#respond .invalid { border-color: #f30; }
+
+
+
+
+/* Syntax-Highlighter */
+.wp_syntax {
+  position: relative;
+  border: 1px solid #e8e8e5;
+  background: rgba(255,255,255,.2);
+  margin: 20px 0;
+  font-size: .85em;
+  line-height: 1.6;
+}
+.wp_syntax:hover { background: #fff; }
+.wp_syntax .raw {
+  position: absolute; top: 0; right: -33px;
+  width: 32px; height: 32px;
+  background: url(../img/copy.png) no-repeat 9px 0;
+  border-bottom: 0;
+  text-indent: -999em;
+}
+
 
 
 
@@ -325,7 +419,7 @@ article .tags { float: right; padding-top: 4px; }
 
 
 
-#search { top: 60px; right: -100px; }
+#search { top: 60px; right: -90px; }
 #search fieldset:first-child input { 
   -webkit-border-bottom-left-radius: 0;
      -moz-border-bottom-left-radius: 0;
@@ -381,15 +475,6 @@ footer ul a:hover { background: #fff; border-color: #ddd !important; color: #22
 
 
 
-
-
-
-
-
-
-
-
-
 /* Copied to Clipboard */
 #copied-notice {
   display: none;
@@ -403,6 +488,15 @@ footer ul a:hover { background: #fff; border-color: #ddd !important; color: #22
           border-radius: 15px;
   -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
 }
+
+
+
+
+
+
+
+
+
 
 
 
