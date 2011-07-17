@@ -225,6 +225,16 @@ article .tags { float: right; padding-top: 4px; }
 
 
 
+/* Navigation */
+#post-nav { margin: 10px 10px 50px; }
+#post-nav:after { margin-top: 10px; border-bottom-color: #b9b8ae; }
+
+#post-nav .prev { float: left; }
+#post-nav .next { float: right; }
+
+
+
+
 
 /* Header */
 #header {
