@@ -127,7 +127,7 @@ add_filter( 'wp_page_menu_args', 'twentyten_page_menu_args' );
  * @return int
  */
 function twentyten_excerpt_length( $length ) {
-	return 40;
+	return 100;
 }
 add_filter( 'excerpt_length', 'twentyten_excerpt_length' );
 
@@ -138,7 +138,7 @@ add_filter( 'excerpt_length', 'twentyten_excerpt_length' );
  * @return string "Continue Reading" link
  */
 function twentyten_continue_reading_link() {
-	return '<p class="more"><a href="'. get_permalink() . '">Continue reading <span>&rsaquo;</span></a>';
+	return '<p class="readmore"><a href="'. get_permalink() . '"><span>&rsaquo;</span> Read more</a>';
 }
 
 /**
