@@ -145,7 +145,6 @@ var hash = '';
     // Close
     } else if ( hash.substr( 0, 7 ) === "#/close") {
       do_close( hash.substr( 8 ) );
-    
     }
   })
 
@@ -157,20 +156,94 @@ var hash = '';
 
 
 // Search
-! function() {
-  $( '#search form' ).submit( function( e ) {
-    e.preventDefault();
-    
-    var new_value = $( '#s' ).prop( 'value' );
-    location.hash = $( this ).attr( 'action' ) + save_search( new_value );
-    
-    do_search( new_value );
+$( '#search form' ).submit( function( e ) {
+  /*e.preventDefault();
   
+  var new_value = $( '#s' ).prop( 'value' );
+  location.hash = $( this ).attr( 'action' ) + save_search( new_value );
+  
+  do_search( new_value );*/
+
+});
+
+
+/**
+ * Replaces searched value
+ *
+ * @param _test - RegEx to test for
+ * @param _with - New string for replacement
+ * @param haystack - String to search
+ *
+ */
+function str_replace( _test, _with, haystack ) {
+  while( haystack.search( _test ) > -1 ) {
+    haystack = haystack.replace( _test, _with );
+  }
+  return haystack;
+}
+
+
+
+
+
+/* Syntax Highlighter */
+$( '.wp_syntax' ).each( function() {
+  if ( $( this ).find( '.raw' ).size() < 1 ) {
+    var $raw = $( '<a />', {
+        'class' : 'raw',
+        'title' : 'Copy raw code',
+        'href' : '#/copy-snippet',
+        'html' : 'Copy raw code',
+      });
+    
+    $raw.appendTo( $( this ) );
+    
+    // Copy to clipboard
+    var html = $( this ).find( 'pre' ).html();
+        html = str_replace( /\<span.*\"\>/g, '', html );
+        html = str_replace( /\<\/span>/g, '', html );
+    
+    var clip = new ZeroClipboard.Client();
+    clip.glue( $raw[0] );
+    clip.setText( html );
+    $( clip.div ).attr( 'title', 'Copy to Clipboard' );
+    
+    // After copy is completed
+    clip.addEventListener( 'complete', function( client, text ) {
+      if ( $( '#copied-notice' ).size() > 0 ) {
+        $( '#copied-notice' ).remove();
+      }
+      $( '<div />', {
+        'id' : 'copied-notice',
+        'html' : 'The snippet was copied to your clipboard.'
+      }).appendTo( 'body' ).fadeIn( 200, function() {
+        $( this ).delay( 1000 ).fadeOut();
+      });
+    });
+
+  }
+});
+
+
+
+// Submit a comment
+$( '#commentform' ).submit( function() {
+  var $el,
+      err = false,
+      $req = new Array( $( '#author' ), $( '#email' ), $( '#comment' ) );
+  
+  $.each( $req, function() {
+    $el = $( this );
+    if ( $el.prop( 'value' ) === "" ) {
+      $el.addClass( 'invalid' );
+      err = true;
+    }
   });
-} ();
-
-
-
+  
+  if ( err ) {
+    return false;
+  }
+});
 
 
 

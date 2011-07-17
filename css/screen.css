@@ -92,14 +92,12 @@ input[type="submit"]:active { background: #000; }
 
 
 
-
-
-
 /* Transitions */
 a,
 article .comment-count,
 input, textarea,
-.content-widget .close {
+.content-widget .close,
+.wp_syntax {
      -moz-transition: all 0.3s ease-out;
        -o-transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
@@ -121,7 +119,8 @@ input, textarea,
 .content-widget,
 .content-widget::before,
 input, textarea,
-.wp-caption {
+.wp-caption,
+.wp_syntax {
      -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
           border-radius: 5px;
@@ -163,9 +162,12 @@ input, textarea,
 
 /* Articles */
 article,
-#comments { margin: 30px 180px 80px; padding-bottom: 20px; }
+#comments { margin: 30px 180px; padding-bottom: 20px; }
 article:after,
-#comments:after {
+#comments:after,
+.comment:after,
+#post-nav:after,
+.page-title:after {
   position: absolute; left: 4em; right: 4em;
   display: block; content: "";
   margin-top: 50px; border-bottom: 1px solid #b2b0a4;
@@ -174,7 +176,7 @@ article:after,
 article header { position: relative; margin: 30px -100px; border-bottom: 1px solid #ddd; padding: 0 100px 10px; }
 article .comment-count {
   position: absolute; top: -49px; right: 0;
-  border: 1px solid #c9c8c0; border-top: 0; padding: 20px 18px 10px;
+  border: 1px solid #c9c8c0; border-top: 0; padding: 20px 18px 3px;
   background: #f1efe8;
   font-size: 1.1em; text-shadow: 1px 1px 1px #fff;
   opacity: 0.5;
@@ -387,6 +389,20 @@ footer ul a:hover { background: #fff; border-color: #ddd !important; color: #22
 
 
 
+
+/* Copied to Clipboard */
+#copied-notice {
+  display: none;
+  position: fixed; top: 50%; left: 50%; z-index: 9999;
+  width: 1000px;
+  margin: -50px -500px; padding: 10px 0;
+  background: rgba(0,0,0,.5);
+  font-size: 3em; text-align: center; color: #fff;
+     -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+          border-radius: 15px;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
 
 
 
