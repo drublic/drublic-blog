@@ -23,9 +23,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   <title><?php
-	/*
-	 * Print the <title> tag based on what is being viewed.
-	 */
+	// Print the <title> tag based on what is being viewed.
 	global $page, $paged;
 
 	wp_title( '|', true, 'right' );
@@ -58,8 +56,6 @@
   <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/screen.css">
   <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/mobile.css">
 
-  <!-- More ideas for your <head> here: h5bp.com/docs/#head-Tips -->
-  
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
   <!-- All JavaScript at the bottom, except for Modernizr and Respond.
@@ -67,6 +63,10 @@
        For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
   <script src="<?php bloginfo( 'template_url' ); ?>/js/libs/modernizr-2.0.min.js"></script>
   <script src="<?php bloginfo( 'template_url' ); ?>/js/libs/respond.min.js"></script>
+  
+    <!--! Typekit -->
+  <script type="text/javascript" src="http://use.typekit.com/nls7qda.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   
   
 <?php

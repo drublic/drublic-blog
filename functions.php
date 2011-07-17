@@ -44,9 +44,7 @@
  * Used to set the width of images and content. Should be equal to the width the theme
  * is designed for, generally via the style.css stylesheet.
  */
-if ( ! isset( $content_width ) )
-	$content_width = 640;
-
+ 
 /** Tell WordPress to run twentyten_setup() when the 'after_setup_theme' hook is run. */
 add_action( 'after_setup_theme', 'twentyten_setup' );
 
@@ -77,23 +75,11 @@ function twentyten_setup() {
 	// This theme styles the visual editor with editor-style.css to match the theme style.
 	add_editor_style();
 
-	// Post Format support. You can also use the legacy "gallery" or "asides" (note the plural) categories.
-	add_theme_support( 'post-formats', array( 'aside', 'gallery' ) );
-
 	// This theme uses post thumbnails
 	add_theme_support( 'post-thumbnails' );
 
 	// Add default posts and comments RSS feed links to head
 	add_theme_support( 'automatic-feed-links' );
-
-	// Make theme available for translation
-	// Translations can be filed in the /languages/ directory
-	load_theme_textdomain( 'twentyten', TEMPLATEPATH . '/languages' );
-
-	$locale = get_locale();
-	$locale_file = TEMPLATEPATH . "/languages/$locale.php";
-	if ( is_readable( $locale_file ) )
-		require_once( $locale_file );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -256,27 +242,6 @@ endif;
  * @uses register_sidebar
  */
 function twentyten_widgets_init() {
-	// Area 1, located at the top of the sidebar.
-	register_sidebar( array(
-		'name' => __( 'Primary Widget Area', 'twentyten' ),
-		'id' => 'primary-widget-area',
-		'description' => __( 'The primary widget area', 'twentyten' ),
-		'before_widget' => '',
-		'after_widget' => '',
-		'before_title' => '<h3>',
-		'after_title' => '</h3>',
-	) );
-
-	// Area 2, located below the Primary Widget Area in the sidebar. Empty by default.
-	register_sidebar( array(
-		'name' => __( 'Secondary Widget Area', 'twentyten' ),
-		'id' => 'secondary-widget-area',
-		'description' => __( 'The secondary widget area', 'twentyten' ),
-		'before_widget' => '',
-		'after_widget' => '',
-		'before_title' => '<h3>',
-		'after_title' => '</h3>',
-	) );
 
 	// Area 3, located in the footer. Empty by default.
 	register_sidebar( array(

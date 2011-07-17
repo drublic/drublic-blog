@@ -343,7 +343,7 @@ article .tags { float: right; padding-top: 4px; }
 }
 #inner-header { position: relative; width: 940px; margin: 0 auto; padding: 0 10px; }
 
-#logo { float: left; font-size: 1.5em; }
+#logo { float: left; font-size: 1.5em; font-family: "ff-netto-web-1", "ff-netto-web-2", sans-serif; }
 #logo a { border-bottom: 0; }
 
 
@@ -352,7 +352,6 @@ article .tags { float: right; padding-top: 4px; }
 #misc a { float: left; width: 32px; height: 32px; margin-left: 1em; text-indent: -999em; opacity: .5; border-bottom: 0; }
 #misc .active a,
 #misc a:hover { opacity: 1; }
-#misc .twitter-icon a { background: url(../img/twitter.png) no-repeat; }
 #misc .search-icon a { background: url(../img/search.png) no-repeat; }
 
 

@@ -54,17 +54,10 @@
 		    <?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
 		  </span>
 		  
-		  <span class="tags"><?php the_tags( 'Tags: ', ', ' ); ?></span>
+		  <span class="tags"><?php the_category( ', ' ); ?></span>
 		</header>
 
-    <?php
-      if ( is_archive() || is_search() ) :
-        the_excerpt();
-      else :
-        the_content();
-        wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'twentyten' ), 'after' => '</div>' ) );
-      endif;
-    ?>
+    <?php the_excerpt(); ?>
 
 		</article>
 
