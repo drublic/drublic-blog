@@ -96,14 +96,13 @@
         </div>
         
         <ul id="misc">
-          <li class="twitter-icon"><a href="https://twitter.com/drublic" title="Follow me on Twitter" target="_blank">Twitter</a></li>
           <li class="search-icon"><a href="#/search" title="Try searching&hellip;">Search</a></li>
         </ul>
         
         <div id="search" class="content-widget">
           <a href="#/close/search" title="Close the search" class="close">&times;</a>
           <div class="inner">
-            <form action="#/search/" method="post">
+            <form action="<?php bloginfo( 'home' ); ?>/" method="post">
               <fieldset>
                 <label for="s">Search the articles</label>
                 <input type="search" id="s" name="s">
