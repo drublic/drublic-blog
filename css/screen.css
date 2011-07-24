@@ -210,6 +210,11 @@ article .tags { float: right; padding-top: 4px; }
 .search-results article h1 { font-size: 2em; margin-bottom: 0; }
 
 
+#searchform { margin-top: 20px; }
+#searchform label { display: none; }
+
+
+
 
 /* Comments */
 #comments { margin-bottom: 20px; }
@@ -221,7 +226,8 @@ article .tags { float: right; padding-top: 4px; }
 #respond label { position: relative; float: left; display: inline; width: 140px; margin: 2px 20px 0 0; }
 
 #respond input,
-#respond textarea {
+#respond textarea,
+#searchform input {
   width: 300px;
   border-color: #ccc;
   border-bottom-color: #aaa;
@@ -231,7 +237,8 @@ article .tags { float: right; padding-top: 4px; }
 #respond textarea { width: 579px; }
 
 #respond input:focus,
-#respond textarea:focus {
+#respond textarea:focus,
+#searchform input:focus {
   border-color: #aaa;
   background: rgba(255,255,255,1);
      -moz-box-shadow: 0 0 10px #ddd;
@@ -240,7 +247,8 @@ article .tags { float: right; padding-top: 4px; }
 }
 
 .form-submit { text-align: right; margin: 20px 0; }
-#respond .form-submit input {
+#respond .form-submit input,
+#searchform input[type="submit"] {
   width: auto; padding: 10px 20px;
   background: url(../img/bg-dark.png);
   text-shadow: 0 0 1px #aaa;
@@ -248,7 +256,8 @@ article .tags { float: right; padding-top: 4px; }
   -webkit-box-shadow: 0 1px 3px #aaa;
           box-shadow: 0 1px 3px #aaa;
 }
-#respond .form-submit input:hover {
+#respond .form-submit input:hover,
+#searchform input[type="submit"]:hover {
      -moz-box-shadow: 0 1px 5px rgba(0,0,0,.4);
   -webkit-box-shadow: 0 1px 5px rgba(0,0,0,.4);
           box-shadow: 0 1px 7px rgba(0,0,0,.4);
