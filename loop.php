@@ -57,11 +57,14 @@
 		  <span class="tags"><?php the_category( ', ' ); ?></span>
 		</header>
 
+    <?php if ( get_the_post_thumbnail() != "" ) : ?>
+      <figure class="alignleft">
+        <a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_post_thumbnail( 'thumbnail' ); ?></a>
+      </figure>
+    <?php endif; ?>
     <?php the_excerpt(); ?>
 
-		</article>
-
-		<?php comments_template( '', true ); ?>
+  </article>
 
 <?php endwhile; // End the loop. Whew. ?>
 
