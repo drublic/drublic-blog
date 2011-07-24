@@ -39,9 +39,10 @@ big { font-size: 1.5em; }
 
 
 /* Images */
-.alignright { float: right; margin: 0 0 10px 20px; }
-.alignleft { float: left; margin: 0 20px 10px 0; }
+.alignright { float: right; margin: 10px 0 10px 20px; }
+.alignleft { float: left; margin: 10px 20px 10px 0; }
 .aligncenter { display: block; margin-left: auto; margin-right: auto; }
+.alignleft a, .alignright a { border-bottom: none; }
 
 .wp-caption { background: #f5f5f5; border: 1px solid #ddd; padding: 5px; }
 .wp-caption-text { font-size: 0.9em; text-align: center; margin: 5px 0; line-height: 1; }
