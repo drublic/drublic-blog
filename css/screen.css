@@ -172,8 +172,7 @@ input, textarea,
 
 
 /* Articles */
-article,
-#comments { margin: 30px 180px; padding-bottom: 20px; }
+article { margin: 30px 180px; padding-bottom: 20px; }
 article:after,
 #comments:after,
 .comment:after,
@@ -225,7 +224,7 @@ article .tags { float: right; padding-top: 4px; }
 
 
 /* Comments */
-#comments { margin-bottom: 20px; }
+#comments { margin: 100px 180px 20px; padding-bottom: 20px; }
 #comments:after { border-bottom-color: #d9d8d2; }
 
 #respond p { margin-bottom: 20px; }
