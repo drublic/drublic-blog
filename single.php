@@ -29,7 +29,14 @@ get_header(); ?>
 		  
 		  <span class="tags"><?php the_tags( 'Tags: ', ', ' ); ?></span>
 		</header>
-
+    
+    
+    <?php if ( get_the_post_thumbnail() != "" ) : ?>
+      <figure class="aligncenter">
+        <?php the_post_thumbnail( 'medium' ); ?>
+      </figure>
+    <?php endif; ?>
+    
     <?php the_content(); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'twentyten' ), 'after' => '</div>' ) ); ?>
 	</article>
