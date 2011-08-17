@@ -14,18 +14,19 @@
 
 get_header(); ?>
 
-		<div id="container">
-			<div id="content" role="main">
-
-			<?php
-			/* Run the loop to output the page.
-			 * If you want to overload this in a child theme then include a file
-			 * called loop-page.php and that will be used instead.
-			 */
-			get_template_part( 'loop', 'page' );
-			?>
-
-			</div><!-- #content -->
-		</div><!-- #container -->
+  <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+      <?php if ( is_front_page() ) { ?>
+  		  <h2><?php the_title(); ?></h2>
+  		<?php } else { ?>
+  			<h1><?php the_title(); ?></h1>
+  		<?php } ?>
+  
+      <?php the_content(); ?>
+  		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'twentyten' ), 'after' => '</div>' ) ); ?>
+  		<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="edit-link">', '</span>' ); ?>
+    </article>
+  
+  <?php endwhile; // end of the loop. ?>
 
 <?php get_footer(); ?>
