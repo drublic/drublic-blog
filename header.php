@@ -64,7 +64,7 @@
   <!-- All JavaScript at the bottom, except for Modernizr and Respond.
        Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
        For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
-  <script src="<?php bloginfo( 'template_url' ); ?>/js/libs/modernizr-2.0.min.js"></script>
+  <script src="<?php bloginfo( 'template_url' ); ?>/js/libs/modernizr.custom.65403.js"></script>
   
     <!--! Typekit -->
   <script src="http://use.typekit.com/nls7qda.js"></script>
