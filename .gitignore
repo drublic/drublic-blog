@@ -29,7 +29,6 @@ dwsync.xml
 .hg
 .svn
 intermediate
-publish
 .idea
 
 # build script local files
