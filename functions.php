@@ -373,3 +373,14 @@ endif;
 
 
 
+// Remove Feed
+remove_action( 'wp_head', 'feed_links_extra'); // Display the links to the extra feeds such as category feeds
+remove_action( 'wp_head', 'feed_links'); // Display the links to the general feeds: Post and Comment Feed
+
+
+
+
+
+
+
+

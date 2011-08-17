@@ -57,6 +57,9 @@
   <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/mobile.css">
 
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+  
+  <!-- Feed -->
+  <link rel="alternate" type="application/rss+xml" title="@drublic &raquo; Feed" href="http://feeds.feedburner.com/drublic">
 
   <!-- All JavaScript at the bottom, except for Modernizr and Respond.
        Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
