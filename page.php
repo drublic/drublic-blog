@@ -25,6 +25,7 @@ get_header(); ?>
       <?php the_content(); ?>
   		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'twentyten' ), 'after' => '</div>' ) ); ?>
   		<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="edit-link">', '</span>' ); ?>
+  		<p class="readmore"><a href="<?php bloginfo( 'url' ) ?>" title="Go home!"><span>&lsaquo;</span> Go back to the articles</a></p>
     </article>
   
   <?php endwhile; // end of the loop. ?>
