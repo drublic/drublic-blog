@@ -68,8 +68,8 @@
   <script src="<?php bloginfo( 'template_url' ); ?>/js/libs/respond.min.js"></script>
   
     <!--! Typekit -->
-  <script type="text/javascript" src="http://use.typekit.com/nls7qda.js"></script>
-  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script src="http://use.typekit.com/nls7qda.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
   
   
 <?php
