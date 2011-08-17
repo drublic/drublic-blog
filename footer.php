@@ -47,5 +47,19 @@
 
 	wp_footer();
 ?>
+
+  <!-- Piwik --> 
+  <script>
+    var pkBaseURL = (("https:" == document.location.protocol) ? "https://drublic.de/piwik/" : "http://drublic.de/piwik/");
+    document.write('<script src="' + pkBaseURL + 'piwik.js"><\/script>');
+  </script><script>
+    try {
+      var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+      piwikTracker.trackPageView();
+      piwikTracker.enableLinkTracking();
+    } catch( err ) {}
+  </script><noscript><p><img src="http://drublic.de/piwik/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+  <!-- End Piwik Tracking Code -->
+
 </body>
 </html>
