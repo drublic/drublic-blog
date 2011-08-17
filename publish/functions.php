@@ -201,8 +201,186 @@ function twentyten_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 	switch ( $comment->comment_type ) :
 		case '' :
-	?> <div <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>"> <div class=avatar><?php echo get_avatar( $comment, 64 ); ?></div> <p class=author><cite><?php comment_author_link() ?></cite></p> <time><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><?php comment_date() ?> - <?php comment_time(); ?></a></time> <?php print edit_comment_link( '(Edit)' ) ?> <?php if ( $comment->comment_approved == '0' ) : ?> <p class=comment-awaiting-moderation><em><?php _e( 'Your comment is awaiting moderation.', 'twentyten' ); ?></em></p> <?php endif; ?> <?php comment_text(); ?> <div class=reply><?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?></div> </div> <?php
+	?>
+	<div <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
+		<div class="avatar"><?php echo get_avatar( $comment, 64 ); ?></div>
+		
+		<p class="author"><cite><?php comment_author_link() ?></cite></p>
+
+		<time><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><?php comment_date() ?> - <?php comment_time(); ?></a></time>
+    <?php print edit_comment_link( '(Edit)' ) ?>
+    
+		<?php if ( $comment->comment_approved == '0' ) : ?>
+			<p class="comment-awaiting-moderation"><em><?php _e( 'Your comment is awaiting moderation.', 'twentyten' ); ?></em></p>
+		<?php endif; ?>
+
+		<?php comment_text(); ?>
+
+		<div class="reply"><?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?></div>
+	</div>
+	<?php
 			break;
 		case 'pingback'  :
 		case 'trackback' :
-	?> <div class="post pingback"> <p><?php _e( 'Pingback:', 'twentyten' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'twentyten' ), ' ' ); ?></p> </div> <?php break; endswitch; } endif; /** * Register widgetized areas, including two sidebars and four widget-ready columns in the footer. * * To override twentyten_widgets_init() in a child theme, remove the action hook and add your own * function tied to the init hook. * * @since Twenty Ten 1.0 * @uses register_sidebar */ function twentyten_widgets_init() { // Area 3, located in the footer. Empty by default. register_sidebar( array( 'name' => __( 'First Footer Widget Area', 'twentyten' ), 'id' => 'first-footer-widget-area', 'description' => __( 'The first footer widget area', 'twentyten' ), 'before_widget' => '', 'after_widget' => '', 'before_title' => '<h3>', 'after_title' => '</h3>', ) ); // Area 4, located in the footer. Empty by default. register_sidebar( array( 'name' => __( 'Second Footer Widget Area', 'twentyten' ), 'id' => 'second-footer-widget-area', 'description' => __( 'The second footer widget area', 'twentyten' ), 'before_widget' => '', 'after_widget' => '', 'before_title' => '<h3>', 'after_title' => '</h3>', ) ); // Area 5, located in the footer. Empty by default. register_sidebar( array( 'name' => __( 'Third Footer Widget Area', 'twentyten' ), 'id' => 'third-footer-widget-area', 'description' => __( 'The third footer widget area', 'twentyten' ), 'before_widget' => '', 'after_widget' => '', 'before_title' => '<h3>', 'after_title' => '</h3>', ) ); // Area 6, located in the footer. Empty by default. register_sidebar( array( 'name' => __( 'Fourth Footer Widget Area', 'twentyten' ), 'id' => 'fourth-footer-widget-area', 'description' => __( 'The fourth footer widget area', 'twentyten' ), 'before_widget' => '', 'after_widget' => '', 'before_title' => '<h3>', 'after_title' => '</h3>', ) ); } /** Register sidebars by running twentyten_widgets_init() on the widgets_init hook. */ add_action( 'widgets_init', 'twentyten_widgets_init' ); /** * Removes the default styles that are packaged with the Recent Comments widget. * * To override this in a child theme, remove the filter and optionally add your own * function tied to the widgets_init action hook. * * This function uses a filter (show_recent_comments_widget_style) new in WordPress 3.1 * to remove the default style. Using Twenty Ten 1.2 in WordPress 3.0 will show the styles, * but they won't have any effect on the widget in default Twenty Ten styling. * * @since Twenty Ten 1.0 */ function twentyten_remove_recent_comments_style() { add_filter( 'show_recent_comments_widget_style', '__return_false' ); } add_action( 'widgets_init', 'twentyten_remove_recent_comments_style' ); if ( ! function_exists( 'twentyten_posted_on' ) ) : /** * Prints HTML with meta information for the current post-date/time and author. * * @since Twenty Ten 1.0 */ function twentyten_posted_on() { } endif; if ( ! function_exists( 'twentyten_posted_in' ) ) : /** * Prints HTML with meta information for the current post (category, tags and permalink). * * @since Twenty Ten 1.0 */ function twentyten_posted_in() { } endif; if ( ! function_exists( 'drublic_comment_form' ) ) : function drublic_comment_form() { return comment_form( array( 'fields' => array( 'author' => '<fieldset>' . '<label for=author>' . __( 'Name' ) . '<span class=required>*</span>' . '</label> ' . '<input id=author name=author type=text value="' . esc_attr( $commenter['comment_author'] ) . '"' . $aria_req . '>' . '</fieldset>', 'email' => '<fieldset>' . '<label for=email>' . __( 'E-Mail' ) . '<span class=required>*</span>' . '</label> ' . '<input id=email name=email type=email value="' . esc_attr( $commenter['comment_author_email'] ) . '"' . $aria_req . '>' . '</fieldset>', 'url' => '<fieldset>' . '<label for=url>' . __( 'Website' ) . '</label>' . '<input id=url name=url type=text value="' . esc_attr( $commenter['comment_author_url'] ) . '">' . '</fieldset>', ), 'comment_field' => '<fieldset>' . '<label for=comment>' . _x( 'Comment', 'noun' ) . '</label>' . '<textarea id=comment name=comment cols=45 rows=8 aria-required=true></textarea>' . '</fieldset>', 'comment_notes_before' => '<p>Remember what your mother told you: Be friendly. <small>Your email address will not be published.</small></p>', 'comment_notes_after' => '', 'title_reply' => __('Leave a Comment') ) ); } endif; // Remove Feed remove_action( 'wp_head', 'feed_links_extra'); // Display the links to the extra feeds such as category feeds remove_action( 'wp_head', 'feed_links'); // Display the links to the general feeds: Post and Comment Feed
+	?>
+	<div class="post pingback">
+		<p><?php _e( 'Pingback:', 'twentyten' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'twentyten' ), ' ' ); ?></p>
+  </div>
+	<?php
+			break;
+	endswitch;
+}
+endif;
+
+/**
+ * Register widgetized areas, including two sidebars and four widget-ready columns in the footer.
+ *
+ * To override twentyten_widgets_init() in a child theme, remove the action hook and add your own
+ * function tied to the init hook.
+ *
+ * @since Twenty Ten 1.0
+ * @uses register_sidebar
+ */
+function twentyten_widgets_init() {
+
+	// Area 3, located in the footer. Empty by default.
+	register_sidebar( array(
+		'name' => __( 'First Footer Widget Area', 'twentyten' ),
+		'id' => 'first-footer-widget-area',
+		'description' => __( 'The first footer widget area', 'twentyten' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	) );
+
+	// Area 4, located in the footer. Empty by default.
+	register_sidebar( array(
+		'name' => __( 'Second Footer Widget Area', 'twentyten' ),
+		'id' => 'second-footer-widget-area',
+		'description' => __( 'The second footer widget area', 'twentyten' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	) );
+
+	// Area 5, located in the footer. Empty by default.
+	register_sidebar( array(
+		'name' => __( 'Third Footer Widget Area', 'twentyten' ),
+		'id' => 'third-footer-widget-area',
+		'description' => __( 'The third footer widget area', 'twentyten' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	) );
+
+	// Area 6, located in the footer. Empty by default.
+	register_sidebar( array(
+		'name' => __( 'Fourth Footer Widget Area', 'twentyten' ),
+		'id' => 'fourth-footer-widget-area',
+		'description' => __( 'The fourth footer widget area', 'twentyten' ),
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	) );
+}
+/** Register sidebars by running twentyten_widgets_init() on the widgets_init hook. */
+add_action( 'widgets_init', 'twentyten_widgets_init' );
+
+/**
+ * Removes the default styles that are packaged with the Recent Comments widget.
+ *
+ * To override this in a child theme, remove the filter and optionally add your own
+ * function tied to the widgets_init action hook.
+ *
+ * This function uses a filter (show_recent_comments_widget_style) new in WordPress 3.1
+ * to remove the default style. Using Twenty Ten 1.2 in WordPress 3.0 will show the styles,
+ * but they won't have any effect on the widget in default Twenty Ten styling.
+ *
+ * @since Twenty Ten 1.0
+ */
+function twentyten_remove_recent_comments_style() {
+	add_filter( 'show_recent_comments_widget_style', '__return_false' );
+}
+add_action( 'widgets_init', 'twentyten_remove_recent_comments_style' );
+
+if ( ! function_exists( 'twentyten_posted_on' ) ) :
+/**
+ * Prints HTML with meta information for the current post-date/time and author.
+ *
+ * @since Twenty Ten 1.0
+ */
+function twentyten_posted_on() {
+}
+endif;
+
+if ( ! function_exists( 'twentyten_posted_in' ) ) :
+/**
+ * Prints HTML with meta information for the current post (category, tags and permalink).
+ *
+ * @since Twenty Ten 1.0
+ */
+function twentyten_posted_in() {
+}
+endif;
+
+
+
+
+
+
+if ( ! function_exists( 'drublic_comment_form' ) ) :
+
+
+function drublic_comment_form() {
+  return comment_form( array(
+    'fields' => array(
+    	'author' => '<fieldset>' .
+    	               '<label for="author">' . __( 'Name' ) . '<span class="required">*</span>' . '</label> ' .
+    	               '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '"' . $aria_req . '>' .
+    	             '</fieldset>',
+    	'email'  => '<fieldset>' .
+    	               '<label for="email">' . __( 'E-Mail' ) . '<span class="required">*</span>' . '</label> ' .
+    	               '<input id="email" name="email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '"' . $aria_req . '>' .
+    	            '</fieldset>',
+    	'url'    => '<fieldset>' .
+    	               '<label for="url">' . __( 'Website' ) . '</label>' .
+    	               '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '">' .
+    	             '</fieldset>',
+    ),
+    'comment_field' => '<fieldset>' .
+                          '<label for="comment">' . _x( 'Comment', 'noun' ) . '</label>' .
+                          '<textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>' .
+                        '</fieldset>',
+    'comment_notes_before' => '<p>Remember what your mother told you: Be friendly. <small>Your email address will not be published.</small></p>',
+    'comment_notes_after' => '',
+    'title_reply' => __('Leave a Comment')
+  ) );
+
+}
+
+
+endif;
+
+
+
+
+
+
+
+
+
+// Remove Feed
+remove_action( 'wp_head', 'feed_links_extra'); // Display the links to the extra feeds such as category feeds
+remove_action( 'wp_head', 'feed_links'); // Display the links to the general feeds: Post and Comment Feed
+
+
+
+
+
+
+
+
