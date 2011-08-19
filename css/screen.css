@@ -73,7 +73,7 @@ textarea {
   background: rgba(29,28,24,.2);
   width: 200px;
 }
-textarea { height: 150px; }
+textarea { height: 150px; resize: vertical; }
 
 input:focus, textarea:focus { outline: 0; background: rgba(29,28,24,.4); }
 
