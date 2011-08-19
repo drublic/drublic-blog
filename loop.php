@@ -65,6 +65,8 @@
     <?php the_excerpt(); ?>
 
   </article>
+  
+  <hr>
 
 <?php endwhile; // End the loop. Whew. ?>
 

@@ -27,7 +27,8 @@ get_header(); ?>
   		<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="edit-link">', '</span>' ); ?>
   		<p class="readmore"><a href="<?php bloginfo( 'url' ) ?>" title="Go home!"><span>&lsaquo;</span> Go back to the articles</a></p>
     </article>
-  
+    <hr>
+
   <?php endwhile; // end of the loop. ?>
 
 <?php get_footer(); ?>

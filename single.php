@@ -40,6 +40,7 @@ get_header(); ?>
     <?php the_content(); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'twentyten' ), 'after' => '</div>' ) ); ?>
 	</article>
+	<hr>
 	
 	<?php comments_template( '', true ); ?>
 	

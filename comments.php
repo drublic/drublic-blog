@@ -30,3 +30,4 @@
 <?php drublic_comment_form(); ?>
 
 </section>
+<hr>

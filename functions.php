@@ -236,6 +236,9 @@ function twentyten_comment( $comment, $args, $depth ) {
 	<?php
 			break;
 	endswitch;
+	?>
+  <hr>
+  <?php
 }
 endif;
 

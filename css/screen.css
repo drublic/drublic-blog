@@ -173,15 +173,13 @@ input, textarea,
 
 
 /* Articles */
-article { margin: 30px 180px; padding-bottom: 20px; }
-article:after,
-#comments:after,
-.comment:after,
+article { margin: 30px 180px 80px; padding-bottom: 20px; }
+hr,
 #post-nav:after,
 .page-title:after {
   position: absolute; left: 4em; right: 4em;
   display: block; content: "";
-  margin-top: 50px; border-bottom: 1px solid #b2b0a4;
+  margin-top: -50px; border-top: 1px solid #b2b0a4;
 }
 
 article header { position: relative; margin: 30px -100px; border-bottom: 1px solid #ddd; padding: 0 100px 10px; }
@@ -225,8 +223,8 @@ article .tags { float: right; padding-top: 4px; }
 
 
 /* Comments */
-#comments { margin: 100px 180px 20px; padding-bottom: 20px; }
-#comments:after { border-bottom-color: #d9d8d2; }
+#comments { margin: 100px 180px 30px; padding-bottom: 20px; }
+#comments + hr { border-top-color: #d9d8d2; margin-top: -10px; }
 
 #respond p { margin-bottom: 20px; }
 
@@ -295,8 +293,9 @@ article .tags { float: right; padding-top: 4px; }
 
 
 /* Single Comment */
-.comment { position: relative; margin-bottom: 50px; }
-.comment:after { margin-top: 20px; border-bottom-color: #e8e8e5; }
+.comment { position: relative; margin-bottom: 80px; }
+.comment + hr { border-top-color: #e8e8e5; }
+#commentform { margin-bottom: 80px; }
 
 .avatar {
   position: absolute; top: 0; left: -50px;
