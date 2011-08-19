@@ -14,7 +14,7 @@
         	 * your footer with four columns of widgets.
         	 */
         	get_sidebar( 'footer' );
-        ?> </div> </footer> </div> <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> <script>window.jQuery||document.write('<script src="<?php bloginfo( 'template_url' ); ?>/js/libs/jquery-1.6.1.min.js"><\/script>');</script> <script defer src='<?php bloginfo( 'template_url' ); ?>/js/bf2d305c3eebb921dcc56f9be4feff176136dd89.js'></script> <?php
+        ?> </div> </footer> </div> <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> <script>window.jQuery||document.write('<script src="<?php bloginfo( 'template_url' ); ?>/js/libs/jquery-1.6.2.min.js"><\/script>');</script> <script defer src='<?php bloginfo( 'template_url' ); ?>/js/bf2d305c3eebb921dcc56f9be4feff176136dd89.js'></script> <?php
 	/* Always have wp_footer() just before the closing </body>
 	 * tag of your theme, or you will break many plugins, which
 	 * generally use this hook to reference JavaScript files.
