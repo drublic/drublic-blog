@@ -394,3 +394,45 @@ remove_action( 'wp_head', 'feed_links'); // Display the links to the general fee
 
 
 
+add_action( 'init', 'drublic_init' );
+function drublic_init() {
+	
+  // Register some Scripts
+  if (!is_admin()) {
+    
+    wp_deregister_script('jquery');
+    wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js', false, '1', true);
+    wp_enqueue_script('jquery');
+    
+    wp_deregister_script('comment-reply');
+    wp_deregister_script('l10n');
+  }
+  
+
+}
+
+
+
+
+/**
+ * Removes the versioning for Scripts that are loaded from the Google-Servers
+ * in Order to allow the user to use the cached file
+ */
+function script_loader_filter( $src ) {
+  if ( FALSE === strpos( $src, '//ajax.googleapis.com' ) ) {
+    return $src;
+  }
+  $new_src = str_replace( 'http:', '', $src );
+  $new_src = explode( '?', $new_src );
+  return $new_src[0];
+  
+}
+add_filter('script_loader_src', 'script_loader_filter');
+
+
+
+
+
+
+
+

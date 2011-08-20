@@ -27,9 +27,9 @@
 
 
   <!-- JavaScript at the bottom for fast page loading -->
-
+  
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <?php wp_footer(); ?>
   <script>window.jQuery || document.write('<script src="<?php bloginfo( 'template_url' ); ?>/js/libs/jquery-1.6.2.min.js"><\/script>')</script>
 
 
@@ -37,17 +37,8 @@
   <script defer src="<?php bloginfo( 'template_url' ); ?>/js/plugins.js"></script>
   <script defer src="<?php bloginfo( 'template_url' ); ?>/js/script.js"></script>
   <!-- end scripts-->
-
-
-<?php
-	/* Always have wp_footer() just before the closing </body>
-	 * tag of your theme, or you will break many plugins, which
-	 * generally use this hook to reference JavaScript files.
-	 */
-
-	wp_footer();
-?>
   
+  <!-- Social Media -->
   <script defer src="https://apis.google.com/js/plusone.js"></script>
   <script defer src="http://platform.twitter.com/widgets.js"></script>
 
