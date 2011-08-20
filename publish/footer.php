@@ -14,11 +14,4 @@
         	 * your footer with four columns of widgets.
         	 */
         	get_sidebar( 'footer' );
-        ?> </div> </footer> </div> <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> <script>window.jQuery||document.write('<script src="<?php bloginfo( 'template_url' ); ?>/js/libs/jquery-1.6.2.min.js"><\/script>');</script> <script defer src='<?php bloginfo( 'template_url' ); ?>/js/bf2d305c3eebb921dcc56f9be4feff176136dd89.js'></script> <?php
-	/* Always have wp_footer() just before the closing </body>
-	 * tag of your theme, or you will break many plugins, which
-	 * generally use this hook to reference JavaScript files.
-	 */
-
-	wp_footer();
-?> <script defer src="https://apis.google.com/js/plusone.js"></script> <script defer src="http://platform.twitter.com/widgets.js"></script> <script>var pkBaseURL=(("https:"==document.location.protocol)?"https://drublic.de/piwik/":"http://drublic.de/piwik/");document.write('<script src="'+pkBaseURL+'piwik.js"><\/script>');</script><script>try{var piwikTracker=Piwik.getTracker(pkBaseURL+"piwik.php",1);piwikTracker.trackPageView();piwikTracker.enableLinkTracking()}catch(err){};</script><noscript><p><img src="http://drublic.de/piwik/piwik.php?idsite=1" style="border:0" alt=""/></p></noscript> </body> </html>
+        ?> </div> </footer> </div> <?php wp_footer(); ?> <script>window.jQuery||document.write('<script src="<?php bloginfo( 'template_url' ); ?>/js/libs/jquery-1.6.2.min.js"><\/script>');</script> <script defer src='<?php bloginfo( 'template_url' ); ?>/js/595772df9fc7a616d9644527b8db1fea986e5c34.js'></script> <script defer src="https://apis.google.com/js/plusone.js"></script> <script defer src="http://platform.twitter.com/widgets.js"></script> <script>var pkBaseURL=(("https:"==document.location.protocol)?"https://drublic.de/piwik/":"http://drublic.de/piwik/");document.write('<script src="'+pkBaseURL+'piwik.js"><\/script>');</script><script>try{var piwikTracker=Piwik.getTracker(pkBaseURL+"piwik.php",1);piwikTracker.trackPageView();piwikTracker.enableLinkTracking()}catch(err){};</script><noscript><p><img src="http://drublic.de/piwik/piwik.php?idsite=1" style="border:0" alt=""/></p></noscript> </body> </html>
