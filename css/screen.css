@@ -203,6 +203,10 @@ article time, article .tags, article .author { font-size: 0.8em; color: #888; }
 article .tags { float: right; padding-top: 4px; }
 
 
+.share-post { text-align: center; padding-bottom: 5px; border-bottom: 1px solid #eee; margin: -15px -100px 30px; }
+
+
+
 .readmore { margin: 10px 0 80px; }
 .readmore span { font: 1.3em Georgia, "Times New Roman", Times, serif; padding-right: 3px; }
 

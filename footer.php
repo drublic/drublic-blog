@@ -47,6 +47,9 @@
 
 	wp_footer();
 ?>
+  
+  <script defer src="https://apis.google.com/js/plusone.js"></script>
+  <script defer src="http://platform.twitter.com/widgets.js"></script>
 
   <!-- Piwik --> 
   <script>
