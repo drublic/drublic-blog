@@ -9,6 +9,12 @@ body {
 }
 
 
+/* Selected Text */
+::-moz-selection { background: #c3beae; color:#fff; text-shadow: none; }
+::selection { background: #c3beae; color:#fff; text-shadow: none; }
+a:link { -webkit-tap-highlight-color: #c3beae; }
+
+
 
 
 
