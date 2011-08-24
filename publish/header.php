@@ -26,7 +26,7 @@
 	if ( $paged >= 2 || $page >= 2 )
 		echo ' | ' . sprintf( __( 'Page %s', 'twentyten' ), max( $paged, $page ) );
 
-	?></title> <meta name=viewport content="width=device-width, initial-scale=1.0"> <link rel=profile href="http://gmpg.org/xfn/11"> <link rel=stylesheet href='<?php bloginfo( 'template_url' ); ?>/css/d5b93b530b01dcd3254d9ea14113eaeb5bc870e7.css'> <link rel=pingback href="<?php bloginfo( 'pingback_url' ); ?>"> <link rel=alternate type="application/rss+xml" title="@drublic &raquo; Feed" href="http://feeds.feedburner.com/drublic"> <script src="<?php bloginfo( 'template_url' ); ?>/js/libs/modernizr.custom.65403.js"></script> <script src="http://use.typekit.com/nls7qda.js"></script> <script>try{Typekit.load()}catch(e){};</script> <?php
+	?></title> <meta name=viewport content="width=device-width, initial-scale=1.0"> <link rel=profile href="http://gmpg.org/xfn/11"> <link rel=stylesheet href='<?php bloginfo( 'template_url' ); ?>/css/57038c4063b94dc74e8e3417a7888404de8588db.css'> <link rel=pingback href="<?php bloginfo( 'pingback_url' ); ?>"> <link rel=alternate type="application/rss+xml" title="@drublic &raquo; Feed" href="http://feeds.feedburner.com/drublic"> <script src="<?php bloginfo( 'template_url' ); ?>/js/libs/modernizr.custom.65403.js"></script> <script src="http://use.typekit.com/nls7qda.js"></script> <script>try{Typekit.load()}catch(e){};</script> <?php
 	/* We add some JavaScript to pages with the comment form
 	 * to support sites with threaded comments (when in use).
 	 */
