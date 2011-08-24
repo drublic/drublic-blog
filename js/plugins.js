@@ -21,7 +21,7 @@ var ZeroClipboard = {
 	
 	version: "1.0.4",
 	clients: {}, // registered upload clients on page, indexed by id
-	moviePath: 'http://localhost:8888/source-access/wordpress/wp-content/themes/drublic/js/ZeroClipboard.swf', // URL to movie
+	moviePath: $( 'link[rel="stylesheet"]' ).attr( 'href' ).split('css/')[0] + 'js/ZeroClipboard.swf', // URL to movie
 	nextId: 1, // ID of next movie
 	
 	$: function(thingy) {
