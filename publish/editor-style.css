@@ -30,7 +30,7 @@ pre {
 	font-family: "Courier 10 Pitch", Courier, monospace;
 }
 code, code var {
-	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font: 14px monospace;
 }
 body, input, textarea {
 	font-size: 12px;
