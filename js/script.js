@@ -11,6 +11,10 @@
 ! function( $, window, document, undefined ) {
 
 
+// Images loaded
+$( 'img' ).addClass( 'show' );
+
+
 
 // Close Action
 function do_close( action ) {

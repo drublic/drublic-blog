@@ -121,7 +121,8 @@ a,
 article .comment-count,
 input, textarea,
 .content-widget .close,
-.wp_syntax {
+.wp_syntax,
+.js img {
      -moz-transition: all 0.3s ease-out;
        -o-transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
@@ -525,6 +526,12 @@ footer ul a:hover { background: #fff; border-color: #ddd !important; color: #22
 
 
 
+
+
+
+/* Images */
+.js img { opacity: 0; }
+.js img.show { opacity: 1; }
 
 
 
