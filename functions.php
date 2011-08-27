@@ -434,5 +434,29 @@ add_filter('script_loader_src', 'script_loader_filter');
 
 
 
+if ( !function_exists( 'drublic_preprocess_comment' ) ) :
+function drublic_preprocess_comment( $comment ) {
+  // Replace all appereances of __ and ** with <i>
+  $comment['comment_content'] = preg_replace( '/__(.*?)__/is', '<b>$1</b>', $comment['comment_content'] );
+  $comment['comment_content'] = preg_replace( '/\*\*(.*?)\*\*/is', '<strong>$1</strong>', $comment['comment_content'] );
+  
+  // Replace all appereances of _ and * with <i> and <em>
+  $comment['comment_content'] = preg_replace( '/_(.*?)_/is', '<i>$1</i>', $comment['comment_content'] );
+  $comment['comment_content'] = preg_replace( '/\*(.*?)\*/is', '<em>$1</em>', $comment['comment_content'] );
+  
+  // Replace all appereances of ` with <code>
+  $comment['comment_content'] = preg_replace( '/`(.*?)`/is', '<code>$1</code>', $comment['comment_content'] );
+
+  return $comment;
+}
+endif;
+add_filter('preprocess_comment', 'drublic_preprocess_comment');
+
+
+
+
+
+
+
 
 
