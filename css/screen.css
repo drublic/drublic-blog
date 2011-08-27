@@ -535,6 +535,27 @@ footer ul a:hover { background: #fff; border-color: #ddd !important; color: #22
 
 
 
+/* About me */
+.about-img { position: relative; width: 220px; height: 220px; cursor: pointer; }
+.js .about-img img {
+  position: absolute; top: 0; left: 0;
+     -moz-transform: rotateY(-91deg);
+       -o-transform: rotateY(-91deg);
+  -webkit-transform: rotateY(-91deg);
+      -ms-transform: rotateY(-91deg);
+          transform: rotateY(-91deg);
+  visibility: hidden;
+}
+.about-img img.front {
+  visibility: visible;
+     -moz-transform: rotateY(0deg);
+       -o-transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+
 
 
 
