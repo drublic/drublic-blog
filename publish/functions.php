@@ -365,7 +365,7 @@ function drublic_comment_form() {
                           '<label for="comment">' . _x( 'Comment', 'noun' ) . '</label>' .
                           '<textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>' .
                         '</fieldset>',
-    'comment_notes_before' => '<p>Remember what your mother told you: Be friendly. <small>Your email address will not be published.</small></p>',
+    'comment_notes_before' => '<p>Remember what your mother told you: Be friendly. <small>Your email address will not be published.</small><br>There are <a href="#/markdown">some Markdown-Goodies</a> available.',
     'comment_notes_after' => '',
     'title_reply' => __('Leave a Comment')
   ) );
@@ -453,6 +453,14 @@ endif;
 add_filter('preprocess_comment', 'drublic_preprocess_comment');
 
 
+
+
+
+
+// Markdown-Text
+if ( isset( $_GET['get_markdown'] ) ) {
+  include ( 'ajax/markdown.php' );
+}
 
 
 
