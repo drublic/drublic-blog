@@ -128,6 +128,7 @@ input, textarea,
   -webkit-transition: all 0.3s ease-out;
       -ms-transition: all 0.3s ease-out;
           transition: all 0.3s ease-out;
+  -webkit-backface-visibility: hidden;
 }
 .content-widget {
      -moz-transition: all 0.1s ease-out;
@@ -560,6 +561,38 @@ footer ul a:hover { background: #fff; border-color: #ddd !important; color: #22
 
 /* 404-Page */
 .error404 { margin-bottom: 100px; }
+
+
+
+
+/* Markdown */
+#markdown {
+  display: none;
+  position: fixed; top: 50px; left: 50%; z-index: 102;
+  width: 500px;
+  margin: 0 -270px; border: 1px solid #ddd; padding: 0 20px 10px;
+  background: url(../img/bg.png);
+     -moz-box-shadow: 0 0 100px rgba(0,0,0,.5), 0 0 30px rgba(0,0,0,.5);
+  -webkit-box-shadow: 0 0 100px rgba(0,0,0,.5), 0 0 30px rgba(0,0,0,.5);
+          box-shadow: 0 0 100px rgba(0,0,0,.5), 0 0 30px rgba(0,0,0,.5);
+     -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+#markdown .close {
+  float: right;
+  height: 24px;
+  padding: 0 5px; margin-right: -7px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+}
+
+.ruleset { padding-top: 10px; border-top: 1px solid #ddd; margin-top: 10px; line-height: 1.2; }
+.ruleset:last-child { padding-bottom: 10px; border-bottom: 1px solid #ddd; margin-bottom: 20px; }
+
+
+
 
 
 

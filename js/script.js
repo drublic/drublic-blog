@@ -11,8 +11,9 @@
 ! function( $, window, document, undefined ) {
 
 
-// Images loaded
+// FadeIn Images
 $( 'img' ).addClass( 'show' );
+
 
 
 // About Column
@@ -50,6 +51,9 @@ function do_close( action ) {
              'transform' : 'scale(0)',
       'opacity' : '0'
     });
+  } else {
+    remove_overlay();
+    $( '#markdown' ).fadeOut();
   }
 
 }
@@ -62,25 +66,28 @@ function do_overlay( action, transparency ) {
     transparency = false;
   }
   
-  var $overlay = $( '<div />', {
-      'id' : 'overlay',
-      'css' : {
-        'display' : 'none'
-      }
+  if ( $( '#overlay' ).size() < 1 ) {      
+    
+    var $overlay = $( '<div />', {
+        'id' : 'overlay',
+        'css' : {
+          'display' : 'none'
+        }
+      });
+      
+    if ( transparency ) {
+      $overlay.addClass( 'transparent' )
+    }
+    
+    $overlay.click( function( e ) {
+      e.preventDefault();
+      
+      location.hash = '#/close/' + action;
     });
     
-  if ( transparency ) {
-    $overlay.addClass( 'transparent' )
-  }
-  
-  $overlay.click( function( e ) {
-    e.preventDefault();
-    
-    location.hash = '#/close/' + action;
-  });
-  
-  if ( $( '#overlay' ).size() == 0 ) {
     $overlay.appendTo( 'body' ).fadeIn();
+  } else {
+    $( '#overlay' ).fadeIn();
   }
   
   delete $output;
@@ -91,9 +98,7 @@ function do_overlay( action, transparency ) {
 // Remove Overlay
 function remove_overlay() {
   if ( $( '#overlay' ).size() > 0 ) {
-    $( '#overlay' ).fadeOut( function() {
-      $( this ).remove();
-    });
+    $( '#overlay' ).fadeOut();
   }
 }
 
@@ -167,6 +172,20 @@ var hash = '';
     // Close
     } else if ( hash.substr( 0, 7 ) === "#/close") {
       do_close( hash.substr( 8 ) );
+    
+    // Markdown rules
+    } else if ( hash === "#/markdown" ) {
+      if ( $( '#markdown' ).size() > 0 ) {
+        do_overlay( 'markdown' );
+        $( '#markdown' ).fadeIn();
+      } else {
+        $.get( '?get_markdown', function( data ) {
+          $( 'body' ).append( data );
+          do_overlay( 'markdown' );
+          
+          $( '#markdown' ).fadeIn();
+        });
+      }
     }
   })
 
