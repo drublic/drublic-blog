@@ -117,30 +117,6 @@ function remove_overlay() {
 
 
 
-// Helper for search
-function str_replace( search, replace, val ) {
-  return val.split( search ).join( replace );
-}
-
-
-// Save URL-Search value
-function save_search( val ) {
-  val = str_replace( ' ', '-', val )
-  val = str_replace( '.', '-', val )
-  val = str_replace( ':', '-', val )
-  val = str_replace( ',', '-', val )
-  val = str_replace( ';', '-', val )
-  val = str_replace( '/', '-', val )
-  val = str_replace( '\\', '-', val )
-  val = str_replace( '!', '-', val )
-  val = str_replace( '?', '-', val )
-  val = str_replace( '(', '-', val ),
-  val = str_replace( ')', '-', val );
-           
-  return val;
-}
-
-
 
 
 // Init Hash-Listener
@@ -194,39 +170,6 @@ var hash = '';
 
 
 
-
-
-// Search
-$( '#search form' ).submit( function( e ) {
-  /*e.preventDefault();
-  
-  var new_value = $( '#s' ).prop( 'value' );
-  location.hash = $( this ).attr( 'action' ) + save_search( new_value );
-  
-  do_search( new_value );*/
-
-});
-
-
-/**
- * Replaces searched value
- *
- * @param _test - RegEx to test for
- * @param _with - New string for replacement
- * @param haystack - String to search
- *
- */
-function str_replace( _test, _with, haystack ) {
-  while( haystack.search( _test ) > -1 ) {
-    haystack = haystack.replace( _test, _with );
-  }
-  return haystack;
-}
-
-
-
-
-
 /* Syntax Highlighter */
 $( '.wp_syntax' ).each( function() {
   if ( $( this ).find( '.raw' ).size() < 1 ) {
@@ -240,9 +183,14 @@ $( '.wp_syntax' ).each( function() {
     $raw.appendTo( $( this ) );
     
     // Copy to clipboard
-    var html = $( this ).find( 'pre' ).html();
-        html = str_replace( /\<span.*\"\>/g, '', html );
-        html = str_replace( /\<\/span>/g, '', html );
+    var html = $( this ).find( 'pre' ).html().split( /<\/span>/ig ),
+        re = /<span(.*)>(.*)/ig;
+
+    for ( i = 0; i < html.length; i++ ) {
+      html[i] = html[i].replace( re, '$2' );
+    }
+    
+    html = html.join( '' );
     
     var clip = new ZeroClipboard.Client();
     clip.glue( $raw[0] );
