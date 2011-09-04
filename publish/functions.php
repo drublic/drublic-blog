@@ -401,7 +401,7 @@ function drublic_init() {
   if (!is_admin()) {
     
     wp_deregister_script('jquery');
-    wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js', false, '1', true);
+    wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js', false, '1', true);
     wp_enqueue_script('jquery');
     
     wp_deregister_script('comment-reply');
