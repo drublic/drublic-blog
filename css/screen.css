@@ -3,9 +3,9 @@ html { background: url(../img/bg.png); }
 
 body {
   font: 15px/2 sans-serif;
-  -webkit-hyphen: auto;
-     -moz-hyphen: auto;
-          hyphen: auto;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+          hyphens: auto;
 }
 
 
