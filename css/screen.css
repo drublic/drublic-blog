@@ -150,6 +150,7 @@ fieldset + fieldset input[type="search"] {
   
   border: 1px solid #777; padding: .5em 1.5em; margin: 0.5em 0;
   text-decoration: none; color: #333; text-shadow: 0 1px 0 rgba(255,255,255,.8); white-space: nowrap;
+  line-height: 1;
   cursor: pointer; overflow: visible;
   
      -moz-border-radius: 5px;
@@ -162,6 +163,7 @@ fieldset + fieldset input[type="search"] {
 }
 
 .button:hover, input[type="submit"]:hover {
+  border-bottom-color: #555;
   background-color: #ddd;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#ddd));
   background-image: -webkit-linear-gradient(top, #fafafa, #ddd);
@@ -329,7 +331,13 @@ article time, article .tags, article .author { font-size: 0.8em; color: #888; }
 article .tags { float: right; padding-top: 4px; }
 
 
-.share-post { text-align: center; padding-bottom: 5px; border-bottom: 1px solid #eee; margin: -15px -100px 30px; }
+.share-post {
+  text-align: center;
+  padding: 15px 0 5px;
+  border-top: 1px solid #c9c8c0; border-bottom: 1px solid #eee;
+  margin: 50px -100px 10px;
+}
+.instapaper { text-align: center; }
 
 
 

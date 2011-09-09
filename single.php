@@ -29,14 +29,6 @@ get_header(); ?>
 		  
 		  <span class="tags"><?php the_category( ', ' ); ?></span>
 		</header>
-		
-		<div class="share-post">
-		  <iframe src="http://www.facebook.com/plugins/like.php?href=<?php print urlencode( wp_get_shortlink() ); ?>&amp;layout=button_count&amp;show-faces=false&amp;width=90&amp;action=like&amp;font=arial&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:100px; height:20px"></iframe> 
-		  
-		  <a href="http://twitter.com/share" class="twitter-share-button" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" data-count="horizontal" data-via="drublic" data-related="drublic">Tweet</a>
-		  
-		  <g:plusone size="medium"></g:plusone>
-		</div>
     
     
     <?php if ( get_the_post_thumbnail() != "" ) : ?>
@@ -47,6 +39,20 @@ get_header(); ?>
     
     <?php the_content(); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'twentyten' ), 'after' => '</div>' ) ); ?>
+		
+		
+		<div class="share-post">
+		  <iframe src="http://www.facebook.com/plugins/like.php?href=<?php print urlencode( wp_get_shortlink() ); ?>&amp;layout=button_count&amp;show-faces=false&amp;width=90&amp;action=like&amp;font=arial&amp;colorscheme=light" scrolling="no" frameborder="0" allowTransparency="true" style="border:none; overflow:hidden; width:100px; height:20px"></iframe> 
+		  
+		  <a href="http://twitter.com/share" class="twitter-share-button" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" data-count="horizontal" data-via="drublic" data-related="drublic">Tweet</a>
+		  
+		  <g:plusone size="medium"></g:plusone>
+		</div>
+    
+    <div class="instapaper">
+		  <a href="http://www.instapaper.com/hello2?url=<?php the_permalink(); ?>&amp;title=<?php the_title(); ?>" title="Diesen Artikel später mit Instapaper lesen?" target="_blank" class="button">Instapaper</a>
+		</div>
+		
 	</article>
 	<hr>
 	
