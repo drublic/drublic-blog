@@ -326,7 +326,8 @@ article .comment-count {
   -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
 }
 article:hover .comment-count { opacity: 1; border-bottom-color: #c9c8c0; }
-article header h1 { margin-bottom: 20px; }
+article header h1 { line-height: 1.2; margin-bottom: 20px; }
+article header h1 a { display: block; }
 article time, article .tags, article .author { font-size: 0.8em; color: #888; }
 article .tags { float: right; padding-top: 4px; }
 
