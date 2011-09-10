@@ -25,7 +25,7 @@ h2 { font-size: 2em; margin-top: 20px; }
 h3 { font-size: 1.5em; margin-top: 18px; }
 h4 { font-size: 1.2em; }
 
-h1, h2, h3 { font-family: "ff-netto-web-1", "ff-netto-web-2", sans-serif; }
+h1, h2, h3 { font-family: ff-meta-serif-web-pro-1,ff-meta-serif-web-pro-2,serif; font-weight: normal; }
 
 
 
@@ -313,7 +313,7 @@ hr,
 article header { position: relative; margin: 30px -90px; border-bottom: 1px solid #ddd; padding: 0 90px 10px; }
 article .comment-count {
   position: absolute; top: -49px; right: 10px;
-  border: 1px solid #c9c8c0; border-top: 0; padding: 20px 24px 3px;
+  border: 1px solid #c9c8c0; border-top: 0; padding: 20px 18px 3px;
   background: #f1efe8;
   font-size: 1.1em; text-shadow: 1px 1px 1px #fff;
   opacity: 0.5;
@@ -326,7 +326,7 @@ article .comment-count {
   -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
 }
 article:hover .comment-count { opacity: 1; border-bottom-color: #c9c8c0; }
-article header h1 { line-height: 1.2; margin-bottom: 20px; }
+article header h1 { margin-bottom: 20px; }
 article time, article .tags, article .author { font-size: 0.8em; color: #888; }
 article .tags { float: right; padding-top: 4px; }
 
@@ -363,6 +363,7 @@ article .tags { float: right; padding-top: 4px; }
 /* Comments */
 #comments { margin: 100px 170px 30px; padding-bottom: 20px; }
 #comments + hr { border-top-color: #d9d8d2; margin-top: -10px; }
+#comments .children { margin-left: 30px; }
 
 #respond p { margin-bottom: 20px; }
 

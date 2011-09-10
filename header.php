@@ -62,7 +62,7 @@
        For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
   <script src="<?php bloginfo( 'template_url' ); ?>/js/libs/modernizr.custom.65403.js"></script>
   
-    <!--! Typekit -->
+  <!--! Typekit -->
   <script src="http://use.typekit.com/nls7qda.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
   
