@@ -25,7 +25,12 @@ h2 { font-size: 2em; margin-top: 20px; }
 h3 { font-size: 1.5em; margin-top: 18px; }
 h4 { font-size: 1.2em; }
 
-h1, h2, h3 { font-family: ff-meta-web-pro-1,ff-meta-web-pro-2,sans-serif; font-weight: normal; }
+h1, h2, h3 {
+  font-family: ff-meta-web-pro-1,ff-meta-web-pro-2,sans-serif; font-weight: normal;
+  -webkit-hyphens: manual;
+     -moz-hyphens: manual;
+          hyphens: manual;
+}
 
 
 
