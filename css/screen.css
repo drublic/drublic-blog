@@ -2,7 +2,7 @@ html { background: url(../img/bg.png); }
 
 
 body {
-  font: 15px/2 sans-serif;
+  font: 15px/2 ff-meta-serif-web-pro-1,ff-meta-serif-web-pro-2,serif;
   -webkit-hyphens: auto;
      -moz-hyphens: auto;
           hyphens: auto;
@@ -25,7 +25,7 @@ h2 { font-size: 2em; margin-top: 20px; }
 h3 { font-size: 1.5em; margin-top: 18px; }
 h4 { font-size: 1.2em; }
 
-h1, h2, h3 { font-family: ff-meta-serif-web-pro-1,ff-meta-serif-web-pro-2,serif; font-weight: normal; }
+h1, h2, h3 { font-family: ff-meta-web-pro-1,ff-meta-web-pro-2,sans-serif; font-weight: normal; }
 
 
 
@@ -327,8 +327,8 @@ article .comment-count {
 }
 article:hover .comment-count { opacity: 1; border-bottom-color: #c9c8c0; }
 article header h1 { line-height: 1.2; margin-bottom: 20px; }
-article header h1 a { display: block; }
-article time, article .tags, article .author { font-size: 0.8em; color: #888; }
+article header h1 a { border-bottom: 0; }
+article time, article .tags, article .author { font-size: 0.9em; color: #888; }
 article .tags { float: right; padding-top: 4px; }
 
 
