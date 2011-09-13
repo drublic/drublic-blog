@@ -371,6 +371,8 @@ article .tags { float: right; padding-top: 4px; }
 #comments + hr { border-top-color: #d9d8d2; margin-top: -10px; }
 #comments .children { margin-left: 30px; }
 
+.pingback { margin: -40px 0 60px; }
+
 #respond p { margin-bottom: 20px; }
 
 #respond fieldset { margin-bottom: 2px; }
