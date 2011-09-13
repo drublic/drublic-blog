@@ -223,14 +223,14 @@ function twentyten_comment( $comment, $args, $depth ) {
 		case 'pingback'  :
 		
 	?>
-	<div class="post pingback">
+	<div class="pingback">
 		<p><?php _e( 'Pingback:', 'twentyten' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'twentyten' ), ' ' ); ?></p>
   </div>
 	<?php
 			break;
 		case 'trackback' :
 	?>
-	<div class="post pingback">
+	<div class="pingback">
 		<p><?php _e( 'Pingback:', 'twentyten' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'twentyten' ), ' ' ); ?></p>
   </div>
 	<?php
