@@ -190,7 +190,7 @@ $( '.wp_syntax' ).each( function() {
       html[i] = html[i].replace( re, '$2' );
     }
     
-    html = html.join( '' );
+    html = html.join( '' ).replace(/&gt;/ig, '>').replace(/&lt;/ig, '<');
     
     var clip = new ZeroClipboard.Client();
     clip.glue( $raw[0] );
