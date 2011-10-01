@@ -654,25 +654,42 @@ footer ul a:hover { background: #fff; border-color: #ddd !important; color: #22
 
 
 /* About me */
-.about-img { position: relative; width: 220px; height: 220px; cursor: pointer; }
-.js .about-img img {
-  position: absolute; top: 0; left: 0;
-     -moz-transform: rotateY(-91deg);
-       -o-transform: rotateY(-91deg);
-  -webkit-transform: rotateY(-91deg);
-      -ms-transform: rotateY(-91deg);
-          transform: rotateY(-91deg);
-  visibility: hidden;
-}
-.about-img img.front {
-  visibility: visible;
-     -moz-transform: rotateY(0deg);
-       -o-transform: rotateY(0deg);
-  -webkit-transform: rotateY(0deg);
-      -ms-transform: rotateY(0deg);
-          transform: rotateY(0deg);
+.animate-wrap {
+    position: relative;
+    width: 220px; height: 220px;
+    margin-bottom: 10px;
+    -webkit-perspective: 1000;
+       -moz-perspective: 1000;
+            perspective: 1000;
 }
 
+.animate-wrap input { display: none; }
+.animate-wrap [type="radio"]:checked + .animate {
+    -webkit-transform: rotateY(180deg);
+       -moz-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+}
+.animate {
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all 0.5s ease-out;
+     -moz-transition: all 0.5s ease-out;
+          transition: all 0.5s ease-out;
+}
+label {
+  position: absolute; top: 0; left: 0; z-index: 2;
+  -webkit-backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.back {
+  -webkit-transform: rotateY(180deg);
+     -moz-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+.front { z-index: 1; }
 
 
 

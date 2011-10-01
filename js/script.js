@@ -17,21 +17,12 @@ $( 'img' ).addClass( 'show' );
 
 
 // About Column
-$( '.about-img img' ).eq( 0 ).addClass( 'front' );
-
-$( '.about-img img' ).click( function() {
-  var $el = $( this );
-
-  $el.removeClass( 'front' );
-  setTimeout( function() {
-    if( $el.next().size() > 0 ) {
-      $el.next().addClass( 'front' );
-    } else {
-      $( '.about-img img' ).eq( 0 ).addClass( 'front' );
-    }
-  }, 300);
-
-});
+if (!Modernizr.csstransforms3d) {
+    $('label').click(function() {
+        $('.animate .front').removeClass('front');
+        $(this).addClass('front');
+    });
+}
 
 
 
