@@ -73,8 +73,8 @@
 <?php // Display navigation to next/previous pages when applicable ?>
 <?php if (  $wp_query->max_num_pages > 1 ) : ?>
   <nav id="post-nav" class="nav-loop">
-    <div class="prev"><?php previous_posts_link( '<span class="meta-nav">' . _x( '&larr;', 'Previous Posts', 'twentyten' ) . '</span> Previous Posts' ); ?></div>
-    <div class="next"><?php next_posts_link( 'Next posts <span class="meta-nav">' . _x( '&rarr;', 'Next posts', 'twentyten' ) . '</span>' ); ?></div>
+    <div class="prev"><?php next_posts_link( '<span class="meta-nav">' . _x( '&larr;', 'Next posts', 'twentyten' ) . '</span> Older posts' ); ?></div>
+    <div class="next"><?php previous_posts_link( 'Newer Posts <span class="meta-nav">' . _x( '&rarr;', 'Previous Posts', 'twentyten' ) . '</span> ' ); ?></div>
     <div class="clearfix"></div>
   </nav>
 <?php endif; ?>
