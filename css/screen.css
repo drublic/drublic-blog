@@ -461,6 +461,9 @@ article .tags { float: right; padding-top: 4px; }
 #post-nav .next { float: right; }
 
 
+#post-nav.nav-loop { margin-top: -38px; }
+
+
 
 
 
