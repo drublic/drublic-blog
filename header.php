@@ -10,13 +10,28 @@
  */
 ?>
 <!doctype html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" <?php language_attributes(); ?>> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" <?php language_attributes(); ?>> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" <?php language_attributes(); ?>> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
+  
+  <!--      
+       ____      _            _     _ _      
+      / __ \  __| |_ __ _   _| |__ | (_) ___ 
+     / / _` |/ _` | '__| | | | '_ \| | |/ __|
+    | | (_| | (_| | |  | |_| | |_) | | | (__ 
+     \ \__,_|\__,_|_|   \__,_|_.__/|_|_|\___|
+      \____/
+      
+    Feel free to view and copy my source-code if you want to.
+    Contact me if you have questions.
+    
+    Thanks for visiting!
+    Hans
+    
+  -->
 
   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
        Remove this if you use the .htaccess -->
@@ -48,24 +63,20 @@
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
   
   <link rel="profile" href="http://gmpg.org/xfn/11">
-
-  <!-- CSS: implied media="all" -->
+  
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/style.css">
 
-  <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-  
   <!-- Feed -->
+  <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
   <link rel="alternate" type="application/rss+xml" title="@drublic &raquo; Feed" href="http://feeds.feedburner.com/drublic">
 
-  <!-- All JavaScript at the bottom, except for Modernizr and Respond.
-       Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
-       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+  <!-- All JavaScript at the bottom, except for Modernizr. -->
   <script src="<?php bloginfo( 'template_url' ); ?>/js/libs/modernizr.custom.65404.js"></script>
   
-  <!--! Typekit -->
+  <!-- Typekit -->
   <script src="http://use.typekit.com/nls7qda.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
-  
   
 <?php
 	/* We add some JavaScript to pages with the comment form
