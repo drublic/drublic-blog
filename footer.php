@@ -13,7 +13,7 @@
     </div>
     
     
-    <footer>
+    <footer id="footer">
       <div class="inner clearfix">
         <?php
         	/* A sidebar in the footer? Yep. You can can customize

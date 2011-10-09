@@ -598,7 +598,7 @@ article .tags { float: right; padding-top: 4px; }
 
 
 /* Footer */
-footer {
+#footer {
   padding: 10px 0 100px; font-size: 0.9em;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0)), to(rgba(255,255,255,1)));
   background-image: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,1));
@@ -607,7 +607,7 @@ footer {
   background-image:      -o-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,1));
   background-image:         linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,1));
 }
-footer .inner { width: 960px; margin: 0 auto; }
+#footer .inner { width: 960px; margin: 0 auto; }
 
 .col-1, .col-2, .col-3, .col-4 {
   display: inline; float: left;
@@ -616,15 +616,15 @@ footer .inner { width: 960px; margin: 0 auto; }
 }
 
 
-footer ul { margin: 0 0 20px; list-style: none; border-top: 1px solid #ddd; }
-footer ul a,
-footer ul a:visited {
+#footer ul { margin: 0 0 20px; list-style: none; border-top: 1px solid #ddd; }
+#footer ul a,
+#footer ul a:visited {
   display: block;
   border-bottom: 1px solid #ddd !important;
   white-space: nowrap;
   overflow: hidden; text-overflow: ellipsis;
 }
-footer ul a:hover { background: #fff; border-color: #ddd !important; color: #222; padding-left: 10px; }
+#footer ul a:hover { background: #fff; border-color: #ddd !important; color: #222; padding-left: 10px; }
 
 
 
