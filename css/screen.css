@@ -677,7 +677,7 @@ article .categories { float: right; padding-top: 4px; }
        -moz-transform: rotateY(180deg);
             transform: rotateY(180deg);
 }
-.animate {
+..animate-wrap animate {
   -webkit-transform-style: preserve-3d;
      -moz-transform-style: preserve-3d;
           transform-style: preserve-3d;
@@ -685,19 +685,19 @@ article .categories { float: right; padding-top: 4px; }
      -moz-transition: all 0.5s ease-out;
           transition: all 0.5s ease-out;
 }
-label {
+.animate-wrap label {
   position: absolute; top: 0; left: 0; z-index: 2;
   -webkit-backface-visibility: hidden;
      -moz-backface-visibility: hidden;
           backface-visibility: hidden;
 }
 
-.back {
+.animate-wrap .back {
   -webkit-transform: rotateY(180deg);
      -moz-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
-.front { z-index: 1; }
+.animate-wrap .front { z-index: 1; }
 
 
 
