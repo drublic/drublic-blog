@@ -46,6 +46,8 @@ a:hover { color: #000; border-bottom-color: #000; text-decoration: none; }
 /* Quotes */
 q, blockquote { font: italic 1em/2 Georgia, "Times New Roman", Times, serif; }
 blockquote { margin: 20px 0; border-left: 5px solid #ddd; padding-left: 20px; }
+blockquote footer { margin: 10px 0 10px 20px; font-style: normal; font-size: .9em; }
+blockquote footer:before { content: '\2014\0020'; }
 
 
 
