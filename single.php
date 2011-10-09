@@ -27,7 +27,7 @@ get_header(); ?>
 		    <?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
 		  </span>
 		  
-		  <span class="tags"><?php the_category( ', ' ); ?></span>
+		  <span class="categories"><?php the_category( ', ' ); ?></span>
 		</header>
     
     
