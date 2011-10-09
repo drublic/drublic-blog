@@ -345,7 +345,10 @@ article .categories { float: right; padding-top: 4px; }
   border-top: 1px solid #c9c8c0; border-bottom: 1px solid #eee;
   margin: 50px -90px 10px;
 }
+.tags,
 .instapaper { text-align: center; }
+
+.tags { border-top: 1px solid #eee; margin-top: 7px; padding-top: 10px; }
 
 
 

@@ -53,6 +53,9 @@ get_header(); ?>
 		  <a href="http://www.instapaper.com/hello2?url=<?php the_permalink(); ?>&amp;title=<?php the_title(); ?>" title="Diesen Artikel später mit Instapaper lesen?" target="_blank" class="button">Instapaper</a>
 		</div>
 		
+		
+		<p class="tags"><?php the_tags( 'Tagged with: ' ); ?></p>
+		
 	</article>
 	<hr>
 	
