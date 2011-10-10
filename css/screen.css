@@ -21,6 +21,9 @@ a:link { -webkit-tap-highlight-color: #c3beae; }
 
 /* Headlines */
 h1 { font-size: 3em; }
+h1 a {
+   text-shadow: 2px 2px 0 #fff;
+}
 h2 { font-size: 2em; margin-top: 20px; }
 h3 { font-size: 1.5em; margin-top: 18px; }
 h4 { font-size: 1.2em; }
@@ -628,6 +631,7 @@ article .categories { float: right; padding-top: 4px; }
   border-bottom: 1px solid #ddd !important;
   white-space: nowrap;
   overflow: hidden; text-overflow: ellipsis;
+  text-shadow: 1px 1px 0 #fff;
 }
 #footer ul a:hover { background: #fff; border-color: #ddd !important; color: #222; padding-left: 10px; }
 
