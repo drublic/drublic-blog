@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-  <div id=content role=main>
+  <div id="content" role="main">
 
     <section class="error404 not-found">
 		  <h1><?php _e( 'Not Found', 'twentyten' ); ?></h1>
@@ -17,7 +17,10 @@ get_header(); ?>
 		</section>
 		
   </div>
-	<script>document.getElementById("s")&&document.getElementById("s").focus();</script>
+	<script>
+		// focus on search field after it has loaded
+		document.getElementById('s') && document.getElementById('s').focus();
+	</script>
 	<hr>
 
 <?php get_footer(); ?>

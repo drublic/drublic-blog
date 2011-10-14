@@ -9,10 +9,10 @@
 
 get_header(); ?>
 
-		<div id=container>
-			<div id=content role=main>
+		<div id="container">
+			<div id="content" role="main">
 
-				<h1 class=page-title><?php
+				<h1 class="page-title"><?php
 					printf( __( 'Category Archives: %s', 'twentyten' ), '<span>' . single_cat_title( '', false ) . '</span>' );
 				?></h1>
 				<?php

@@ -9,10 +9,10 @@
 
 get_header(); ?>
 <?php if ( have_posts() ) : ?>
-  <h1 class=page-title><?php printf( __( 'Search Results for %s', 'twentyten' ), '<i>' . get_search_query() . '</i>' ); ?></h1>
+  <h1 class="page-title"><?php printf( __( 'Search Results for %s', 'twentyten' ), '<i>' . get_search_query() . '</i>' ); ?></h1>
 	<?php get_template_part( 'loop', 'search' ); ?>
 <?php else : ?>
-	<article id=post-0 class="post no-results not-found">
+	<article id="post-0" class="post no-results not-found">
     <header>
       <hgroup>
         <h1><?php _e( 'Not Found', 'twentyten' ); ?></h1>
@@ -22,7 +22,7 @@ get_header(); ?>
     <p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some other keyword.', 'twentyten' ); ?></p>
 		<?php get_search_form(); ?>
 		
-		<p class=readmore></p>
+		<p class="readmore"></p>
   </article>
 
 <?php endif; ?>

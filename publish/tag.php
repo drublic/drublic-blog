@@ -8,7 +8,7 @@
  */
 
 get_header(); ?>
-  <div class=title>
+  <div class="title">
     <h1><?php printf( __( 'Tag Archives: %s', 'twentyten' ), '<span>' . single_tag_title( '', false ) . '</span>' ); ?></h1>
   </div>
 	
