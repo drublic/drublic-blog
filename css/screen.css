@@ -111,7 +111,13 @@ code {
 .wp-caption {
   background: #f5f5f5;
   border: 1px solid #ddd;
-  padding: 5px; }
+  padding: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box; }
 
 .wp-caption-text {
   font-size: 0.9em;
@@ -143,9 +149,12 @@ textarea {
   -moz-box-shadow: 0 0 10px #ddd;
   -webkit-box-shadow: 0 0 10px #ddd;
   box-shadow: 0 0 10px #ddd;
-  -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box; }
@@ -208,9 +217,12 @@ fieldset + fieldset input[type="search"] {
   line-height: 1;
   cursor: pointer;
   overflow: visible;
-  -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
   border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
   -moz-box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.8), 0 1px 0 rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.8), 0 1px 0 rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.8), 0 1px 0 rgba(0, 0, 0, 0.3); }
@@ -247,9 +259,9 @@ fieldset + fieldset input[type="search"] {
   -moz-box-shadow: 1px 0 0 rgba(0, 0, 0, 0.5), 2px 0 0 rgba(255, 255, 255, 0.5);
   -webkit-box-shadow: 1px 0 0 rgba(0, 0, 0, 0.5), 2px 0 0 rgba(255, 255, 255, 0.5);
   box-shadow: 1px 0 0 rgba(0, 0, 0, 0.5), 2px 0 0 rgba(255, 255, 255, 0.5);
-  -moz-border-radius: .15em 0 0 .15em;
-  -webkit-border-radius: .15em 0 0 .15em;
-  border-radius: .15em 0 0 .15em;
+  -webkit-border-radius: 0.15em 0 0 0.15em;
+  -moz-border-radius: 0.15em 0 0 0.15em;
+  border-radius: 0.15em 0 0 0.15em;
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box; }
@@ -322,26 +334,6 @@ textarea,
   -webkit-transition: all 0.1s ease-out;
   -ms-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out; }
-
-/* Border-Radius */
-.content-widget,
-.content-widget::before,
-.wp-caption,
-.wp_syntax {
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box; }
-
-.content-widget .close {
-  -moz-border-radius: 15px;
-  -webkit-border-radius: 15px;
-  border-radius: 15px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box; }
 
 /* Overlay */
 #overlay {
@@ -579,7 +571,13 @@ article .categories {
   background: rgba(255, 255, 255, 0.2);
   margin: 20px 0;
   font-size: .85em;
-  line-height: 1.6; }
+  line-height: 1.6;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box; }
 
 .wp_syntax:hover {
   background: #fff; }
@@ -667,6 +665,12 @@ article .categories {
   border: 1px solid #000;
   color: #ddd;
   opacity: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
   -webkit-backface-visibility: hidden;
   -moz-box-shadow: 0 0 10px #000;
   -webkit-box-shadow: 0 0 10px #000;
@@ -685,6 +689,12 @@ article .categories {
   left: 0;
   width: 100%;
   height: 50px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
   border-top: 1px solid #aaa;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#646464), to(rgba(100, 100, 100, 0)));
   background-image: -webkit-linear-gradient(top, #646464, rgba(100, 100, 100, 0));
@@ -709,6 +719,12 @@ article .categories {
   text-align: center;
   text-shadow: 0 -1px 0 white;
   opacity: .7;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4); }

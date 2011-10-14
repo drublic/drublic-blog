@@ -1,3 +1,34 @@
+@mixin rotate($deg) {
+    -webkit-transform: rotateY($deg);
+    -moz-transform: rotateY($deg);
+    transform: rotateY($deg);
+}
+
+@mixin transition($duration) {
+  -webkit-transition: all $duration ease-out;
+     -moz-transition: all $duration ease-out;
+      -ms-transition: all $duration ease-out;
+       -o-transition: all $duration ease-out;
+          transition: all $duration ease-out;
+}
+
+
+@mixin shadow($vals) {
+  -webkit-box-shadow: $vals;
+     -moz-box-shadow: $vals;
+          box-shadow: $vals;
+}
+
+@mixin corners($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+
+
+
+
 html { background: url(../img/bg.png); }
 
 
@@ -75,7 +106,11 @@ code {
 .aligncenter { display: block; margin-left: auto; margin-right: auto; text-align: center; }
 .alignleft a, .alignright a { border-bottom: none; }
 
-.wp-caption { background: #f5f5f5; border: 1px solid #ddd; padding: 5px; }
+.wp-caption {
+  background: #f5f5f5; border: 1px solid #ddd; padding: 5px;
+  @include corners(5px);
+}
+
 .wp-caption-text { font-size: 0.9em; text-align: center; margin: 5px 0; line-height: 1; }
 
 
@@ -105,9 +140,7 @@ textarea {
      -moz-box-shadow: 0 0 10px #ddd;
   -webkit-box-shadow: 0 0 10px #ddd;
           box-shadow: 0 0 10px #ddd;
-     -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  @include corners(5px);
   -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
 }
 
@@ -163,9 +196,7 @@ fieldset + fieldset input[type="search"] {
   line-height: 1;
   cursor: pointer; overflow: visible;
   
-     -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
+  @include corners(5px);
   
      -moz-box-shadow: inset 0 0 1px 1px rgba(255,255,255,.8), 0 1px 0 rgba(0,0,0,.3);
   -webkit-box-shadow: inset 0 0 1px 1px rgba(255,255,255,.8), 0 1px 0 rgba(0,0,0,.3);
@@ -202,10 +233,7 @@ fieldset + fieldset input[type="search"] {
   -webkit-box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
           box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
 
-     -moz-border-radius: .15em 0 0 .15em;
-  -webkit-border-radius: .15em 0 0 .15em;
-          border-radius: .15em 0 0 .15em;
-  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+  @include corners(.15em 0 0 .15em);
 }
 
 /* Hexadecimal entities for icons */
@@ -265,24 +293,6 @@ textarea,
 
 
 
-
-/* Border-Radius */
-.content-widget,
-.content-widget::before,
-.wp-caption,
-.wp_syntax {
-     -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
-}
-
-.content-widget .close {
-     -moz-border-radius: 15px;
-  -webkit-border-radius: 15px;
-          border-radius: 15px;
-  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
-}
 
 
 
@@ -447,6 +457,7 @@ article .categories { float: right; padding-top: 4px; }
   margin: 20px 0;
   font-size: .85em;
   line-height: 1.6;
+  @include corners(5px);
 }
 .wp_syntax:hover { background: #fff; }
 .wp_syntax .raw {
@@ -509,6 +520,7 @@ article .categories { float: right; padding-top: 4px; }
   border: 1px solid #000;
   color: #ddd;
   opacity: 0;
+  @include corners(5px);
   -webkit-backface-visibility: hidden;
      -moz-box-shadow: 0 0 10px #000;
   -webkit-box-shadow: 0 0 10px #000;
@@ -523,6 +535,7 @@ article .categories { float: right; padding-top: 4px; }
   display: block; content: '\0020';
   position: absolute; top: 0; left: 0;
   width: 100%; height: 50px;
+  @include corners(5px);
   border-top: 1px solid #aaa;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(100,100,100,1)), to(rgba(100,100,100,0)));
   background-image: -webkit-linear-gradient(top, rgba(100,100,100,1), rgba(100,100,100,0));
@@ -539,6 +552,7 @@ article .categories { float: right; padding-top: 4px; }
   color: #333; font-size: 1.1em; font-weight: bold; line-height: 0.6;
   text-align: center; text-shadow: 0 -1px 0 #fff;
   opacity: .7;
+  @include corners(5px);
      -moz-box-shadow: 0 1px 1px rgba(0,0,0,.4);
   -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.4);
           box-shadow: 0 1px 1px rgba(0,0,0,.4);
@@ -678,12 +692,10 @@ article .categories { float: right; padding-top: 4px; }
 
 /* Inputs */
 .animate-wrap input {
-    display: none;
+  display: none;
 }
 .animate-wrap [type="radio"]:checked + .animate {
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    transform: rotateY(180deg);
+  @include rotate(180deg);
 }
 
 /* Image-Wrapper */
@@ -705,9 +717,7 @@ article .categories { float: right; padding-top: 4px; }
 }
 
 .back {
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    transform: rotateY(180deg);
+  @include rotate(180deg);
 }
 .front {
     z-index: 1;
