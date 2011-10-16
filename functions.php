@@ -465,6 +465,8 @@ if ( isset( $_GET['get_markdown'] ) ) {
 
 
 
+require('functions/includes.php');
+
 
 
 
