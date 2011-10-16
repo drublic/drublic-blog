@@ -14,8 +14,7 @@ $general_details = array (
 
 function general_details () {
   global $general_details;
-  bo_styles();
-  new_meta_boxes( false, $general_details);
+  new_options( 'posts', false, $general_details);
 }
 
 function create_meta_box () {
@@ -23,3 +22,10 @@ function create_meta_box () {
 		add_meta_box( 'general_details', __('General Information', $theme_code), 'general_details', 'post', 'normal', 'high' );
 	}
 }
+
+add_action('admin_menu', 'create_meta_box');
+
+
+
+
+
