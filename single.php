@@ -31,6 +31,10 @@ get_header(); ?>
 		</header>
     
     
+    <?php if ( get_post_meta( get_the_ID(), 'posts-header', true ) != '' ) : ?>
+      <?php print get_post_meta( get_the_ID(), 'posts-header', true ); ?>
+    <?php endif; ?>
+    
     <?php if ( get_the_post_thumbnail() != "" ) : ?>
       <figure class="aligncenter">
         <?php the_post_thumbnail( 'medium' ); ?>

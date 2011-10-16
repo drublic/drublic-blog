@@ -3,10 +3,10 @@
 $general_details = array (
 		
 		array(
-		  'name'        => 'some-name',
+		  'name'        => 'posts-header',
 			'std'         => '',
-			'type'        => 'text',
-			'title'       => __('Some Text:', $theme_code),
+			'type'        => 'textarea',
+			'title'       => __('Header HTML:', $theme_code),
 			'description' => '')
 			
   );
