@@ -4,12 +4,12 @@
     transform: rotateY($deg);
 }
 
-@mixin transition($duration) {
-  -webkit-transition: all $duration ease-out;
-     -moz-transition: all $duration ease-out;
-      -ms-transition: all $duration ease-out;
-       -o-transition: all $duration ease-out;
-          transition: all $duration ease-out;
+@mixin transition($prop, $duration, $effect) {
+  -webkit-transition: $prop $duration $effect;
+     -moz-transition: $prop $duration $effect;
+      -ms-transition: $prop $duration $effect;
+       -o-transition: $prop $duration $effect;
+          transition: $prop $duration $effect;
   -webkit-backface-visibility: hidden;
 }
 
@@ -259,10 +259,10 @@ textarea,
 .content-widget .close,
 .wp_syntax,
 .js img {
-  @include transition(all 0.3s ease-out);
+  @include transition(all, 0.3s, ease-out);
 }
 .content-widget {
-  @include transition(all 0.1s ease-out);
+  @include transition(all, 0.1s, ease-out);
 }
 
 
@@ -635,7 +635,7 @@ article .categories { float: right; padding-top: 4px; }
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
-  @include transition(all 0.5s ease-out);
+  @include transition(all, 0.5s, ease-out);
 }
 
 /* Labels */

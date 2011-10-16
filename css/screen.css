@@ -316,19 +316,19 @@ textarea,
 .content-widget .close,
 .wp_syntax,
 .js img {
-  -webkit-transition: all all 0.3s ease-out ease-out;
-  -moz-transition: all all 0.3s ease-out ease-out;
-  -ms-transition: all all 0.3s ease-out ease-out;
-  -o-transition: all all 0.3s ease-out ease-out;
-  transition: all all 0.3s ease-out ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   -webkit-backface-visibility: hidden; }
 
 .content-widget {
-  -webkit-transition: all all 0.1s ease-out ease-out;
-  -moz-transition: all all 0.1s ease-out ease-out;
-  -ms-transition: all all 0.1s ease-out ease-out;
-  -o-transition: all all 0.1s ease-out ease-out;
-  transition: all all 0.1s ease-out ease-out;
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -ms-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
   -webkit-backface-visibility: hidden; }
 
 /* Overlay */
@@ -909,11 +909,11 @@ article .categories {
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -webkit-transition: all all 0.5s ease-out ease-out;
-  -moz-transition: all all 0.5s ease-out ease-out;
-  -ms-transition: all all 0.5s ease-out ease-out;
-  -o-transition: all all 0.5s ease-out ease-out;
-  transition: all all 0.5s ease-out ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
   -webkit-backface-visibility: hidden; }
 
 /* Labels */
