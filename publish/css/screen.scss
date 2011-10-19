@@ -13,21 +13,6 @@
   -webkit-backface-visibility: hidden;
 }
 
-
-@mixin shadow($vals) {
-  -webkit-box-shadow: $vals;
-     -moz-box-shadow: $vals;
-          box-shadow: $vals;
-}
-
-@mixin corners($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-          border-radius: $radius;
-  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
-}
-
-
 @mixin linear-gradient($col1, $col2) {
   background: $col1;
   background-image: -webkit-gradient(linear, left top, left bottom, from($col1), to($col2));
@@ -120,7 +105,7 @@ code {
 
 .wp-caption {
   background: #f5f5f5; border: 1px solid #ddd; padding: 5px;
-  @include corners(5px);
+  border-radius: 5px;
 }
 
 .wp-caption-text { font-size: 0.9em; text-align: center; margin: 5px 0; line-height: 1; }
@@ -149,8 +134,8 @@ textarea {
   border-bottom-color: #aaa;
   background: rgba(255,255,255,.2);
   color: #444;
-  @include shadow(0 0 10px #ddd);
-  @include corners(5px);
+  box-shadow: 0 0 10px #ddd;
+  border-radius: 5px;
 }
 
 input[type="text"]:focus,
@@ -162,7 +147,7 @@ input[type="search"]:focus,
 textarea:focus {
   border-color: #aaa;
   background: rgba(255,255,255,1);
-  @include shadow(0 0 10px #aaa);
+  box-shadow: 0 0 10px #aaa;
 
 }
 textarea { height: 150px; resize: vertical; }
@@ -196,8 +181,8 @@ fieldset + fieldset input[type="search"] {
   line-height: 1;
   cursor: pointer; overflow: visible;
   
-  @include corners(5px);
-  @include shadow( (inset 0 0 1px 1px rgba(255,255,255,.8), 0 1px 0 rgba(0,0,0,.3)) );
+  border-radius: 5px;
+  box-shadow: inset 0 0 1px 1px rgba(255,255,255,.8), 0 1px 0 rgba(0,0,0,.3);
 }
 
 .button:hover, input[type="submit"]:hover {
@@ -206,7 +191,7 @@ fieldset + fieldset input[type="search"] {
 }
 
 .button:active, input[type="submit"]:active, input[type="submit"]:focus {
-  @include shadow(inset 0 0 4px 2px rgba(0,0,0,.3));
+  box-shadow: inset 0 0 4px 2px rgba(0,0,0,.3);
 }
 .button:focus { outline: 0; background: #fafafa; }    
 
@@ -217,8 +202,8 @@ fieldset + fieldset input[type="search"] {
   width: 1em;
   padding: 0 .2em; margin: 0 1em 0 -1em;
   text-align: center; font-size: 1.5em;
-  @include corners(.15em 0 0 .15em);
-  @include shadow( (1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5)) );
+  border-radius: .15em 0 0 .15em;
+  box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
 }
 
 /* Hexadecimal entities for icons */
@@ -239,7 +224,7 @@ fieldset + fieldset input[type="search"] {
   border-color: #aaa;
   cursor: default;
   color: #aaa; text-shadow: none;
-  @include shadow(none);
+  box-shadow: none;
 }
 
 
@@ -311,8 +296,8 @@ article .comment-count {
   background: #f1efe8;
   font-size: 1.1em; text-shadow: 1px 1px 1px #fff;
   opacity: 0.5;
-  @include shadow(0px 1px 2px #c9c8c0);
-  @include corners(0 0 5px 5px);
+  box-shadow: 0px 1px 2px #c9c8c0;
+  border-radius: 0 0 5px 5px
 }
 article:hover .comment-count { opacity: 1; border-bottom-color: #c9c8c0; }
 article header h1 { line-height: 1.2; margin-bottom: 20px; }
@@ -370,11 +355,11 @@ article .categories { float: right; padding-top: 4px; }
 .form-submit { text-align: right; margin: 20px 0; }
 
 #author {
-  @include corners(5px 5px 0 0);
+  border-radius: 5px 5px 0 0;
 }
 
 #email {
-  @include corners(0);
+  border-radius: 0;
 }
 
 .required { position: absolute; right: -9px; }
@@ -395,7 +380,7 @@ article .categories { float: right; padding-top: 4px; }
 
 .avatar {
   position: absolute; top: 0; left: -50px;
-  @include corners(33px);
+  border-radius: 33px;
 }
 
 .comment .author { font-size: 1.3em; }
@@ -419,7 +404,7 @@ article .categories { float: right; padding-top: 4px; }
   margin: 20px 0;
   font-size: .85em;
   line-height: 1.6;
-  @include corners(5px);
+  border-radius: 5px;
 }
 .wp_syntax:hover { background: #fff; }
 .wp_syntax .raw {
@@ -453,7 +438,7 @@ article .categories { float: right; padding-top: 4px; }
   position: relative;
   background: url(../img/bg-dark.png);
   border-bottom: 1px solid #b2b0a4; margin-bottom: 50px;
-  @include shadow(0 0 2px #b2b0a4);
+  box-shadow: 0 0 2px #b2b0a4;
 }
 #inner-header { position: relative; width: 940px; margin: 0 auto; padding: 0 10px; }
 
@@ -480,9 +465,9 @@ article .categories { float: right; padding-top: 4px; }
   border: 1px solid #000;
   color: #ddd;
   opacity: 0;
-  @include corners(5px);
+  border-radius: 5px;
   -webkit-backface-visibility: hidden;
-  @include shadow(0 0 10px #000);
+  box-shadow: 0 0 10px #000;
      -moz-transform: scale(0);
        -o-transform: scale(0);
   -webkit-transform: scale(0);
@@ -493,7 +478,7 @@ article .categories { float: right; padding-top: 4px; }
   display: block; content: '\0020';
   position: absolute; top: 0; left: 0;
   width: 100%; height: 50px;
-  @include corners(5px);
+  border-radius: 5px;
   border-top: 1px solid #aaa;
   @include linear-gradient(rgba(100,100,100,1), rgba(100,100,100,0));
 }
@@ -505,8 +490,8 @@ article .categories { float: right; padding-top: 4px; }
   color: #333; font-size: 1.1em; font-weight: bold; line-height: 0.6;
   text-align: center; text-shadow: 0 -1px 0 #fff;
   opacity: .7;
-  @include corners(5px);
-  @include shadow(0 1px 1px rgba(0,0,0,.4));
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.4);
 }
 .content-widget .close:hover { opacity: 1; }
 
@@ -530,18 +515,18 @@ article .categories { float: right; padding-top: 4px; }
 #search { top: 60px; right: -75px; }
 #search input {  
   border: 1px solid #000; color: #888; background: rgba(29,28,24,.2); text-align: center;
-  @include shadow(none);
+  box-shadow: none;
   width: 200px;
 }
 #search fieldset:first-child input { 
-  @include corners(5px 5px 0 0);
+  border-radius: 5px 5px 0 0;
 }
 #search fieldset + fieldset input { border-top-color: #444; }
 
 #search input[type="submit"] {
   display: inline-block;
   padding: 10px; margin: 0;
-  @include corners(0 0 5px 5px);
+  border-radius: 0 0 5px 5px;
   text-shadow: 0 1px 1px #000;
   @include linear-gradient(rgba(20,20,20,0), rgba(20,20,20,.8));
 }
@@ -597,7 +582,7 @@ article .categories { float: right; padding-top: 4px; }
   margin: -50px -500px; padding: 10px 0;
   background: rgba(0,0,0,.5);
   font-size: 3em; text-align: center; color: #fff;
-  @include corners(15px);
+  border-radius: 15px;
 }
 
 
@@ -668,8 +653,8 @@ article .categories { float: right; padding-top: 4px; }
   width: 500px;
   margin: 0 -270px; border: 1px solid #ddd; padding: 0 20px 10px;
   background: url(../img/bg.png);
-  @include shadow( (0 0 100px rgba(0,0,0,.5), 0 0 30px rgba(0,0,0,.5)) );
-  @include corners(5px);
+  box-shadow: 0 0 100px rgba(0,0,0,.5), 0 0 30px rgba(0,0,0,.5);
+  border-radius: 5px;
 }
 #markdown .close {
   float: right;
