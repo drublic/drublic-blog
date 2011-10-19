@@ -152,26 +152,11 @@ add_filter('gallery_style', 'remove_gallery_style');
  */
 function new_excerpt_more($more) {
        global $post;
-	return '<p><a title="Link zu '.$post->post_title.'" class="more-link" href="'. get_permalink($post->ID) . '">' . 'Lesen Sie mehr' . '</a></p>';
+	return '<p><a title="' . $option['linkto'] . $post->post_title.'" class="more-link" href="'. get_permalink($post->ID) . '">' . $option['readmore'] . '</a></p>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
 
-
-
-// Shortcode [talks year="value"]
-function talks_func( $atts ) {
-  global $post_query_talk;
-  $post_query_talk = 'post_type=talk&talk_category=' . $atts['year'];
-  
-}
-add_shortcode( 'talks', 'talks_func' );
-
-
-
-
-
-add_filter( 'show_admin_bar', '__return_false' );
 
 remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wlwmanifest_link');
