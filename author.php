@@ -3,8 +3,8 @@
  * The template for displaying Author Archive pages.
  *
  * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
+ * @subpackage drublic-blog
+ * @since drublic-blog 1.0
  */
 
 get_header(); ?>
@@ -16,25 +16,16 @@ if ( get_the_author_meta( 'description' ) ) : ?>
 					<div id="entry-author-info">
 						<div id="author-avatar">
 							<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'twentyten_author_bio_avatar_size', 60 ) ); ?>
-						</div><!-- #author-avatar -->
+						</div>
 						<div id="author-description">
 							<h2><?php printf( __( 'About %s', 'twentyten' ), get_the_author() ); ?></h2>
 							<?php the_author_meta( 'description' ); ?>
-						</div><!-- #author-description	-->
-					</div><!-- #entry-author-info -->
+						</div>
+					</div>
 <?php endif; ?>
 
-<?php
-	/* Since we called the_post() above, we need to
-	 * rewind the loop back to the beginning that way
-	 * we can run the loop properly, in full.
-	 */
-	rewind_posts();
-
-	/* Run the loop for the author archive page to output the authors posts
-	 * If you want to overload this in a child theme then include a file
-	 * called loop-author.php and that will be used instead.
-	 */
-	 get_template_part( 'loop', 'author' );
-?>
+  <?php
+    rewind_posts();
+    get_template_part( 'loop', 'author' );
+  ?>
 <?php get_footer(); ?>

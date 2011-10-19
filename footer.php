@@ -2,12 +2,9 @@
 /**
  * The template for displaying the footer.
  *
- * Contains the closing of the id=main div and all content
- * after.  Calls sidebar-footer.php for bottom widgets.
- *
  * @package WordPress
- * @subpackage drublic
- * @since drublic 1.0
+ * @subpackage drublic-blog
+ * @since drublic-blog 1.0
  */
 ?>
     </div>
@@ -15,12 +12,7 @@
     
     <footer id="footer">
       <div class="inner clearfix">
-        <?php
-        	/* A sidebar in the footer? Yep. You can can customize
-        	 * your footer with four columns of widgets.
-        	 */
-        	get_sidebar( 'footer' );
-        ?>
+        <?php get_sidebar( 'footer' ); ?>
       </div>
     </footer>
   </div>

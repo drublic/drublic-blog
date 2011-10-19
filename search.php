@@ -3,8 +3,8 @@
  * The template for displaying Search Results pages.
  *
  * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
+ * @subpackage drublic-blog
+ * @since drublic-blog 1.0
  */
 
 get_header(); ?>
@@ -22,8 +22,8 @@ get_header(); ?>
     <p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some other keyword.', 'twentyten' ); ?></p>
 		<?php get_search_form(); ?>
 		
-		<p class="readmore"></p>
   </article>
+  <hr>
 
 <?php endif; ?>
 

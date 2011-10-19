@@ -3,8 +3,8 @@
  * The Template for displaying all single posts.
  *
  * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
+ * @subpackage drublic-blog
+ * @since drublic-blog 1.0
  */
 
 get_header(); ?>
