@@ -709,8 +709,10 @@ article .categories {
 
 /* @group Social Media Links */
 .social-media-links {
+  float: right;
+  width: 150px;
   list-style: none;
-  margin: 7px 0; }
+  padding: 10px 0; }
   .social-media-links a {
     display: inline;
     float: left;
