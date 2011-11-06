@@ -15,12 +15,12 @@
 
 @mixin linear-gradient($col1, $col2) {
   background: $col1;
-  background-image: -webkit-gradient(linear, left top, left bottom, from($col1), to($col2));
-  background-image: -webkit-linear-gradient(top, $col1, $col2);
-  background-image:    -moz-linear-gradient(top, $col1, $col2);
-  background-image:     -ms-linear-gradient(top, $col1, $col2);
-  background-image:      -o-linear-gradient(top, $col1, $col2);
-  background-image:         linear-gradient(top, $col1, $col2);
+  background: -webkit-gradient(linear, left top, left bottom, from($col1), to($col2));
+  background: -webkit-linear-gradient(top, $col1, $col2);
+  background:    -moz-linear-gradient(top, $col1, $col2);
+  background:     -ms-linear-gradient(top, $col1, $col2);
+  background:      -o-linear-gradient(top, $col1, $col2);
+  background:         linear-gradient(top, $col1, $col2);
 }
 
 
@@ -466,78 +466,186 @@ article .categories { float: right; padding-top: 4px; }
   color: #ddd;
   opacity: 0;
   border-radius: 5px;
-  -webkit-backface-visibility: hidden;
-  box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 10px rgba(0,0,0,.7);
+
      -moz-transform: scale(0);
        -o-transform: scale(0);
   -webkit-transform: scale(0);
       -ms-transform: scale(0);
           transform: scale(0);
-}
-.content-widget::before {
-  display: block; content: '\0020';
-  position: absolute; top: 0; left: 0;
-  width: 100%; height: 50px;
-  border-radius: 5px;
-  border-top: 1px solid #aaa;
-  @include linear-gradient(rgba(100,100,100,1), rgba(100,100,100,0));
-}
-.content-widget .close {
-  position: absolute; top: 0; z-index: 20;
-  width: 16px; height: 13px;
-  padding: 2px 0 1px; margin: 5px;
-  background: #ddd;
-  color: #333; font-size: 1.1em; font-weight: bold; line-height: 0.6;
-  text-align: center; text-shadow: 0 -1px 0 #fff;
-  opacity: .7;
-  border-radius: 5px;
-  box-shadow: 0 1px 1px rgba(0,0,0,.4);
-}
-.content-widget .close:hover { opacity: 1; }
-
-/* Arrow */
-.content-widget .inner { position: relative; z-index: 10; padding: 12px; }
-.content-widget .inner::before,
-.content-widget .inner::after {
-  display: block; content: '\0020';
-  position: absolute; top: -9px; left: 50%;
-  width: 0; height: 0;
-  border-width: 0 10px 10px 10px;
-  border-style: solid;
-  border-color: #666 transparent;
-  margin-left: -7px;
-}
-.content-widget .inner::before { top: -10px; border-color: #aaa transparent; }
+  -webkit-backface-visibility: hidden;
 
 
+  &:before {
+    content: '\0020';
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 50px;
+    border-radius: 5px;
+    border-top: 1px solid #aaa;
+    @include linear-gradient( rgba(100,100,100,.9), rgba(100,100,100,0));
+  }
+
+  .close {
+    position: absolute; top: 0; z-index: 20;
+    width: 16px;
+    line-height: 16px;
+    margin: 5px;
+    border: 0;
+    background: #ddd;
+    color: #333; 
+    font-size: 1.1em; font-weight: bold;
+    text-align: center;
+    text-shadow: 0 -1px 0 #fff;
+    opacity: .7;
+    border-radius: 50%;
+    box-shadow: 0 1px 1px rgba(0,0,0,.4);
+    
+    &:hover {
+      opacity: 1;
+    }
+  }
+  
+  
+  /* Arrow */
+  .inner {
+    position: relative;
+    z-index: 10;
+    padding: 12px;
+    
+    &:before,
+    &:after {
+      content: '\0020';
+      position: absolute; top: -9px; right: 20px;
+      width: 0; height: 0;
+      border-width: 0 10px 10px 10px;
+      border-style: solid;
+      border-color: #666 transparent;
+      margin-left: -7px;
+    }
+    &:before {
+      top: -10px;
+      border-color: #aaa transparent;
+    }
+  }
 
 
-#search { top: 60px; right: -75px; }
-#search input {  
-  border: 1px solid #000; color: #888; background: rgba(29,28,24,.2); text-align: center;
-  box-shadow: none;
-  width: 200px;
 }
-#search fieldset:first-child input { 
-  border-radius: 5px 5px 0 0;
-}
-#search fieldset + fieldset input { border-top-color: #444; }
 
-#search input[type="submit"] {
-  display: inline-block;
-  padding: 10px; margin: 0;
-  border-radius: 0 0 5px 5px;
-  text-shadow: 0 1px 1px #000;
-  @include linear-gradient(rgba(20,20,20,0), rgba(20,20,20,.8));
-}
-#search input[type="submit"]:focus,
-#search input[type="submit"]:active { background: #000; }
 
-#search label {
-  margin-bottom: 10px; 
-  color: #ddd; line-height: 1;
-  text-shadow: 0 -1px 1px #000; text-align: center;
+
+#search {
+  top: 60px; right: 30px;
+
+  input {  
+    border: 1px solid #000;
+    color: #888;
+    background: rgba(29,28,24,.2);
+    text-align: center;
+    box-shadow: none;
+    width: 200px;
+  }
+
+  fieldset:first-child input { 
+    border-radius: 5px 5px 0 0;
+  }
+  
+  fieldset + fieldset input { border-top-color: #444; }
+  
+  input[type="submit"] {
+    float: left;
+    display: inline;
+    padding: 10px; margin: 0;
+    border-radius: 0 0 5px 5px;
+    text-shadow: 0 1px 1px #000;
+    color: #fff;
+    @include linear-gradient(rgba(20,20,20,0), rgba(20,20,20,.8));
+  
+    &:focus,
+    &:active { background: #000; }
+  
+  }
+  
+  label {
+    margin-bottom: 10px; 
+    color: #ddd; line-height: 1;
+    text-shadow: 0 -1px 1px #000; text-align: center;
+  }
+
+
 }
+
+
+
+
+
+
+
+
+
+/* @group Social Media Links */
+
+.social-media-links {
+  list-style: none;
+  margin: 7px 0;
+
+  a {
+    display: inline; float: left;
+    width: 24px; height: 24px;
+    margin-right: 10px;
+    text-indent: -999em;
+    background: url(../img/sprite.png);
+    opacity: .5;
+    border: 0;
+    
+    &:hover { opacity: 1; }
+  }
+  
+  .twitter a { background-position: -24px 0; }
+  .lastfm a { background-position: -24px -24px; }
+
+}
+
+
+/* @end */
+
+
+
+
+
+
+/* @group Logo */
+
+#logo {
+  display: inline;
+  margin: 0 auto;
+
+  a {
+    display: block;
+    width: 170px;
+    line-height: 170px;
+    background: #b02e00;
+    background: rgba(176,46,0,.7);
+    font-size: 1.6em;
+    color: #fff;
+    border-bottom: 1px solid rgba(150,40,0,.4);
+    border-radius: 50%;
+    margin: 30px auto;
+    box-shadow: -7px -7px 0 7px rgba(160,108,90,.4),
+                7px 0 0 7px rgba(160,108,90,.4),
+                -3px 7px 0 7px rgba(160,108,90,.4),
+                inset 0 -2px 30px rgba(0,0,0,.2);
+    text-shadow: 0 -1px 0 #000;
+    
+    span {
+      float: left;
+      font-size: 2.1em;
+      margin: 0 5px 0 20px;
+    }
+
+  }
+}
+
+/* @end */
 
 
 
