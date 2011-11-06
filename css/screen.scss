@@ -657,27 +657,41 @@ article .categories { float: right; padding-top: 4px; }
 #footer {
   padding: 10px 0 100px; font-size: 0.9em;
   @include linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
+  
+  .inner {
+    width: 960px;
+    margin: 0 auto;
+  }
+  
+  ul {
+    margin: 0 0 20px;
+    list-style: none;
+    border-top: 1px solid #ddd;
+    
+    a,
+    a:visited {
+      display: block;
+      border-bottom: 1px solid #ddd !important;
+      white-space: nowrap;
+      overflow: hidden; text-overflow: ellipsis;
+      text-shadow: 1px 1px 0 #fff;
+      
+      &:hover {
+        background: #fff;
+        border-color: #ddd !important;
+        color: #222;
+        padding-left: 10px;
+      }
+    }
+  }
+
 }
-#footer .inner { width: 960px; margin: 0 auto; }
 
 .col-1, .col-2, .col-3, .col-4 {
   display: inline; float: left;
   margin: 0 10px;
   width: 220px;
 }
-
-
-#footer ul { margin: 0 0 20px; list-style: none; border-top: 1px solid #ddd; }
-#footer ul a,
-#footer ul a:visited {
-  display: block;
-  border-bottom: 1px solid #ddd !important;
-  white-space: nowrap;
-  overflow: hidden; text-overflow: ellipsis;
-  text-shadow: 1px 1px 0 #fff;
-}
-#footer ul a:hover { background: #fff; border-color: #ddd !important; color: #222; padding-left: 10px; }
-
 
 
 
