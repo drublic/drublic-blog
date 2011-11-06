@@ -25,11 +25,8 @@
 
 
 
-
-html { background: url(../img/bg.png); }
-
-
 body {
+  background: url(../img/bg.png);
   font: 15px/2 ff-meta-serif-web-pro-1,ff-meta-serif-web-pro-2,serif;
   -webkit-hyphens: auto;
      -moz-hyphens: auto;
@@ -136,20 +133,14 @@ textarea {
   color: #444;
   box-shadow: 0 0 10px #ddd;
   border-radius: 5px;
+  
+  &:focus {
+    border-color: #aaa;
+    background: rgba(255,255,255,1);
+    box-shadow: 0 0 10px #aaa;
+  }
 }
 
-input[type="text"]:focus,
-input[type="url"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-textarea:focus {
-  border-color: #aaa;
-  background: rgba(255,255,255,1);
-  box-shadow: 0 0 10px #aaa;
-
-}
 textarea { height: 150px; resize: vertical; }
 input:focus, textarea:focus { outline: 0; }
 
@@ -301,7 +292,8 @@ article .comment-count {
 }
 article:hover .comment-count { opacity: 1; border-bottom-color: #c9c8c0; }
 article header h1 { line-height: 1.2; margin-bottom: 20px; }
-article header h1 a { border-bottom: 0; }
+article header h1 a { color: #333; border-bottom: 0; }
+article header h1 a:visited { color: #333; }
 article time, article .categories, article .author { font-size: 0.9em; color: #888; }
 article .categories { float: right; padding-top: 4px; }
 
