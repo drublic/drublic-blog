@@ -429,24 +429,43 @@ article .categories { float: right; padding-top: 4px; }
 #header {
   position: relative;
   background: url(../img/bg-dark.png);
-  border-bottom: 1px solid #b2b0a4; margin-bottom: 50px;
-  box-shadow: 0 0 2px #b2b0a4;
+  border-bottom: 1px solid #b2b0a4;
+  padding: 5px 50px;
+  box-shadow: 0 0 5px #b2b0a4;
+  
+  &:before, &:after {
+    display: table;
+    content: '';
+  }
+  &:after {
+    clear: both;
+  }
+
 }
-#inner-header { position: relative; width: 940px; margin: 0 auto; padding: 0 10px; }
-
-#logo { float: left; font-size: 1.5em; font-family: "ff-netto-web-1", "ff-netto-web-2", sans-serif; }
-#logo a { border-bottom: 0; }
 
 
-#misc { float: right; margin: 10px 15px 5px; list-style: none; }
-#misc li { display: inline; }
-#misc a { float: left; width: 32px; height: 32px; margin-left: 1em; text-indent: -999em; opacity: .5; border-bottom: 0; }
-#misc .active a,
-#misc a:hover { opacity: 1; }
-#misc .search-icon a { background: url(../img/search.png) no-repeat; }
+#misc {
+  float: right;
+  list-style: none;
 
+  li { display: inline; }
+  
+  a {
+    float: left;
+    width: 32px; height: 32px;
+    margin-left: 1em;
+    text-indent: -999em;
+    opacity: .5;
+    border-bottom: 0;
+  }
+  
+  .active a,
+  a:hover { opacity: 1; }
 
-
+  .search-icon a {
+    background: url(../img/search.png) no-repeat;
+  }
+}
 
 
 
@@ -609,10 +628,15 @@ article .categories { float: right; padding-top: 4px; }
 /* @group Logo */
 
 #logo {
-  display: inline;
-  margin: 0 auto;
+  position: relative;
+  margin: 0 auto 49px;
+  border-bottom: 1px solid #b2b0a4;
+  width: 960px;
+  padding: 20px 0;
+  
 
   a {
+    position: relative;
     display: block;
     width: 170px;
     line-height: 170px;
@@ -626,15 +650,60 @@ article .categories { float: right; padding-top: 4px; }
     box-shadow: -7px -7px 0 7px rgba(160,108,90,.4),
                 7px 0 0 7px rgba(160,108,90,.4),
                 -3px 7px 0 7px rgba(160,108,90,.4),
-                inset 0 -2px 30px rgba(0,0,0,.2);
+                inset 0 -5px 30px rgba(0,0,0,.2),
+                0 0 40px rgba(0,0,0,.7);
     text-shadow: 0 -1px 0 #000;
     
     span {
       float: left;
       font-size: 2.1em;
-      margin: 0 5px 0 20px;
+      margin: 0 10px 0 30px;
+    }
+    
+    &:before, &:after {
+      content: '';
+      position: absolute; top: 58px; left: 59px;
+      background: #fff;
+      width: 75px;
+      height: 1px;
+      border-top: 1px solid rgba(0,0,0,.7);
+    }
+    
+    &:after {
+      top: 103px;
     }
 
+  }
+  
+  .before, .after {
+    position: absolute; top: 130px; left: 100px;
+    width: 230px; height: 0;
+    background: #b15738;
+    border-top: 2px dashed #fff;
+    box-shadow: 0 0 0 7px #b15738,
+                0 0 10px 7px rgba(0,0,0,.2),
+                0 15px 0 2px #ddd,
+                0 -15px 0 2px #ddd,
+                0 17px 0 1px #fff,
+                0 -17px 0 1px #fff;
+    
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      top: -9px; left: -14px;
+      border-width: 8px 0 8px 8px;
+      border-style: solid;
+      border-color: #b15738 transparent;
+    }
+
+    &:after {
+      left: auto; right: -14px;
+      border-width: 8px 8px 8px 0;
+    }
+  }
+  
+  .after {
+    left: auto; right: 100px;
   }
 }
 

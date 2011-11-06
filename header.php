@@ -117,7 +117,17 @@
             </form>
           </div>
         </div>
+
+      </div>
+      
+
+      <!-- Logo -->
+      <div id="logo">
+        <span class="before"></span>
+        <a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span>{</span> drublic</a>
+        <span class="after"></span>
         
+        <div class="visuallyhidden"><?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?></div>
       </div>
     </header>
     
