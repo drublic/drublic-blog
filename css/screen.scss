@@ -616,35 +616,6 @@ article .categories { float: right; padding-top: 4px; }
 
 /* @group Logo */
 
-#logo {
-  display: inline;
-  margin: 0 auto;
-
-  a {
-    display: block;
-    width: 170px;
-    line-height: 170px;
-    background: #b02e00;
-    background: rgba(176,46,0,.7);
-    font-size: 1.6em;
-    color: #fff;
-    border-bottom: 1px solid rgba(150,40,0,.4);
-    border-radius: 50%;
-    margin: 30px auto;
-    box-shadow: -7px -7px 0 7px rgba(160,108,90,.4),
-                7px 0 0 7px rgba(160,108,90,.4),
-                -3px 7px 0 7px rgba(160,108,90,.4),
-                inset 0 -2px 30px rgba(0,0,0,.2);
-    text-shadow: 0 -1px 0 #000;
-    
-    span {
-      float: left;
-      font-size: 2.1em;
-      margin: 0 5px 0 20px;
-    }
-
-  }
-}
 
 /* @end */
 
