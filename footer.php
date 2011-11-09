@@ -36,7 +36,7 @@
 
   <!-- Piwik --> 
   <script>
-    var pkBaseURL = (("https:" == document.location.protocol) ? "https://drublic.de/piwik/" : "http://drublic.de/piwik/");
+    var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.drublic.de/" : "http://piwik.drublic.de/");
     document.write('<script src="' + pkBaseURL + 'piwik.js"><\/script>');
   </script><script>
     try {
@@ -44,7 +44,7 @@
       piwikTracker.trackPageView();
       piwikTracker.enableLinkTracking();
     } catch( err ) {}
-  </script><noscript><p><img src="http://drublic.de/piwik/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+  </script><noscript><p><img src="http://piwik.drublic.de/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
   <!-- End Piwik Tracking Code -->
 
 </body>
