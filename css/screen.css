@@ -820,7 +820,6 @@ article .categories {
 
 /* Image-Wrapper */
 .animate {
-  -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-transition: all 0.5s ease-out;

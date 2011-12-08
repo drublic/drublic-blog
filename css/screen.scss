@@ -698,7 +698,6 @@ article .categories { float: right; padding-top: 4px; }
 
 /* Image-Wrapper */
 .animate {
-  -webkit-transform-style: preserve-3d;
      -moz-transform-style: preserve-3d;
           transform-style: preserve-3d;
   @include transition(all, .5s, ease-out);
