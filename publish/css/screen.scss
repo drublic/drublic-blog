@@ -1,7 +1,7 @@
 @mixin rotate($deg) {
     -webkit-transform: rotateY($deg);
-    -moz-transform: rotateY($deg);
-    transform: rotateY($deg);
+       -moz-transform: rotateY($deg);
+            transform: rotateY($deg);
 }
 
 @mixin transition($prop, $duration, $effect) {
@@ -10,7 +10,6 @@
       -ms-transition: $prop $duration $effect;
        -o-transition: $prop $duration $effect;
           transition: $prop $duration $effect;
-  -webkit-backface-visibility: hidden;
 }
 
 @mixin linear-gradient($col1, $col2) {
@@ -684,8 +683,8 @@ article .categories { float: right; padding-top: 4px; }
     width: 220px; height: 220px;
     background-color: #aaa;
     -webkit-perspective: 1000;
-    -moz-perspective: 1000;
-    perspective: 1000;
+       -moz-perspective: 1000;
+            perspective: 1000;
     margin-bottom: 15px;
 }
 
@@ -699,25 +698,25 @@ article .categories { float: right; padding-top: 4px; }
 
 /* Image-Wrapper */
 .animate {
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-  @include transition(all, 0.5s, ease-out);
+     -moz-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  @include transition(all, .5s, ease-out);
 }
 
 /* Labels */
-.animate label {
-    position: absolute; top: 0; left: 0; z-index: 2;
+.animate-wrap label {
+    position: absolute; top: 0; left: 0;
     -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    backface-visibility: hidden;
+       -moz-backface-visibility: hidden;
+            backface-visibility: hidden;
 }
 
-.back {
+.animate-wrap .back {
   @include rotate(180deg);
+  z-index: 10;
 }
-.front {
-  z-index: 1;
+.animate-wrap .front {
+  z-index: 100;
 }
 
 
@@ -759,3 +758,4 @@ article .categories { float: right; padding-top: 4px; }
 
 
 
+  
