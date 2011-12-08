@@ -288,16 +288,14 @@ textarea,
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  -webkit-backface-visibility: hidden; }
+  transition: all 0.3s ease-out; }
 
 .content-widget {
   -webkit-transition: all 0.1s ease-out;
   -moz-transition: all 0.1s ease-out;
   -ms-transition: all 0.1s ease-out;
   -o-transition: all 0.1s ease-out;
-  transition: all 0.1s ease-out;
-  -webkit-backface-visibility: hidden; }
+  transition: all 0.1s ease-out; }
 
 /* Overlay */
 #overlay {
@@ -829,26 +827,25 @@ article .categories {
   -moz-transition: all 0.5s ease-out;
   -ms-transition: all 0.5s ease-out;
   -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-  -webkit-backface-visibility: hidden; }
+  transition: all 0.5s ease-out; }
 
 /* Labels */
-.animate label {
+.animate-wrap label {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   backface-visibility: hidden; }
 
-.back {
+.animate-wrap .back {
   -webkit-transform: rotateY(180deg);
   -moz-transform: rotateY(180deg);
-  transform: rotateY(180deg); }
+  transform: rotateY(180deg);
+  z-index: 10; }
 
-.front {
-  z-index: 1; }
+.animate-wrap .front {
+  z-index: 100; }
 
 /* 404-Page */
 .error404 {
