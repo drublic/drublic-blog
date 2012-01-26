@@ -19,11 +19,7 @@
 
 
   <!-- JavaScript at the bottom for fast page loading -->
-  
-  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
   <?php wp_footer(); ?>
-  <script>window.jQuery || document.write('<script src="<?php bloginfo( 'template_url' ); ?>/js/libs/jquery-1.6.4.min.js"><\/script>')</script>
-
 
   <!-- scripts concatenated and minified via ant build script-->
   <script defer src="<?php bloginfo( 'template_url' ); ?>/js/plugins.js"></script>
