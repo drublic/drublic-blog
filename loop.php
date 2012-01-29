@@ -51,7 +51,7 @@
         <a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_post_thumbnail( 'thumbnail' ); ?></a>
       </figure>
     <?php endif; ?>
-    <?php the_excerpt(); ?>
+    <?php the_content(); ?>
 
   </article>
   
