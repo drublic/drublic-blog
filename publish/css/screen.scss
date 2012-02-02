@@ -288,7 +288,13 @@ hr,
   margin-top: -50px; border-top: 1px solid #b2b0a4;
 }
 
-article header { position: relative; margin: 30px -90px; border-bottom: 1px solid #ddd; padding: 0 90px 10px; }
+article header {
+  position: relative;
+  margin: 30px -90px;
+  border-bottom: 1px solid #ddd;
+  padding: 0 90px 10px;
+  overflow: hidden;
+}
 article .comment-count {
   position: absolute; top: -49px; right: 10px;
   border: 1px solid #c9c8c0; border-top: 0; padding: 20px 18px 3px;
