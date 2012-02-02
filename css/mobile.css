@@ -1,6 +1,5 @@
 /* iPad */
-@media only screen and (max-width: 768px),
-only screen and (max-device-width: 768px) {
+@media screen and (min-width: 480px) and (max-width: 980px) {
   
   
   
@@ -10,12 +9,20 @@ only screen and (max-device-width: 768px) {
 
 
   /* Header */
-  #inner-header { width: 718px; padding: 0 20px; }
+  #inner-header {
+    width: 100%;
+    max-width: 900px;
+    padding: 0 20px;
+    -moz-box-sizing: border-box; box-sizing: border-box;
+  }
   
   
   
   /* Main */
-  #main { width: 748px; }
+  #main {
+    width: 100%;
+    max-width: 900px;
+  }
   
   
   article { margin: 30px 20px; }
