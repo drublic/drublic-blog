@@ -171,7 +171,7 @@ if (!isMobile) {
           'class' : 'raw',
           'title' : 'Copy raw code',
           'href' : '#/copy-snippet',
-          'html' : 'Copy raw code',
+          'html' : 'Copy raw code'
         });
       
       $raw.appendTo( $( this ) );
