@@ -293,7 +293,11 @@ article header {
   margin: 30px -90px;
   border-bottom: 1px solid #ddd;
   padding: 0 90px 10px;
-  overflow: hidden;
+}
+article header:after {
+  content: '';
+  display: table;
+  clear: both;
 }
 article .comment-count {
   position: absolute; top: -49px; right: 10px;
