@@ -163,52 +163,6 @@ var hash = '';
 
 
 
-/* Syntax Highlighter */
-if (!isMobile) {
-  $( '.wp_syntax' ).each( function() {
-    if ( $( this ).find( '.raw' ).size() < 1 ) {
-      var $raw = $( '<a />', {
-          'class' : 'raw',
-          'title' : 'Copy raw code',
-          'href' : '#/copy-snippet',
-          'html' : 'Copy raw code'
-        });
-      
-      $raw.appendTo( $( this ) );
-      
-      // Copy to clipboard
-      var html = $( this ).find( 'pre' ).html().split( /<\/span>/ig ),
-          re = /<span(.*)>(.*)/ig;
-  
-      for ( i = 0; i < html.length; i++ ) {
-        html[i] = html[i].replace( re, '$2' );
-      }
-      
-      html = html.join( '' ).replace(/&gt;/ig, '>').replace(/&lt;/ig, '<');
-      
-      var clip = new ZeroClipboard.Client();
-      clip.glue( $raw[0] );
-      clip.setText( html );
-      $( clip.div ).attr( 'title', 'Copy to Clipboard' );
-      
-      // After copy is completed
-      clip.addEventListener( 'complete', function( client, text ) {
-        if ( $( '#copied-notice' ).size() > 0 ) {
-          $( '#copied-notice' ).remove();
-        }
-        $( '<div />', {
-          'id' : 'copied-notice',
-          'html' : 'The snippet was copied to your clipboard.'
-        }).appendTo( 'body' ).fadeIn( 200, function() {
-          $( this ).delay( 1000 ).fadeOut();
-        });
-      });
-  
-    }
-  });
-}
-
-
 
 // Submit a comment
 $( '#commentform' ).submit( function() {
