@@ -26,7 +26,7 @@
 	if ( $paged >= 2 || $page >= 2 )
 		echo ' | ' . sprintf( __( 'Page %s', 'twentyten' ), max( $paged, $page ) );
 
-	?></title> <meta name=viewport content="width=device-width, initial-scale=1.0"> <link rel=profile href="http://gmpg.org/xfn/11"> <link rel=stylesheet href='<?php bloginfo( 'template_url' ); ?>/css/dd8ddf6.css'> <link rel=pingback href="<?php bloginfo( 'pingback_url' ); ?>"> <link rel=alternate type="application/rss+xml" title="@drublic &raquo; Feed" href="http://feeds.feedburner.com/drublic"> <script src="<?php bloginfo( 'template_url' ); ?>/js/libs/modernizr.custom.65404.js"></script> <script src="http://use.typekit.com/nls7qda.js"></script> <script>try{Typekit.load()}catch(e){};</script> <?php
+	?></title> <meta name=viewport content="width=device-width, initial-scale=1.0"> <link rel=profile href="http://gmpg.org/xfn/11"> <link rel=stylesheet href='<?php bloginfo( 'template_url' ); ?>/css/4ff0278.css'> <link rel=pingback href="<?php bloginfo( 'pingback_url' ); ?>"> <link rel=alternate type="application/rss+xml" title="@drublic &raquo; Feed" href="http://feeds.feedburner.com/drublic"> <script src="<?php bloginfo( 'template_url' ); ?>/js/libs/modernizr.custom.65404.js"></script> <script src="http://use.typekit.com/nls7qda.js"></script> <script>try{Typekit.load()}catch(e){};</script> <?php
 	if ( is_singular() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
