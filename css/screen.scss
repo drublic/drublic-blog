@@ -197,18 +197,6 @@ fieldset + fieldset input[type="search"] {
   box-shadow: 1px 0 0 rgba(0,0,0,.5), 2px 0 0 rgba(255,255,255,.5);
 }
 
-/* Hexadecimal entities for icons */
-.add:before { content: "\271A"; }
-.edit:before { content: "\270E"; }
-.delete:before { content: "\2718"; }
-.save:before { content: "\2714"; }
-.email:before { content: "\2709"; }
-.like:before { content: "\2764"; }
-._next:before { content: "\279C"; }
-.star:before { content: "\2605"; }
-.spark:before { content: "\2737"; }
-.play:before { content: "\25B6"; }
-
 /* disabled buttons */
 .button[disabled], .button[disabled]:hover, .button.disabled, .button.disabled:hover {
   background: #eee;
