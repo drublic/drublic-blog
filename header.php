@@ -122,12 +122,17 @@
       
 
       <!-- Logo -->
-      <div id="logo">
-        <span class="before"></span>
-        <a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span>{</span> drublic</a>
-        <span class="after"></span>
+      <div id="header-nav">
+        <div id="logo">
+          <a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span>{</span> drublic</a>
+  
+          <div class="visuallyhidden"><?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?></div>
+        </div>
         
-        <div class="visuallyhidden"><?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?></div>
+        <nav id="nav">
+          <div class="visuallyhidden"><a href="#main">Skip to content</a></div>
+          <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+        </nav>
       </div>
     </header>
     
