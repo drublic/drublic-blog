@@ -228,7 +228,6 @@ fieldset + fieldset input[type="search"] {
 
 /* Transitions */
 a,
-article .comment-count,
 input[type="text"],
 input[type="url"],
 input[type="email"],
@@ -288,16 +287,6 @@ hr,
 }
 
 article header { position: relative; margin: 30px 0; border-bottom: 1px solid #ddd; padding-bottom: 1em; }
-article .comment-count {
-  position: absolute; top: -49px; right: 10px;
-  border: 1px solid #c9c8c0; border-top: 0; padding: 20px 18px 3px;
-  background: #f1efe8;
-  font-size: 1.1em; text-shadow: 1px 1px 1px #fff;
-  opacity: 0.5;
-  box-shadow: 0px 1px 2px #c9c8c0;
-  border-radius: 0 0 5px 5px
-}
-article:hover .comment-count { opacity: 1; border-bottom-color: #c9c8c0; }
 article header h1 {
   line-height: 1.2;
   margin-bottom: 20px;
@@ -317,7 +306,7 @@ article .categories { float: right; padding-top: 4px; }
   text-align: center;
   padding: 15px 0 5px;
   border-top: 1px solid #c9c8c0; border-bottom: 1px solid #eee;
-  margin: 50px -90px 10px;
+  margin: 50px 0 10px;
 }
 .tags,
 .instapaper { text-align: center; }
@@ -346,7 +335,7 @@ article .categories { float: right; padding-top: 4px; }
 
 
 /* Comments */
-#comments { margin: 100px 170px 30px; padding-bottom: 20px; }
+#comments { margin: 100px 0 30px; padding-bottom: 20px; }
 #comments + hr { border-top-color: #d9d8d2; margin-top: -10px; }
 #comments .children { margin-left: 30px; }
 
@@ -419,14 +408,11 @@ article .categories { float: right; padding-top: 4px; }
 
 
 /* Navigation */
-#post-nav { margin: 10px 10px 50px; }
+#post-nav { margin: 10px 0 50px; }
 #post-nav:after { margin-top: 10px; border-bottom-color: #b9b8ae; }
 
 #post-nav .prev { float: left; }
 #post-nav .next { float: right; }
-
-
-#post-nav.nav-loop { margin-top: -38px; }
 
 
 
