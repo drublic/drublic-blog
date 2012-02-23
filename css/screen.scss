@@ -358,6 +358,11 @@ article .categories { float: right; padding-top: 4px; }
 
 #respond fieldset { margin-bottom: 2px; }
 #respond label { position: relative; float: left; display: inline; width: 140px; margin: 2px 20px 0 0; }
+#respond .subscribe-to-comments label {
+  float: none;
+  display: inline-block;
+  width: auto;
+}
 
 #respond textarea { width: 599px; }
 
