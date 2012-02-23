@@ -72,7 +72,7 @@ a {
   border-bottom: 1px dotted #aaa;
   text-decoration: none;
   
-  &:visted {
+  &:visited {
     color: #666;
   }
   
@@ -435,11 +435,9 @@ article .categories { float: right; padding-top: 4px; }
 /* Header */
 #header {
   position: relative;
-  background: #e8e8e4;
+  background: #e9e8e4;
   margin-top: .5em;
-  border: 1px solid #bab8ad;
-  border-width: 1px 0;
-  padding: .5em 3em;
+  padding: 0 3em;
   
   &:before, &:after {
     display: table;
@@ -448,52 +446,150 @@ article .categories { float: right; padding-top: 4px; }
   &:after {
     clear: both;
   }
+
+  .inner {
+    max-width: 45em;
+    margin: 0 auto;
+    
+    &:before, &:after {
+      display: table;
+      content: '';
+    }
+    &:after {
+      clear: both;
+    }
+  }
 }
 
-#header-nav {
-  width: 45em;
-  margin: 0 auto;
+// @group Social Media Links/
+.social-media-links {
+  list-style: none;
+  margin-left: 0;
+
+  a {
+    position: relative;
+    display: inline;
+    float: left;
+    width: 32px;
+    height: 32px;
+    padding: .45em .6em;
+    text-indent: -999em;
+    border-right: 1px solid #fff;
+    border-bottom: 0;
+    background: #d1d0c9;
+    
+    &:after {
+      position: absolute;
+      top: .55em;
+      left: .6em;
+      content: '';
+      width: 32px; height: 32px;
+      background: url(../img/github_alt.png);
+    }
+
+    &:hover {
+      background-color: #cac8bf;
+    }
+  }
+  
+  .twitter a:after {
+    background: url(../img/twitter.png);
+  }
+  .lastfm a:after {
+    background: url(../img/youtube.png);
+  }
+  .rss a:after {
+    background: url(../img/facebook.png);
+  }
+  
+  li:first-child a {
+    border-left: 1px solid #fff;
+  }
+
 }
 
 
-/* @group Logo */
-
+// Logo
 #logo {
   float: left;
   a {
     display: block;
-    border: none;
-    padding: .7em 1.5em;
-    font-size: 1.5em;
-    background: #ddd;
+    border: 1px solid #fff;
+    border-width: 0 1px;
+    padding: .5em 1.5em;
+    background: #cac8bf;
+    color: #000;
+    font-weight: bold;
+    
+    &:visited {
+      color: #000;
+    }
+    
+    &:hover {
+      color: #000;
+    }
   }
 }
 
-/* @end */
-
-
-
-
-#misc {
+// Main navigation
+#nav {
   float: right;
-  list-style: none;
-
-  li { display: inline; }
+  overflow: hidden;
   
-  a {
+  li {
     float: left;
-    width: 32px; height: 32px;
-    margin-left: 1em;
-    text-indent: -999em;
-    opacity: .5;
+  }
+
+  a {
+    display: block;
+    background: #d1d0c9;
+    padding: .5em 1.5em;
+    border-right: 1px solid #fff;
     border-bottom: 0;
+    color: #4b493f;
+    
+    &:visted {
+      color: #4b493f;
+    }
+    
+    &:hover {
+      background: #cac8bf;
+    }
   }
   
-  .active a,
-  a:hover { opacity: 1; }
+  li:first-child a {
+    border-left: 1px solid #fff;
+  }
+  
+  .current-menu-item a {
+    background: #b2b0a4;
+    color: #000;
+    
+    &:visted {
+      color: #000;
+    }
+  }
+}
 
-  .search-icon a {
-    background: url(../img/search.png) no-repeat;
+
+.search-icon {
+  position: absolute;
+  top: 0;
+  right: 3em;
+  width: 32px; height: 32px;
+  text-indent: -999em;
+  padding: .45em .6em;
+  border: 1px solid #fff;
+  border-width: 0 1px;
+  background: #d1d0c9;
+  
+  &:after {
+    position: absolute;
+    top: .55em;
+    left: .6em;
+    content: '';
+    width: 32px; height: 32px;
+    background: url(../img/search.png);
   }
 }
 
@@ -621,34 +717,6 @@ article .categories { float: right; padding-top: 4px; }
 
 
 
-
-
-/* @group Social Media Links */
-
-.social-media-links {
-  list-style: none;
-  margin: 7px 0;
-
-  a {
-    display: inline; float: left;
-    width: 24px; height: 24px;
-    margin-right: 10px;
-    text-indent: -999em;
-    background: url(../img/sprite.png);
-    opacity: .5;
-    border: 0;
-    
-    &:hover { opacity: 1; }
-  }
-  
-  .twitter a { background-position: -24px 0; }
-  .lastfm a { background-position: -24px -24px; }
-  .rss a { background-position: 0 -24px; }
-
-}
-
-
-/* @end */
 
 
 

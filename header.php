@@ -99,10 +99,20 @@
           <li class="lastfm"><a href="http://www.lastfm.de/user/MySxWA" target="_blank">LastFM</a></li>
         </ul>
 
-        <ul id="misc">
-          <li class="search-icon"><a href="#/search" title="Try searching&hellip;">Search</a></li>
-        </ul>
+        <div class="inner">
+          <div id="logo">
+            <a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span>{</span> drublic</a>
+    
+            <div class="visuallyhidden"><?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?></div>
+          </div>
+          
+          <nav id="nav">
+            <div class="visuallyhidden"><a href="#main">Skip to content</a></div>
+            <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+          </nav>
+        </div>
 
+        <a href="#/search" title="Try searching&hellip;" class="search-icon">Search</a>
         <div id="search" class="content-widget">
           <div class="inner">
             <form action="<?php bloginfo( 'home' ); ?>/" method="post">
@@ -118,21 +128,6 @@
           </div>
         </div>
 
-      </div>
-      
-
-      <!-- Logo -->
-      <div id="header-nav">
-        <div id="logo">
-          <a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span>{</span> drublic</a>
-  
-          <div class="visuallyhidden"><?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?></div>
-        </div>
-        
-        <nav id="nav">
-          <div class="visuallyhidden"><a href="#main">Skip to content</a></div>
-          <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-        </nav>
       </div>
     </header>
     
