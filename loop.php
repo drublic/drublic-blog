@@ -26,6 +26,7 @@
 
 <?php
   // Start the Loop.
+  $iterator = 0;
   while ( have_posts() ) : the_post();
 ?>
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -46,7 +47,11 @@
         <a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_post_thumbnail( 'thumbnail' ); ?></a>
       </figure>
     <?php endif; ?>
-    <?php the_content(); ?>
+    <?php if ($iterator++ == 0) : ?>
+      <?php the_content(); ?>
+    <?php else : ?>
+      <?php the_excerpt(); ?>
+    <?php endif; ?>
 
   </article>
   
