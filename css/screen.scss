@@ -698,21 +698,6 @@ article .categories { float: right; padding-top: 4px; }
 
 
 
-/* Copied to Clipboard */
-#copied-notice {
-  display: none;
-  position: fixed; top: 50%; left: 50%; z-index: 9999;
-  width: 1000px;
-  margin: -50px -500px; padding: 10px 0;
-  background: rgba(0,0,0,.5);
-  font-size: 3em; text-align: center; color: #fff;
-  border-radius: 15px;
-}
-
-
-
-
-
 
 /* Images */
 .js img { opacity: 0; }
