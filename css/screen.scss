@@ -472,7 +472,7 @@ article .categories { float: right; padding-top: 4px; }
     float: left;
     width: 32px;
     height: 32px;
-    padding: .45em .6em;
+    padding: .6em .8em;
     text-indent: -999em;
     border-right: 1px solid #fff;
     border-bottom: 0;
@@ -480,11 +480,11 @@ article .categories { float: right; padding-top: 4px; }
     
     &:after {
       position: absolute;
-      top: .55em;
-      left: .6em;
+      top: .6em;
+      left: .8em;
       content: '';
       width: 32px; height: 32px;
-      background: url(../img/github_alt.png);
+      background: url(../img/github.png);
     }
 
     &:hover {
@@ -496,10 +496,10 @@ article .categories { float: right; padding-top: 4px; }
     background: url(../img/twitter.png);
   }
   .lastfm a:after {
-    background: url(../img/youtube.png);
+    background: url(../img/lastfm.png);
   }
   .rss a:after {
-    background: url(../img/facebook.png);
+    background: url(../img/rss.png);
   }
   
   li:first-child a {
@@ -516,7 +516,7 @@ article .categories { float: right; padding-top: 4px; }
     display: block;
     border: 1px solid #fff;
     border-width: 0 1px;
-    padding: .5em 1.5em;
+    padding: .7em 1.5em;
     background: #cac8bf;
     color: #000;
     font-weight: bold;
@@ -543,7 +543,7 @@ article .categories { float: right; padding-top: 4px; }
   a {
     display: block;
     background: #d1d0c9;
-    padding: .5em 1.5em;
+    padding: .7em 1.5em;
     border-right: 1px solid #fff;
     border-bottom: 0;
     color: #4b493f;
@@ -578,15 +578,15 @@ article .categories { float: right; padding-top: 4px; }
   right: 3em;
   width: 32px; height: 32px;
   text-indent: -999em;
-  padding: .45em .6em;
+  padding: .6em .7em;
   border: 1px solid #fff;
   border-width: 0 1px;
   background: #d1d0c9;
   
   &:after {
     position: absolute;
-    top: .55em;
-    left: .6em;
+    top: .6em;
+    left: .7em;
     content: '';
     width: 32px; height: 32px;
     background: url(../img/search.png);
