@@ -263,6 +263,22 @@ textarea,
 
 
 
+.message {
+  border: 1px solid #ddd;
+  background: #e9e8e4;;
+  padding: 0 1em;
+  margin: 1em -1em 1.5em;
+  
+  h3 {
+    margin-top: .5em;
+  }
+  
+  p {
+    margin: .4em 0;
+  }
+}
+
+
 
 /* Container */
 #main {
@@ -277,7 +293,7 @@ textarea,
 
 
 /* Articles */
-article { margin: 4em 0; padding-bottom: 3em; }
+article { margin: 4em 0; }
 hr,
 #post-nav:after,
 .page-title:after {
