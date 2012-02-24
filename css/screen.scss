@@ -391,9 +391,8 @@ article .categories { float: right; padding-top: 4px; }
 
 
 /* Single Comment */
-.comment { position: relative; margin-bottom: 80px; }
+.comment { position: relative; }
 .comment + hr { border-top-color: #e8e8e5; }
-#commentform { margin-bottom: 80px; }
 
 .avatar {
   position: absolute; top: 0; left: -50px;
@@ -524,6 +523,7 @@ article .categories { float: right; padding-top: 4px; }
     border: 1px solid #fff;
     border-width: 0 1px;
     padding: .7em 1.5em;
+    margin-left: -1px;
     background: #cac8bf;
     color: #000;
     font-weight: bold;
@@ -732,7 +732,6 @@ article .categories { float: right; padding-top: 4px; }
 /* Footer */
 #footer {
   padding: 10px 0 100px; font-size: 0.9em;
-  @include linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
   
   .inner {
     width: 960px;

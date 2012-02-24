@@ -1,47 +1,95 @@
+@media screen and (max-width: 60em) {
+  /* Footer */
+  #footer .inner { width: auto; margin: 0 2em; }
+  .col-1, .col-2, .col-3, .col-4 {
+    width: 23%;
+    margin: 0 1%;
+  }
+}
+
+
+
+
+
+@media screen and (max-width: 54em) {
+  
+  /* Header */
+  #nav {
+    margin-right: 3.55em;
+  }
+}
+
+
+
 /* iPad */
-@media screen and (min-width: 480px) and (max-width: 980px) {
+@media screen and (max-width: 48em) {
   
   
   
   /* Images */
-  img { max-width: 100%; }
-
-
-
-  /* Header */
-  #inner-header {
-    width: 100%;
-    max-width: 900px;
-    padding: 0 20px;
-    -moz-box-sizing: border-box; box-sizing: border-box;
+  img {
+    max-width: 100%;
+    height: auto;
   }
-  
+  img[width] {
+    max-width: 100% !important;
+    height: auto !important;
+  }
   
   
   /* Main */
   #main {
-    width: 100%;
-    max-width: 900px;
+    width: auto;
+    max-width: 48em;
+    margin: 0 2em;
   }
   
   
-  article { margin: 30px 20px; }
-  article::after { left: 10px; right: 10px; }
-  article header { margin: 30px 0; padding: 0 0 10px; }
+  article { margin: 3em 0; }
+  article header { margin: 2em 0; padding: 0 0 1em; }
   
   
   
-  /* Footer */
-  footer .inner { width: 748px; }
-  .col-1, .col-2, .col-3, .col-4 { width: 165px; }
+  
+  .animate-wrap {
+    width: auto;
+    height: auto;
+  }
 
 }
 
 
 
+@media screen and (max-width: 42em) {
+  
+  
+  #header .inner {
+    width: 100%;
+    margin: 1px 0 0;
+  }
+
+  .social-media-links {
+    overflow: hidden;
+  }
+  #nav {
+    margin-right: 0;
+  }
+
+
+  #respond textarea {
+    width: 300px;
+  }
+  
+}
+
+
+
 /* Phones */
-@media only screen and (max-width: 480px),
-only screen and (max-device-width: 480px) {
+@media only screen and (max-width: 480px) {
+
+  body {
+    line-height: 1.7;
+  }
   
   /* Headlines */
   h1 { font-size: 2em; }
@@ -49,47 +97,90 @@ only screen and (max-device-width: 480px) {
   h3 { font-size: 1.2em; margin-top: 5px; }
   h4 { font-size: 1.1em; }
   
-
-  /* Images */
-  img { max-width: 100%; }
-
-
-
+  
+  /* Inputs */
+  input,
+  #respond input,
+  textarea,
+  #respond textarea {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1em;
+  }
+  
   /* Header */
-  #inner-header { width: auto; padding: 0 20px; }
+  #header {
+    padding: 0 1.5em;
+  }
+
+
+  .social-media-links a,
+  .search-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .social-media-links a:after,
+  .search-icon:after {
+    width: 24px;
+    height: 24px;
+    background-size: 100% 100%;
+  }
+  
+  .search-icon {
+    right: 1.5em
+  }
   
   
+  #nav {
+    float: none;
+  }
+  #nav li:first-child a {
+    border-left: 0;
+  }
+  
+  #comments {
+    margin: 3em 0 1em;
+  }
+  
+  .required {
+    display: none;
+  }
+
   
   /* Main */
-  #main { width: 100%; }
-  
-  
-  article { margin: 50px 20px 30px; }
-  article::after { left: 10px; right: 10px; }
-  hr, #post-nav:after, .page-title:after {
-    left: 0;
-    right: 0;
-    margin-top: -30px;
-  }
-  article header { margin: 30px 0; padding: 0 0 10px; }
-  article .comment-count { padding: 10px 10px 0; }
-  
-  #post-nav.nav-loop {
-    margin-top: -20px;
-  }
-  #post-nav:after {
-    margin-top: 0;
+  #main {
+    margin: 0 1.5em;
   }
   
-  .wp-syntax .raw {
+  
+  article { margin: 2em 0 1em; }
+  article header {
+    margin: 30px 0;
+    padding: 0 0 10px;
+  }
+  article header:after {
+    display: table;
+    content: '';
+    clear: both;
+  }
+  
+  article header h1 {
+    margin-bottom: 0;
+  }
+  
+  #post-nav {
     display: none;
   }
   
   
-  
   /* Footer */
-  footer .inner { width: auto !important; }
-  .col-1, .col-2, .col-3, .col-4 { float: none; display: block; width: auto; margin-bottom: 40px; }
+  .col-1, .col-2, .col-3, .col-4 {
+    float: none;
+    display: block;
+    width: auto;
+    margin: 0 0 2em;
+  }
 
 
 
