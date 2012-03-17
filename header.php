@@ -90,26 +90,30 @@
 <body <?php body_class(); ?>>
 
   <div id="container">
-    <header id="header">
-      <div id="inner-header" class="clearfix">
-        <div id="logo">
-          <a href="http://drublic.de">@drublic</a> / <a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">blog</a>
-          <div class="visuallyhidden"><?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?></div>
+    <header>
+      <div id="header">
+        <ul class="social-media-links">
+          <li class="rss"><a href="http://feeds.feedburner.com/drublic">Subscribe to Feed</a></li>
+          <li class="github"><a href="https://github.com/drublic">Github</a></li>
+          <li class="twitter"><a href="https://twitter.com/drublic">Twitter</a></li>
+          <li class="lastfm"><a href="http://www.lastfm.de/user/MySxWA">LastFM</a></li>
+        </ul>
+
+        <div class="inner">
+          <div id="logo">
+            <a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span>{</span> drublic</a>
+    
+            <div class="visuallyhidden"><?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?></div>
+          </div>
+          
+          <nav id="nav">
+            <div class="visuallyhidden"><a href="#main">Skip to content</a></div>
+            <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+          </nav>
         </div>
 
-        <ul id="misc">
-          <li class="search-icon"><a href="#/search" title="Try searching&hellip;">Search</a></li>
-        </ul>
-        
-        <ul class="social-media-links">
-          <li class="rss"><a href="http://feeds.feedburner.com/drublic" target="_blank">Subscribe to Feed</a></li>
-          <li class="github"><a href="https://github.com/drublic" target="_blank">Github</a></li>
-          <li class="twitter"><a href="https://twitter.com/drublic" target="_blank">Twitter</a></li>
-          <li class="lastfm"><a href="http://www.lastfm.de/user/MySxWA" target="_blank">LastFM</a></li>
-        </ul>
-        
+        <a href="#/search" title="Try searching&hellip;" class="search-icon">Search</a>
         <div id="search" class="content-widget">
-          <a href="#/close/search" title="Close the search" class="close">&times;</a>
           <div class="inner">
             <form action="<?php bloginfo( 'home' ); ?>/" method="post">
               <fieldset>
@@ -123,7 +127,7 @@
             </form>
           </div>
         </div>
-        
+
       </div>
     </header>
     
