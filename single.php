@@ -60,7 +60,7 @@ get_header(); ?>
 		</div>
     
     <div class="instapaper">
-		  <a href="http://www.instapaper.com/hello2?url=<?php the_permalink(); ?>&amp;title=<?php the_title(); ?>" title="Diesen Artikel später mit Instapaper lesen?" target="_blank" class="button">Instapaper</a>
+		  <a href="http://www.instapaper.com/hello2?url=<?php the_permalink(); ?>&amp;title=<?php the_title(); ?>" title="Diesen Artikel später mit Instapaper lesen?" class="button">Instapaper</a>
 		</div>
 		
 		

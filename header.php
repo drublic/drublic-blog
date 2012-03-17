@@ -93,10 +93,10 @@
     <header>
       <div id="header">
         <ul class="social-media-links">
-          <li class="rss"><a href="http://feeds.feedburner.com/drublic" target="_blank">Subscribe to Feed</a></li>
-          <li class="github"><a href="https://github.com/drublic" target="_blank">Github</a></li>
-          <li class="twitter"><a href="https://twitter.com/drublic" target="_blank">Twitter</a></li>
-          <li class="lastfm"><a href="http://www.lastfm.de/user/MySxWA" target="_blank">LastFM</a></li>
+          <li class="rss"><a href="http://feeds.feedburner.com/drublic">Subscribe to Feed</a></li>
+          <li class="github"><a href="https://github.com/drublic">Github</a></li>
+          <li class="twitter"><a href="https://twitter.com/drublic">Twitter</a></li>
+          <li class="lastfm"><a href="http://www.lastfm.de/user/MySxWA">LastFM</a></li>
         </ul>
 
         <div class="inner">
