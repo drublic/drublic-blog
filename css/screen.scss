@@ -357,19 +357,49 @@ article .categories { float: right; padding-top: 4px; }
 
 .pingback { margin: -40px 0 60px; }
 
-#respond p { margin-bottom: 20px; }
+#respond {
+  &:before,
+  &:after {
+    display: table;
+    content: '';
+  }
+  &:after {
+    clear: both;
+  }
 
-#respond fieldset { margin-bottom: 2px; }
-#respond label { position: relative; float: left; display: inline; width: 140px; margin: 2px 20px 0 0; }
-#respond .subscribe-to-comments label {
-  float: none;
-  display: inline-block;
-  width: auto;
+  p {
+    margin-bottom: 20px;
+  }
+  
+  fieldset {
+    margin-bottom: 2px;
+  }
+  
+  label {
+    position: relative; float: left; display: inline; width: 140px; margin: 2px 20px 0 0;
+  }
+
+  .subscribe-to-comments {
+    float: left;
+    margin: 18px 0 10px 160px;
+    width: 330px;
+  
+    clear: none !important;
+    label {
+      float: none;
+      display: inline-block;
+      width: auto;
+      margin-left: 5px;
+    }
+  }
 }
 
-#respond textarea { width: 599px; }
+#respond textarea { width: 493px; }
 
-.form-submit { text-align: right; margin: 20px 0; }
+.form-submit {
+  float: right;
+  margin: 10px 0 20px;
+}
 
 #author {
   border-radius: 5px 5px 0 0;
@@ -379,15 +409,7 @@ article .categories { float: right; padding-top: 4px; }
   border-radius: 0;
 }
 
-.required { position: absolute; right: -9px; }
-
-#reply-title:before {
-  float: left; content: "";
-  position: relative; top: 5px;
-  width: 28px; height: 29px;
-  margin-right: 10px;
-  background: url(../img/new.png);
-}
+.required { position: relative; left: 3px; }
 
 
 /* Single Comment */
