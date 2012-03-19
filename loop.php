@@ -32,12 +32,12 @@
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header>
       <hgroup>
-        <h1><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+        <h1><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="entry-title"><?php the_title(); ?></a></h1>
       </hgroup>
-		  <time><?php the_date(); ?></time>
+		  <time datetime="<?php print get_the_date('c'); ?>" rel="updated"><?php the_date(); ?></time>
 		  <span class="author">
 		    by
-		    <a href="<?php print get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" title="<?php print sprintf( esc_attr__( 'View all posts by %s', 'twentyten' ), get_the_author() ); ?>"><?php the_author(); ?></a>
+		    <a href="<?php print get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" title="<?php print sprintf( esc_attr__( 'View all posts by %s', 'twentyten' ), get_the_author() ); ?>" rel="author"><?php the_author(); ?></a>
 		    <?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
 		  </span>
 		</header>
