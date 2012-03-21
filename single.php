@@ -26,16 +26,6 @@ get_header(); ?>
 		  
 		  <span class="categories"><?php the_category( ', ' ); ?></span>
 		</header>
-    <?php
-      $oldness = ( time() - mktime(0, 0, 0, get_the_date('n'), get_the_date('j'), get_the_date('Y')) ) / 60 / 60 / 24 ;
-      $oldness = (int) $oldness;
-    ?>
-    <?php if ($oldness > 180 ) : ?>
-      <div class="message">
-        <h3>Hey there&hellip;</h3>
-        <p>This post is <?php print $oldness; ?> days old. It was written on <?php print get_the_date('d.m.Y'); ?>. Please make sure to be careful with the information provided and check a more recent source on this topic.</p>
-      </div>
-    <?php endif; ?>
     
     <?php if ( get_post_meta( get_the_ID(), 'posts-header', true ) != '' ) : ?>
       <?php print get_post_meta( get_the_ID(), 'posts-header', true ); ?>
@@ -45,6 +35,17 @@ get_header(); ?>
       <figure class="aligncenter">
         <?php the_post_thumbnail( 'medium' ); ?>
       </figure>
+    <?php endif; ?>
+
+    <?php
+      $oldness = ( time() - mktime(0, 0, 0, get_the_date('n'), get_the_date('j'), get_the_date('Y')) ) / 60 / 60 / 24 ;
+      $oldness = (int) $oldness;
+    ?>
+    <?php if ($oldness > 180 ) : ?>
+      <div class="message">
+        <h3>Hey there&hellip;</h3>
+        <p>This post is <?php print $oldness; ?> days old. It was written on <?php print get_the_date('d.m.Y'); ?>. Please make sure to be careful with the information provided and check a more recent source on this topic.</p>
+      </div>
     <?php endif; ?>
     
     <?php the_content(); ?>
