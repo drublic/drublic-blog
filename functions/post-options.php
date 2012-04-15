@@ -7,6 +7,13 @@ $general_details = array (
 			'std'         => '',
 			'type'        => 'textarea',
 			'title'       => __('Header HTML:', $theme_code),
+			'description' => ''),
+		
+		array(
+		  'name'        => 'linked_list_url',
+			'std'         => '',
+			'type'        => 'text',
+			'title'       => __('Linked List URL:', $theme_code),
 			'description' => '')
 			
   );
