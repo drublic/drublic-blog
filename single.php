@@ -15,7 +15,11 @@ get_header(); ?>
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
     <header>
       <hgroup>
-        <h1><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'drublic-blog' ), the_title_attribute( 'echo=0' ) ); ?>" rel="entry-title"><?php the_title(); ?></a></h1>
+        <?php if (is_linked_list()) : ?>
+          <h1><a href="<?php the_linked_list_link(); ?>" title="<?php printf( esc_attr__( '%s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="entry-title"><?php the_title(); ?> &rarr;</a></h1>
+        <?php else : ?>
+          <h1><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="entry-title"><?php the_title(); ?></a></h1>
+        <?php endif; ?>
       </hgroup>
 		  <time datetime="<?php print get_the_date('c'); ?>" rel="updated"><?php the_date(); ?></time>
 		  <span class="author">
@@ -23,6 +27,10 @@ get_header(); ?>
 		    <a href="<?php print get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" title="<?php print sprintf( esc_attr__( 'View all posts by %s', 'drublic-blog' ), get_the_author() ); ?>" rel="author"><?php the_author(); ?></a>
 		    <?php edit_post_link( __( 'Edit', 'drublic-blog' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
 		  </span>
+
+      <?php if (is_linked_list()) : ?>
+        <span class="permalink"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink for %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>">&#9776;</a></span>
+      <?php endif; ?>
 		  
 		  <span class="categories"><?php the_category( ', ' ); ?></span>
 		</header>

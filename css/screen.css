@@ -330,6 +330,9 @@ article .categories {
   float: right;
   padding-top: 4px; }
 
+.permalink {
+  margin-left: 10px; }
+
 .share-post {
   text-align: center;
   padding: 15px 0 5px;

@@ -29,32 +29,43 @@
   $iterator = 0;
   while ( have_posts() ) : the_post();
 ?>
-  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <header>
-      <hgroup>
-        <h1><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="entry-title"><?php the_title(); ?></a></h1>
-      </hgroup>
-		  <time datetime="<?php print get_the_date('c'); ?>" rel="updated"><?php the_date(); ?></time>
-		  <span class="author">
-		    by
-		    <a href="<?php print get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" title="<?php print sprintf( esc_attr__( 'View all posts by %s', 'twentyten' ), get_the_author() ); ?>" rel="author"><?php the_author(); ?></a>
-		    <?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
-		  </span>
-		</header>
 
-    <?php if ( get_the_post_thumbnail() != "" ) : ?>
-      <figure class="alignleft">
-        <a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_post_thumbnail( 'thumbnail' ); ?></a>
-      </figure>
-    <?php endif; ?>
-    <?php if ($iterator++ == 0) : ?>
-      <?php the_content(); ?>
-    <?php else : ?>
-      <?php the_excerpt(); ?>
-    <?php endif; ?>
 
-  </article>
-  
+    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+      <header>
+        <hgroup>
+          <?php if (is_linked_list()) : ?>
+            <h1><a href="<?php the_linked_list_link(); ?>" title="<?php printf( esc_attr__( '%s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="entry-title"><?php the_title(); ?> &rarr;</a></h1>
+          <?php else : ?>
+            <h1><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="entry-title"><?php the_title(); ?></a></h1>
+          <?php endif; ?>
+        </hgroup>
+  		  <time datetime="<?php print get_the_date('c'); ?>" rel="updated"><?php the_date(); ?></time>
+  		  <span class="author">
+  		    by
+  		    <a href="<?php print get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" title="<?php print sprintf( esc_attr__( 'View all posts by %s', 'twentyten' ), get_the_author() ); ?>" rel="author"><?php the_author(); ?></a>
+  		    <?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
+  		  </span>
+
+        <?php if (is_linked_list()) : ?>
+          <span class="permalink"><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink for %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>">&#9776;</a></span>
+        <?php endif; ?>
+  		</header>
+
+      <?php if ( get_the_post_thumbnail() != "" ) : ?>
+        <figure class="alignleft">
+          <a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_post_thumbnail( 'thumbnail' ); ?></a>
+        </figure>
+      <?php endif; ?>
+      
+      <?php if ($iterator++ == 0 || is_linked_list()) : ?>
+        <?php the_content(); ?>
+      <?php else : ?>
+        <?php the_excerpt(); ?>
+      <?php endif; ?>
+
+    </article>
+
   <hr>
 
 <?php endwhile; // End the loop. Whew. ?>
