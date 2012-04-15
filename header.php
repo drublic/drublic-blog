@@ -72,7 +72,7 @@
   <link rel="alternate" type="application/rss+xml" title="@drublic &raquo; Feed" href="http://feeds.feedburner.com/drublic">
 
   <!-- All JavaScript at the bottom, except for Modernizr. -->
-  <script src="<?php bloginfo( 'template_url' ); ?>/js/libs/modernizr.custom.65404.js"></script>
+  <script src="<?php bloginfo( 'template_url' ); ?>/js/vendor/modernizr.custom.65404.js"></script>
   
   <!-- Typekit -->
   <script src="http://use.typekit.com/nls7qda.js"></script>

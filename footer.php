@@ -23,7 +23,7 @@
 
   <!-- scripts concatenated and minified via ant build script-->
   <script defer src="<?php bloginfo( 'template_url' ); ?>/js/plugins.js"></script>
-  <script defer src="<?php bloginfo( 'template_url' ); ?>/js/script.js"></script>
+  <script defer src="<?php bloginfo( 'template_url' ); ?>/js/main.js"></script>
   <!-- end scripts-->
   
   <!-- Social Media -->
