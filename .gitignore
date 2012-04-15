@@ -1,5 +1,4 @@
 # Numerous always-ignore extensions
-*.esproj
 *.diff
 *.err
 *.orig
@@ -9,14 +8,18 @@
 *.swp
 *.vi
 *~
+*.sass-cache
 
 # OS or Editor folders
 .DS_Store
+Thumbs.db
 .cache
 .project
 .settings
+.tmproj
 nbproject
-Thumbs.db
+*.sublime-project
+*.sublime-workspace
 
 # Dreamweaver added files
 _notes
@@ -26,12 +29,17 @@ dwsync.xml
 *.komodoproject
 .komodotools
 
+# Espresso
+*.esproj
+*.espressostorage
+
 # Folders to ignore
 .hg
 .svn
+.CVS
 intermediate
+publish
 .idea
-.sass-cache
 
 # build script local files
 build/buildinfo.properties
