@@ -21,5 +21,7 @@ require('post-options.php');
 // Save all options
 require('admin-save.php');
 
+// Widgets
+require('theme-widgets.php');
 
 
