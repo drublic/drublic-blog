@@ -718,36 +718,13 @@ article .categories {
     text-align: center; }
 
 /* Footer */
-#footer {
+.footer {
   padding: 10px 0 100px;
-  font-size: 0.9em; }
-  #footer .inner {
-    width: 960px;
-    margin: 0 auto; }
-  #footer ul {
-    margin: 0 0 20px;
-    list-style: none;
-    border-top: 1px solid #ddd; }
-    #footer ul a,
-    #footer ul a:visited {
-      display: block;
-      border-bottom: 1px solid #ddd !important;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      text-shadow: 1px 1px 0 #fff; }
-      #footer ul a:hover,
-      #footer ul a:visited:hover {
-        background: #fff;
-        border-color: #ddd !important;
-        color: #222;
-        padding-left: 10px; }
-
-.col-1, .col-2, .col-3, .col-4 {
-  display: inline;
-  float: left;
-  margin: 0 10px;
-  width: 220px; }
+  width: 45em;
+  margin: 0 auto; }
+  .footer .author-image {
+    float: left;
+    margin-right: 2em; }
 
 /* Images */
 .js img {
@@ -755,56 +732,6 @@ article .categories {
 
 .js img.show {
   opacity: 1; }
-
-/* About me */
-.animate-wrap {
-  position: relative;
-  width: 220px;
-  height: 220px;
-  background-color: #aaa;
-  -webkit-perspective: 1000;
-  -moz-perspective: 1000;
-  perspective: 1000;
-  margin-bottom: 15px; }
-
-/* Inputs */
-.animate-wrap input {
-  display: none; }
-
-.animate-wrap [type="radio"]:checked + .animate {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  transform: rotateY(180deg); }
-
-/* Image-Wrapper */
-.animate {
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transition: all 0.5s ease-out;
-  -moz-transition: all 0.5s ease-out;
-  -ms-transition: all 0.5s ease-out;
-  -o-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-  -webkit-backface-visibility: hidden; }
-
-/* Labels */
-.animate label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden; }
-
-.back {
-  -webkit-transform: rotateY(180deg);
-  -moz-transform: rotateY(180deg);
-  transform: rotateY(180deg); }
-
-.front {
-  z-index: 1; }
 
 /* 404-Page */
 .error404 {

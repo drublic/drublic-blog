@@ -10,10 +10,8 @@
     </div>
     
     
-    <footer id="footer">
-      <div class="inner clearfix">
-        <?php get_sidebar( 'footer' ); ?>
-      </div>
+    <footer class="footer">
+      <?php get_sidebar( 'footer' ); ?>
     </footer>
   </div>
 
