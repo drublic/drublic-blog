@@ -1,5 +1,5 @@
 /* Import CSS fires for build script */
-@import url('h5bp');
+@import 'h5bp';
 
 
 @mixin rotate($deg) {
@@ -830,7 +830,7 @@ article .categories { float: right; padding-top: 4px; }
 
 
 
-@import url('mobile');
+@import 'mobile';
 
 
 
