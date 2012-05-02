@@ -1,6 +1,6 @@
-#container, html.embed { background: url(http://drublic.de/blog/wp-content/themes/drublic/img/bg.png); }
+#container, html.embed { background: #fff; }
 
-.wufoo, .wufoo .info div { font: 15px/2 sans-serif; }
+.wufoo, .wufoo .info div { font: 15px/2 Helvetica Neue, Helvetica, Arial, sans-serif; }
 .wufoo .info h2 { font-size: 2em; margin-top: 20px; color: #444; }
 
 .info, form li { padding-left: 2px; }
