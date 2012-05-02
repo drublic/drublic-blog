@@ -390,7 +390,9 @@ article .categories {
   margin-left: 30px; }
 
 .pingback {
-  margin: -40px 0 60px; }
+  padding-bottom: 1em;
+  border-bottom: 1px solid #e8e8e5;
+  margin-bottom: 1em; }
 
 #respond:before, #respond:after {
   display: table;
@@ -729,9 +731,8 @@ article .categories {
 /* Images */
 .js img {
   opacity: 0; }
-
-.js img.show {
-  opacity: 1; }
+  .js img.show {
+    opacity: 1; }
 
 /* 404-Page */
 .error404 {

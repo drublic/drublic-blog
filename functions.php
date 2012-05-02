@@ -187,6 +187,7 @@ function twentyten_comment( $comment, $args, $depth ) {
 
 		<div class="reply"><?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?></div>
 	</div>
+	<hr>
 	<?php
 			break;
 		case 'pingback'  :
@@ -206,7 +207,6 @@ function twentyten_comment( $comment, $args, $depth ) {
 			break;
 	endswitch;
 	?>
-  <hr>
   <?php
 }
 endif;
