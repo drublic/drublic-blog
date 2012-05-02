@@ -284,6 +284,10 @@ textarea,
 #main {
   margin: 0 auto;
   width: 45em;
+
+  ul {
+    margin-bottom: 1em;
+  }
 }
 
 
@@ -334,8 +338,11 @@ article .categories { float: right; padding-top: 4px; }
 
 
 
-.readmore { margin: 10px 0 80px; }
-.readmore span { font: 1.3em Georgia, "Times New Roman", Times, serif; padding-right: 3px; }
+.readmore {
+  margin: 10px 0 80px;
+  span { font: 1.3em Georgia, "Times New Roman", Times, serif; padding-right: 3px; }
+}
+
 
 
 .page-title { margin-bottom: 50px; text-align: center; }

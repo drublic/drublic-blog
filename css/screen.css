@@ -295,6 +295,8 @@ textarea,
 #main {
   margin: 0 auto;
   width: 45em; }
+  #main ul {
+    margin-bottom: 1em; }
 
 /* Articles */
 article {
@@ -351,10 +353,9 @@ article .categories {
 
 .readmore {
   margin: 10px 0 80px; }
-
-.readmore span {
-  font: 1.3em Georgia, "Times New Roman", Times, serif;
-  padding-right: 3px; }
+  .readmore span {
+    font: 1.3em Georgia, "Times New Roman", Times, serif;
+    padding-right: 3px; }
 
 .page-title {
   margin-bottom: 50px;
