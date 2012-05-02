@@ -74,10 +74,6 @@
   <!-- All JavaScript at the bottom, except for Modernizr. -->
   <script src="<?php bloginfo( 'template_url' ); ?>/js/vendor/modernizr.custom.65404.js"></script>
   
-  <!-- Typekit -->
-  <script src="http://use.typekit.com/nls7qda.js"></script>
-  <script>try{Typekit.load();}catch(e){}</script>
-  
 <?php
 	if ( is_singular() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
