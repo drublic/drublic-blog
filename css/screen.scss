@@ -526,7 +526,7 @@ article .categories { float: right; padding-top: 4px; }
       left: .8em;
       content: '';
       width: 32px; height: 32px;
-      background: url(../img/github.png);
+      background: url(../img/sprite.png) 0 -64px;
     }
 
     &:hover {
@@ -535,13 +535,13 @@ article .categories { float: right; padding-top: 4px; }
   }
   
   .twitter a:after {
-    background: url(../img/twitter.png);
+    background-position: 0 -96px;
   }
   .lastfm a:after {
-    background: url(../img/lastfm.png);
+    background-position: 0 0;
   }
   .rss a:after {
-    background: url(../img/rss.png);
+    background-position: 0 -32px;
   }
   
   li:first-child a {
@@ -628,11 +628,11 @@ article .categories { float: right; padding-top: 4px; }
   
   &:after {
     position: absolute;
-    top: .6em;
-    left: .7em;
+    top: 11px;
+    left: 12px;
     content: '';
-    width: 32px; height: 32px;
-    background: url(../img/search.png);
+    width: 27px; height: 27px;
+    background: url(../img/sprite.png) 0 -128px;
   }
 }
 
@@ -695,7 +695,7 @@ article .categories { float: right; padding-top: 4px; }
     &:before,
     &:after {
       content: '\0020';
-      position: absolute; top: -9px; right: 20px;
+      position: absolute; top: -9px; right: 30px;
       width: 0; height: 0;
       border-width: 0 10px 10px 10px;
       border-style: solid;
@@ -807,7 +807,7 @@ article .categories { float: right; padding-top: 4px; }
   position: fixed; top: 50px; left: 50%; z-index: 102;
   width: 500px;
   margin: 0 -270px; border: 1px solid #ddd; padding: 0 20px 10px;
-  background: url(../img/bg.png);
+  background: #fff;
   box-shadow: 0 0 100px rgba(0,0,0,.5), 0 0 30px rgba(0,0,0,.5);
   border-radius: 5px;
 }

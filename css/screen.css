@@ -539,15 +539,15 @@ article .categories {
       content: '';
       width: 32px;
       height: 32px;
-      background: url(../img/github.png); }
+      background: url(../img/sprite.png) 0 -64px; }
     .social-media-links a:hover {
       background-color: #cac8bf; }
   .social-media-links .twitter a:after {
-    background: url(../img/twitter.png); }
+    background-position: 0 -96px; }
   .social-media-links .lastfm a:after {
-    background: url(../img/lastfm.png); }
+    background-position: 0 0; }
   .social-media-links .rss a:after {
-    background: url(../img/rss.png); }
+    background-position: 0 -32px; }
   .social-media-links li:first-child a {
     border-left: 1px solid #fff; }
 
@@ -604,12 +604,12 @@ article .categories {
   background: #d1d0c9; }
   .search-icon:after {
     position: absolute;
-    top: .6em;
-    left: .7em;
+    top: 11px;
+    left: 12px;
     content: '';
-    width: 32px;
-    height: 32px;
-    background: url(../img/search.png); }
+    width: 27px;
+    height: 27px;
+    background: url(../img/sprite.png) 0 -128px; }
 
 /* Content Widgets */
 .content-widget {
@@ -671,7 +671,7 @@ article .categories {
       content: '\0020';
       position: absolute;
       top: -9px;
-      right: 20px;
+      right: 30px;
       width: 0;
       height: 0;
       border-width: 0 10px 10px 10px;
@@ -750,7 +750,7 @@ article .categories {
   margin: 0 -270px;
   border: 1px solid #ddd;
   padding: 0 20px 10px;
-  background: url(../img/bg.png);
+  background: #fff;
   box-shadow: 0 0 100px rgba(0, 0, 0, 0.5), 0 0 30px rgba(0, 0, 0, 0.5);
   border-radius: 5px; }
 
