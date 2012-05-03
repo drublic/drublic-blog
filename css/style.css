@@ -884,11 +884,11 @@ article .categories {
       content: '';
       width: 32px;
       height: 32px;
-      background: url(../img/sprite.png) 0 -64px; }
+      background: url(../img/sprite.png) 0 -96px; }
     .social-media-links a:hover {
       background-color: #cac8bf; }
   .social-media-links .twitter a:after {
-    background-position: 0 -96px; }
+    background-position: 0 -64px; }
   .social-media-links .lastfm a:after {
     background-position: 0 0; }
   .social-media-links .rss a:after {
