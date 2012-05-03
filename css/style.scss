@@ -652,13 +652,11 @@ article .categories { float: right; padding-top: 4px; }
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0,0,0,.7);
 
+  -webkit-transform: scale(0) translate3d(0,0,0);
      -moz-transform: scale(0);
-       -o-transform: scale(0);
-  -webkit-transform: scale(0);
       -ms-transform: scale(0);
+       -o-transform: scale(0);
           transform: scale(0);
-  -webkit-backface-visibility: hidden;
-
 
   &:before {
     content: '\0020';
