@@ -1199,6 +1199,9 @@ article .categories {
   #header {
     padding: 0 1.5em; }
 
+  #logo a {
+    padding: .5em 1em; }
+
   .social-media-links a,
   .search-icon {
     width: 24px;
@@ -1208,13 +1211,26 @@ article .categories {
   .search-icon:after {
     width: 24px;
     height: 24px;
-    background-size: 100% 100%; }
+    background-size: 24px auto;
+    background-position: 0 -72px; }
+
+  .social-media-links .twitter a:after {
+    background-position: 0 -48px; }
+  .social-media-links .lastfm a:after {
+    background-position: 0 0; }
+  .social-media-links .rss a:after {
+    background-position: 0 -24px; }
 
   .search-icon {
     right: 1.5em; }
+    .search-icon:after {
+      height: 20px;
+      background: url(../img/sprite.png) 0 -96px; }
 
   #nav {
     float: none; }
+    #nav a {
+      padding: .5em 1em; }
 
   #nav li:first-child a {
     border-left: 0; }

@@ -86,6 +86,8 @@
 /* Phones */
 @media only screen and (max-width: 480px) {
 
+  $smWidth: 24px;
+
   body {
     line-height: 1.7;
   }
@@ -112,27 +114,51 @@
     padding: 0 1.5em;
   }
 
+  #logo a {
+    padding: .5em 1em;
+  }
 
   .social-media-links a,
   .search-icon {
-    width: 24px;
-    height: 24px;
+    width: $smWidth;
+    height: $smWidth;
   }
   
   .social-media-links a:after,
   .search-icon:after {
-    width: 24px;
-    height: 24px;
-    background-size: 100% 100%;
+    width: $smWidth;
+    height: $smWidth;
+    background-size: $smWidth auto;
+    background-position: 0 ($smWidth * -3);
+  }
+
+  .social-media-links {
+    .twitter a:after {
+      background-position: 0 ($smWidth * -2);
+    }
+    .lastfm a:after {
+      background-position: 0 0;
+    }
+    .rss a:after {
+      background-position: 0 ($smWidth * -1);
+    }
   }
   
   .search-icon {
-    right: 1.5em
+    right: 1.5em;
+    &:after {
+      height: $smWidth - 4;
+      background: url(../img/sprite.png) 0 ($smWidth * -4);
+    }
   }
   
   
   #nav {
     float: none;
+
+    a {
+      padding: .5em 1em;
+    }
   }
   #nav li:first-child a {
     border-left: 0;

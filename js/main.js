@@ -18,16 +18,6 @@ $( 'img' ).addClass( 'show' );
 
 
 
-// About Column
-if (!Modernizr.csstransforms3d) {
-    $('label').click(function() {
-        $('.animate .front').removeClass('front');
-        $(this).addClass('front');
-    });
-}
-
-
-
 // Close Action
 function do_close( action ) {
   log( 'Close: ' + action );
@@ -156,7 +146,11 @@ var hash = '';
         });
       }
     }
-  })
+  });
+
+  if (location.hash) {
+    location.hash = "";
+  }
 
 } ();
 

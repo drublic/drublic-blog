@@ -45,6 +45,10 @@ a:link { -webkit-tap-highlight-color: #c3beae; }
 
 
 
+$smWidth: 32px;
+
+
+
 
 
 
@@ -509,6 +513,7 @@ article .categories { float: right; padding-top: 4px; }
 
 // @group Social Media Links/
 .social-media-links {
+
   list-style: none;
   margin-left: 0;
 
@@ -516,8 +521,8 @@ article .categories { float: right; padding-top: 4px; }
     position: relative;
     display: inline;
     float: left;
-    width: 32px;
-    height: 32px;
+    width: $smWidth;
+    height: $smWidth;
     padding: .6em .8em;
     text-indent: -999em;
     border-right: 1px solid #fff;
@@ -529,8 +534,9 @@ article .categories { float: right; padding-top: 4px; }
       top: .6em;
       left: .8em;
       content: '';
-      width: 32px; height: 32px;
-      background: url(../img/sprite.png) 0 -96px;
+      width: $smWidth;
+      height: $smWidth;
+      background: url(../img/sprite.png) 0 ($smWidth * -3);
     }
 
     &:hover {
@@ -539,13 +545,13 @@ article .categories { float: right; padding-top: 4px; }
   }
   
   .twitter a:after {
-    background-position: 0 -64px;
+    background-position: 0 ($smWidth * -2);
   }
   .lastfm a:after {
     background-position: 0 0;
   }
   .rss a:after {
-    background-position: 0 -32px;
+    background-position: 0 ($smWidth * -1);
   }
   
   li:first-child a {
@@ -623,7 +629,8 @@ article .categories { float: right; padding-top: 4px; }
   position: absolute;
   top: 0;
   right: 3em;
-  width: 32px; height: 32px;
+  width: $smWidth;
+  height: $smWidth;
   text-indent: -999em;
   padding: .6em .7em;
   border: 1px solid #fff;
@@ -636,7 +643,7 @@ article .categories { float: right; padding-top: 4px; }
     left: 12px;
     content: '';
     width: 27px; height: 27px;
-    background: url(../img/sprite.png) 0 -128px;
+    background: url(../img/sprite.png) 0 ($smWidth * -4);
   }
 }
 
