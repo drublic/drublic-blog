@@ -58,6 +58,10 @@ get_header(); ?>
     
     <?php the_content(); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'drublic-blog' ), 'after' => '</div>' ) ); ?>
+
+    <div class="message" id="disclaimer">
+      <p><strong>Disclaimer:</strong> I want to apologize for my grammer and stupid mistakes in this post. I am not a native speaker and try to become better. But hey, please help me: <a href="<?php bloginfo('url'); ?>/contact/">send me a mail</a> or <a href="http://twitter.com/drublic">tweet me</a>. Thank you, you're awesome!</p>
+    </div>
 		
 		
 		<div class="share-post">
@@ -74,7 +78,6 @@ get_header(); ?>
 		
 		
 		<p class="tags"><?php the_tags( 'Tagged with: ' ); ?></p>
-		
 	</article>
 	<hr>
 	
