@@ -22,6 +22,17 @@
 	</div>
 <?php endif; ?>
 
+  
+<?php if (!function_exists('is_linked_list')) { ?>
+  <section class="message">
+    <p>Please install the <a href='http://wordpress.org/extend/plugins/daring-fireball-linked-list/'>Daring Fireball-style Linked List</a> plugin!</p>
+  </section>
+<?php
+    function is_linked_list() {
+      return false;
+    }
+  }
+?>
 
 
 <?php
@@ -29,6 +40,8 @@
   $iterator = 0;
   while ( have_posts() ) : the_post();
 ?>
+
+
 
 
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
