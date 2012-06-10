@@ -182,9 +182,11 @@ $( '#commentform' ).submit( function() {
 
 // Enable share-buttons
 ! function () {
-  $('#share-post').before( $('#share-post').html() );
-  $.getScript("https://apis.google.com/js/plusone.js");
-  $.getScript("http://platform.twitter.com/widgets.js");
+  if ($('#share-post').size() > 0) {
+    $('#share-post').before( $('#share-post').html() );
+    $.getScript("https://apis.google.com/js/plusone.js");
+    $.getScript("http://platform.twitter.com/widgets.js");
+  }
 }();
 
 
