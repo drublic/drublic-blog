@@ -23,10 +23,6 @@
   <script defer src="<?php bloginfo( 'template_url' ); ?>/js/plugins.js"></script>
   <script defer src="<?php bloginfo( 'template_url' ); ?>/js/main.js"></script>
   <!-- end scripts-->
-  
-  <!-- Social Media -->
-  <script defer src="https://apis.google.com/js/plusone.js"></script>
-  <script defer src="http://platform.twitter.com/widgets.js"></script>
 
   <!-- Piwik --> 
   <script>
