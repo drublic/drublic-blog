@@ -13,21 +13,21 @@
 <html class="no-js" lang="en">
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
-  
-  <!--      
-       ____      _            _     _ _      
-      / __ \  __| |_ __ _   _| |__ | (_) ___ 
+
+  <!--
+       ____      _            _     _ _
+      / __ \  __| |_ __ _   _| |__ | (_) ___
      / / _` |/ _` | '__| | | | '_ \| | |/ __|
-    | | (_| | (_| | |  | |_| | |_) | | | (__ 
+    | | (_| | (_| | |  | |_| | |_) | | | (__
      \ \__,_|\__,_|_|   \__,_|_.__/|_|_|\___|
       \____/
-      
+
     Feel free to view and copy my source-code if you want to.
     Contact me if you have questions.
-    
+
     Thanks for visiting!
     Hans
-    
+
   -->
 
   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
@@ -58,9 +58,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-  
+
   <link rel="profile" href="http://gmpg.org/xfn/11">
-  
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/style.css">
 
@@ -70,7 +70,7 @@
 
   <!-- All JavaScript at the bottom, except for Modernizr. -->
   <script src="<?php bloginfo( 'template_url' ); ?>/js/vendor/modernizr.custom.65404.js"></script>
-  
+
 <?php
 	if ( is_singular() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -89,16 +89,16 @@
           <li class="rss"><a href="http://feeds.feedburner.com/drublic">Subscribe to Feed</a></li>
           <li class="github"><a href="https://github.com/drublic">Github</a></li>
           <li class="twitter"><a href="https://twitter.com/drublic">Twitter</a></li>
-          <li class="lastfm"><a href="http://www.lastfm.de/user/MySxWA">LastFM</a></li>
+          <li class="google-plus"><a href="https://plus.google.com/112019818423540363330/posts">Google+</a></li>
         </ul>
 
         <div class="inner">
           <div id="logo">
             <a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><span>{</span> drublic</a>
-    
+
             <div class="visuallyhidden"><?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?></div>
           </div>
-          
+
           <nav id="nav">
             <div class="visuallyhidden"><a href="#main">Skip to content</a></div>
             <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
@@ -113,7 +113,7 @@
                 <label for="s">Search the articles</label>
                 <input type="search" id="s" name="s">
               </fieldset>
-              
+
               <fieldset>
                 <input type="submit" id="submit-search" name="submit-search" value="Search">
               </fieldset>
@@ -123,5 +123,5 @@
 
       </div>
     </header>
-    
+
     <div id="main" role="main">
