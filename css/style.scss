@@ -475,12 +475,23 @@ article .categories { float: right; padding-top: 4px; }
 
 
 
-/* Navigation */
-#post-nav { margin: 10px 0 50px; }
-#post-nav:after { margin-top: 10px; border-bottom-color: #b9b8ae; }
+// Post-Navigation
+#post-nav {
+	margin: 10px 0 50px;
 
-#post-nav .prev { float: left; }
-#post-nav .next { float: right; }
+	&:after {
+		margin-top: 10px;
+		border-bottom-color: #b9b8ae;
+	}
+
+	.prev {
+		float: left;
+	}
+
+	.next {
+		float: right;
+	}
+}
 
 
 

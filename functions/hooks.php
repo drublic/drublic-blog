@@ -56,7 +56,7 @@ add_filter( 'wp_page_menu_args', 'wpak_page_menu_args' );
 
 add_action( 'init', 'wpak_init' );
 function wpak_init() {
-	
+
 	// create a new taxonomy for 'Bücher'
 	register_taxonomy(
 		'books_category',
@@ -70,7 +70,7 @@ function wpak_init() {
         'all_items' => __( 'Alle Kategorien' ),
         'parent_item' => __( '&Uuml;bergeordnete Kategorie' ),
         'parent_item_colon' => __( '&Uuml;bergeordnete Kategorie:' ),
-        'edit_item' => __( 'Kategorie bearbeiten' ), 
+        'edit_item' => __( 'Kategorie bearbeiten' ),
         'update_item' => __( 'Kategorie aktualisieren' ),
         'add_new_item' => __( 'Neue Kategorie hinzuf&uuml;gen' ),
         'new_item_name' => __( 'Neuer Kategorie-Name' ),
@@ -81,15 +81,15 @@ function wpak_init() {
 			'rewrite' => array('slug' => 'kategorie')
 		)
 	);
-	
-	
+
+
   // Register some Scripts
   if (!is_admin()) {
-    
+
     wp_deregister_script('comment-reply');
     wp_deregister_script('l10n');
   }
-  
+
 
 }
 
@@ -140,7 +140,7 @@ function script_loader_filter ($src) {
 
   $new_src = explode('?', $src);
   return $new_src[0];
-  
+
 }
 add_filter('script_loader_src', 'script_loader_filter');
 
@@ -190,17 +190,6 @@ remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wlwmanifest_link');
 remove_action('wp_head', 'start_post_rel_link');
 remove_action('wp_head', 'adjacent_posts_rel_link_wp_head');
-
-
-
-
-
-
-
-
-
-
-
 
 
 
