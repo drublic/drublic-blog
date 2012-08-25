@@ -1,6 +1,12 @@
 // iPad
 @media screen and (max-width: 48em) {
 
+	body {
+		   -moz-text-size-adjust: auto;
+		-webkit-text-size-adjust: auto;
+		    -ms-text-size-adjust: auto;
+	}
+
 	// Images
 	img {
 		max-width: 100%;
@@ -98,6 +104,56 @@
 		}
 	}
 
+	#search form {
+		position: absolute;
+		right: 50px;
+	}
+
+}
+
+
+@media only screen and (max-width: 480px) {
+	#logo a,
+	#nav a {
+		padding: 5px 10px;
+	}
+
+	#search {
+		.search-icon {
+			padding: 4px;
+		}
+
+		form {
+			right: 40px;
+		}
+
+		input[type="search"] {
+			border-width: 6px 0 5px;
+			padding: 6px 0;
+			width: 147px;
+
+			&::-webkit-search-cancel-button {
+				display: none;
+			}
+		}
+	}
+
+	#respond input,
+	#respond textarea {
+		width: 100%;
+		max-width: none;
+
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	#respond .subscribe-to-comments label {
+		display: inline;
+	}
+
+	.author-image {
+		max-width: 150px;
+	}
 }
 
 

@@ -9,24 +9,26 @@
  * @since drublic-blog 1.0
  */
 ?>
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 
 	<!--
-			 ____      _            _     _ _
-			/ __ \  __| |_ __ _   _| |__ | (_) ___
-		 / / _` |/ _` | '__| | | | '_ \| | |/ __|
-		| | (_| | (_| | |  | |_| | |_) | | | (__
-		 \ \__,_|\__,_|_|   \__,_|_.__/|_|_|\___|
-			\____/
+             _            _     _ _
+          __| |_ __ _   _| |__ | (_) ___
+         / _` | '__| | | | '_ \| | |/ __|
+        | (_| | |  | |_| | |_) | | | (__
+         \__,_|_|   \__,_|_.__/|_|_|\___|
 
-		Feel free to view and copy my source-code if you want to.
-		Contact me if you have questions.
+        Feel free to view and copy my source-code if you want to.
+        Contact me if you have questions and check out the GitHub- Repo:
+        https://github.com/drublic/drublic-blog
 
-		Thanks for visiting!
-		Hans
+        This is under MIT licence, so take it!
+
+        Thanks for visiting,
+        Hans
 
 	-->
 
@@ -54,10 +56,7 @@
 
 	?></title>
 
-	<!-- Mobile viewport optimized: j.mp/bplateviewport -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+	<meta name="viewport" content="width=device-width">
 
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
