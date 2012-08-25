@@ -1,213 +1,102 @@
-@media screen and (max-width: 60em) {
-  /* Footer */
-  #footer .inner {
-    width: auto;
-    margin: 0 2em;
-  }
-}
-
-
-
-
-
-@media screen and (max-width: 54em) {
-  
-  /* Header */
-  #nav {
-    margin-right: 3.55em;
-  }
-}
-
-
-
-/* iPad */
+// iPad
 @media screen and (max-width: 48em) {
-  
-  
-  
-  /* Images */
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  img[width] {
-    max-width: 100% !important;
-    height: auto !important;
-  }
-  
-  
-  /* Main */
-  #main {
-    width: auto;
-    max-width: 48em;
-    margin: 0 2em;
-  }
-  
-  
-  article { margin: 3em 0; }
-  article header { margin: 2em 0; padding: 0 0 1em; }
-  
-  
-  
-  
-  .animate-wrap {
-    width: auto;
-    height: auto;
-  }
+
+	// Images
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+
+	img[width] {
+		max-width: 100% !important;
+		height: auto !important;
+	}
+
+
+	// Header, Main and Footer
+	#header,
+	#main,
+	.footer {
+		width: auto;
+		max-width: 48em;
+		margin: 7px 2em 0;
+	}
+
+	// Comments form
+	#comment {
+		width: auto;
+		max-width: 400px;
+	}
+
+	#respond .subscribe-to-comments {
+		margin-left: 0;
+	}
 
 }
 
 
 
-@media screen and (max-width: 42em) {
-  
-  
-  #header .inner {
-    width: 100%;
-    margin: 1px 0 0;
-  }
+@media screen and (max-width: 40em) {
+	#comment {
+		max-width: 300px;
+	}
 
-  .social-media-links {
-    overflow: hidden;
-  }
-  #nav {
-    margin-right: 0;
-  }
-
-
-  #respond textarea {
-    width: 300px;
-  }
-  
+	#search.active form {
+		width: 142px;
+	}
 }
 
 
 
-/* Phones */
-@media only screen and (max-width: 480px) {
+// Phones
+@media only screen and (max-width: 543px) {
 
-  $smWidth: 24px;
-
-  body {
-    line-height: 1.7;
-  }
-  
-  /* Headlines */
-  h1 { font-size: 2em; }
-  h2 { font-size: 1.5em; margin-top: 10px; }
-  h3 { font-size: 1.2em; margin-top: 5px; }
-  h4 { font-size: 1.1em; }
-  
-  
-  /* Inputs */
-  input,
-  #respond input,
-  textarea,
-  #respond textarea {
-    width: 100%;
-    box-sizing: border-box;
-    font-size: 1em;
-  }
-  
-  /* Header */
-  #header {
-    padding: 0 1.5em;
-  }
-
-  #logo a {
-    padding: .5em 1em;
-  }
-
-  .social-media-links a,
-  .search-icon {
-    width: $smWidth;
-    height: $smWidth;
-  }
-  
-  .social-media-links a:after,
-  .search-icon:after {
-    width: $smWidth;
-    height: $smWidth;
-    background-size: $smWidth auto;
-    background-position: 0 ($smWidth * -3);
-  }
-
-  .social-media-links {
-    .twitter a:after {
-      background-position: 0 ($smWidth * -2);
-    }
-    .lastfm a:after {
-      background-position: 0 0;
-    }
-    .rss a:after {
-      background-position: 0 ($smWidth * -1);
-    }
-  }
-  
-  .search-icon {
-    right: 1.5em;
-    &:after {
-      height: $smWidth - 4;
-      background: 0 ($smWidth * -4) url('data:image/png;base64,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');
-    }
-  }
-  
-  
-  #nav {
-    float: none;
-
-    a {
-      padding: .5em 1em;
-    }
-  }
-  #nav li:first-child a {
-    border-left: 0;
-  }
-  
-  #comments {
-    margin: 3em 0 1em;
-  }
-  
-  .required {
-    display: none;
-  }
-
-  
-  /* Main */
-  #main {
-    margin: 0 1.5em;
-  }
-  
-  
-  article { margin: 2em 0 1em; }
-  article header {
-    margin: 30px 0;
-    padding: 0 0 10px;
-  }
-  article header:after {
-    display: table;
-    content: '';
-    clear: both;
-  }
-  
-  article header h1 {
-    margin-bottom: 0;
-  }
-  
-  #post-nav {
-    display: none;
-  }
-  
-  
-  /* Footer */
-  .col-1, .col-2, .col-3, .col-4 {
-    float: none;
-    display: block;
-    width: auto;
-    margin: 0 0 2em;
-  }
+	// Headlines
+	h1 { font-size: 2em; }
+	h2 { font-size: 1.5em; margin-top: 10px; }
+	h3 { font-size: 1.2em; margin-top: 5px; }
+	h4 { font-size: 1.1em; }
 
 
+	// Coments
+	#respond label {
+		width: 90px;
+	}
+
+	#respond input,
+	#respond textarea {
+		font-size: 16px;
+	}
+
+	#respond input[type="submit"] {
+		width: auto;
+	}
+
+	#comments {
+		margin: 3em 0 1em;
+	}
+
+
+	// Header, Main and Footer
+	#header,
+	#main,
+	.footer {
+		margin: 7px 1.5em 0;
+	}
+
+
+	article {
+		margin: 2em 0 1em;
+
+		header {
+			margin: 30px 0;
+			padding: 0 0 10px;
+
+			h1 {
+				margin-bottom: 0;
+			}
+		}
+	}
 
 }
 

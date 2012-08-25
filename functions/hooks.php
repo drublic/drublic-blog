@@ -180,7 +180,7 @@ add_filter('gallery_style', 'remove_gallery_style');
 function new_excerpt_more($more) {
   global $post, $wpak_options;
 
-	return '<p><a title="' . $wpak_options['linkto'] . $post->post_title.'" class="more-link" href="'. get_permalink($post->ID) . '">' . $wpak_options['readmore'] . '</a></p>';
+	return '<p class="readmore"><a title="' . $wpak_options['linkto'] . $post->post_title.'" href="'. get_permalink($post->ID) . '">' . $wpak_options['readmore'] . '</a></p>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
@@ -192,4 +192,27 @@ remove_action('wp_head', 'start_post_rel_link');
 remove_action('wp_head', 'adjacent_posts_rel_link_wp_head');
 
 
+/**
+ *  Generate page-navigation
+ */
+function wp_pagenavi() {
+	global $wp_query, $wp_rewrite;
 
+	$max = $wp_query->max_num_pages;
+
+	if (!$current = get_query_var('paged')) {
+		$current = 1;
+	}
+
+	$args['base'] = str_replace(999999999, '%#%', get_pagenum_link(999999999));
+	$args['total'] = $max;
+	$args['current'] = $current;
+
+	$args['mid_size'] = 3;
+	$args['end_size'] = 1;
+	$args['prev_text'] = '«';
+	$args['next_text'] = '»';
+	$args['type'] = 'list';
+
+	echo paginate_links($args);
+}

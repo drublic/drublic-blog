@@ -1,210 +1,150 @@
-/* Author: 
-
-*/
-
-
-
+/**
+ * For drublic.de/blog
+ * @author: Hans Christian Reinl
+ */
 
 
+(function($) {
+
+	"use strict";
 
 
-! function( $, window, document, undefined ) {
-
-var isMobile = $(window).width() < 480;
-
-
-// FadeIn Images
-$( 'img' ).addClass( 'show' );
+	// FadeIn Images
+	$('img').addClass( 'show' );
 
 
+	// Remove Overlay
+	function closeOverlay() {
+		if ($('#overlay').length > 0) {
+			$('#overlay').fadeOut();
+		}
 
-// Close Action
-function do_close( action ) {
-  log( 'Close: ' + action );
-  
-  if ( action === "search" ) {
-    $( '#misc .search-icon' ).removeClass( 'active' );
-    remove_overlay();
-    
-    $( '#search' ).css({
-        '-moz-transform' : 'scale(0)',
-          '-o-transform' : 'scale(0)',
-     '-webkit-transform' : 'scale(0)',
-         '-ms-transform' : 'scale(0)',
-             'transform' : 'scale(0)',
-      'opacity' : '0'
-    });
-  } else {
-    remove_overlay();
-    $( '#markdown' ).fadeOut();
-  }
-
-}
+		$('#markdown').fadeOut();
+	}
 
 
 
-// Overlay
-function do_overlay( action, transparency ) {
-  if ( transparency === undefined ) {
-    transparency = false;
-  }
-  
-  if ( $( '#overlay' ).size() < 1 ) {      
-    
-    var $overlay = $( '<div />', {
-        'id' : 'overlay',
-        'css' : {
-          'display' : 'none'
-        }
-      });
-      
-    if ( transparency ) {
-      $overlay.addClass( 'transparent' )
-    }
-    
-    $overlay.click( function( e ) {
-      e.preventDefault();
-      
-      location.hash = '#/close/' + action;
-    });
-    
-    $overlay.appendTo( 'body' ).fadeIn();
-  } else {
-    $( '#overlay' ).fadeIn();
-  }
-  
-  delete $output;
+	// Overlay
+	function showOverlay (action, transparency) {
+		var $overlay;
 
-}
+		if ($('#overlay').length < 1) {
 
+			$overlay = $( '<div />', {
+					'id' : 'overlay',
+					'css' : {
+						'display' : 'none'
+					}
+				});
 
-// Remove Overlay
-function remove_overlay() {
-  if ( $( '#overlay' ).size() > 0 ) {
-    $( '#overlay' ).fadeOut();
-  }
-}
+			if (transparency) {
+				$overlay.addClass('transparent');
+			}
+
+			$overlay.click( function( e ) {
+				e.preventDefault();
+
+				location.hash = '#/close/' + action;
+			});
+
+			$overlay.appendTo( 'body' ).fadeIn();
+		} else {
+			$( '#overlay' ).fadeIn();
+		}
+
+		$overlay = null;
+
+	}
 
 
 
-// Pressing ESC
-! function() {
-  $( window ).keyup( function( e ) {
-    if ( e.which == 27 && $( '#overlay' ).size() > 0 ) {
-      $( '#overlay' ).trigger( 'click' );
-    }
-  });
-} ();
+	// Pressing ESC
+	$(window).keyup( function (e) {
+		if (e.which === 27 && $('#overlay').length > 0) {
+			$('#overlay').trigger('click');
+		}
+	});
 
 
 
 
+	// Init Hash-Listener
+	$(window).on('hashchange', function () {
+		var hash = location.hash;
+
+		// Search
+		if (hash === "#/search") {
+			$('#search').addClass('active');
+			$('#s').focus();
+
+		// Close
+		} else if ( hash.substr( 0, 7 ) === "#/close") {
+			closeOverlay();
+
+		// Markdown rules
+		} else if ( hash === "#/markdown" ) {
+
+			if ( $('#markdown').size() > 0 ) {
+				showOverlay('markdown');
+				$('#markdown').fadeIn();
+
+			} else {
+				$.get( '?get_markdown', function( data ) {
+					$('body').append( data );
+					showOverlay('markdown');
+
+					$('#markdown').fadeIn();
+				});
+			}
+		}
+	});
+
+	// If hash is already set, trigger change
+	if (location.hash !== "") {
+		$(window).trigger('hashchange');
+	}
 
 
-
-// Init Hash-Listener
-var hash = '';
-! function hash_listener( ) {
-  
-
-  $( window ).bind( 'hashchange', function( e ) {
-    hash = location.hash;
-    log( hash );
-    
-    // Search
-    if ( hash === "#/search" ) {
-      $( '#misc .search-icon' ).addClass( 'active' );
-      
-      $( '#search' ).css({
-          '-moz-transform' : 'scale(1)',
-            '-o-transform' : 'scale(1)',
-       '-webkit-transform' : 'scale(1)',
-           '-ms-transform' : 'scale(1)',
-               'transform' : 'scale(1)',
-        'opacity' : '1'
-      });
-      
-      do_overlay( 'search', true );
-      
-      $( '#s' ).focus();
-    
-    // Close
-    } else if ( hash.substr( 0, 7 ) === "#/close") {
-      do_close( hash.substr( 8 ) );
-    
-    // Markdown rules
-    } else if ( hash === "#/markdown" ) {
-      if ( $( '#markdown' ).size() > 0 ) {
-        do_overlay( 'markdown' );
-        $( '#markdown' ).fadeIn();
-      } else {
-        $.get( '?get_markdown', function( data ) {
-          $( 'body' ).append( data );
-          do_overlay( 'markdown' );
-          
-          $( '#markdown' ).fadeIn();
-        });
-      }
-    }
-  });
-
-  if (location.hash) {
-    location.hash = "";
-  }
-
-} ();
+	// Hide Search on blur
+	$(document).on('blur', '#s', function () {
+		$('#search').removeClass('active');
+		location.hash = '#/';
+	});
 
 
 
 
 
-// Submit a comment
-$( '#commentform' ).submit( function() {
-  var $el,
-      err = false,
-      $req = new Array( $( '#author' ), $( '#email' ), $( '#comment' ) );
-  
-  $.each( $req, function() {
-    $el = $( this );
-    if ( $el.prop( 'value' ) === "" ) {
-      $el.addClass( 'invalid' );
-      err = true;
-    }
-  });
-  
-  if ( err ) {
-    return false;
-  }
-});
+	// Submit a comment
+	$( '#commentform' ).submit( function() {
+		var $el,
+				error = false,
+				$required = [ $( '#author' ), $('#email'), $('#comment') ];
+
+		$.each($required, function () {
+			$el = $(this);
+			$el.removeClass('invalid');
+
+			if ($el.prop('value') === "") {
+				$el.addClass('invalid');
+				error = true;
+			}
+		});
+
+		return !error;
+	});
 
 
 
 
-// Enable share-buttons
-! function () {
-  if ($('#share-post').size() > 0) {
-    $('#share-post').before( $('#share-post').html() );
-    $.getScript("https://apis.google.com/js/plusone.js");
-    $.getScript("http://platform.twitter.com/widgets.js");
-  }
-}();
+	// Enable share-buttons
+	if ($('#share-post').size() > 0) {
+		$('#share-post').before( $('#share-post').html() );
+		$.getScript("https://apis.google.com/js/plusone.js");
+		$.getScript("http://platform.twitter.com/widgets.js");
+	}
 
 
 
 
-} ( jQuery, window, document );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}(jQuery));
