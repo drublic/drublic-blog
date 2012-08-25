@@ -838,9 +838,9 @@ article header {
 #nav {
   float: right;
   overflow: hidden; }
-  #nav .menu-main-menu-container {
+  #nav > div {
     display: inline; }
-    #nav .menu-main-menu-container ul {
+    #nav > div ul {
       display: inline; }
   #nav li {
     float: left; }

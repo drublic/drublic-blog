@@ -750,7 +750,7 @@ article header {
 	float: right;
 	overflow: hidden;
 
-	.menu-main-menu-container {
+	> div {
 		display: inline;
 
 		ul {
