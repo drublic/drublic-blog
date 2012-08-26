@@ -65,7 +65,7 @@
 
 	<!-- Feed -->
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	<link rel="alternate" type="application/rss+xml" title="@drublic &raquo; Feed" href="http://feeds.feedburner.com/drublic">
+	<link rel="alternate" type="application/rss+xml" title="drublic &raquo; Feed" href="http://feeds.feedburner.com/drublic">
 
 	<!-- All JavaScript at the bottom, except for Modernizr. -->
 	<script src="<?php bloginfo( 'template_url' ); ?>/js/vendor/modernizr.custom.65404.js"></script>
@@ -84,6 +84,7 @@
 	<div id="container">
 		<header id="header">
 			<div id="logo">
+				<a href="<?php echo home_url( '/' ); ?>" class="icon">&#x25B5;</a>
 				<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">/drublic<span class="visuallyhidden"> - <?php bloginfo( 'description' ); ?></span></a>
 			</div>
 
