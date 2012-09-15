@@ -31,7 +31,7 @@
 
 body {
 	background: #fff;
-	color: #000;
+	color: #111;
 	font: 15px/2 Helvetica Neue, Helvetica, sans-serif;
 	-webkit-hyphens: auto;
 		 -moz-hyphens: auto;
@@ -67,7 +67,7 @@ $color: #27aae2;
 	display: inline-block;
 	padding: 0 11px;
 	text-decoration: none;
-	background: #000;
+	background: #111;
 	color: #fff;
 
 	&:visited {
@@ -112,11 +112,11 @@ h1, h2, h3 {
 
 // Links
 a {
-	color: #000;
+	color: #111;
 	text-decoration: underline;
 
 	&:visited {
-		color: #000;
+		color: #111;
 	}
 
 	&:hover {
@@ -135,7 +135,7 @@ blockquote {
 	@extend q;
 
 	margin: 20px 0;
-	border-left: 5px solid #000;
+	border-left: 5px solid #111;
 	padding-left: 20px;
 
 	footer {
@@ -204,10 +204,10 @@ textarea {
 	width: 300px;
 	padding: 10px;
 	border: 1px solid #aaa;
-	color: #000;
+	color: #111;
 
 	&:focus {
-		border-color: #000;
+		border-color: #111;
 	}
 }
 
@@ -232,7 +232,7 @@ input[type="search"] {
 input[type="submit"] {
 
 	display: inline-block;
-	background: #000;
+	background: #111;
 
 	border: 0;
 	padding: 10px 25px;
@@ -351,7 +351,7 @@ hr,
 #post-nav:after {
 	display: block;
 	content: "";
-	border-top: 1px solid #000;
+	border-top: 1px solid #111;
 }
 
 article header {
@@ -458,7 +458,7 @@ article header {
 	padding-bottom: 20px;
 
 	+ hr {
-		border-top-color: #000;
+		border-top-color: #111;
 		margin-top: -10px;
 	}
 
@@ -530,7 +530,7 @@ article header {
 
 /* Single Comment */
 .comment { position: relative; }
-.comment + hr { border-top-color: #000; }
+.comment + hr { border-top-color: #111; }
 
 .avatar {
 	position: absolute; top: 0; left: -50px;
@@ -632,7 +632,7 @@ article header {
 
 		.current {
 			background: none;
-			color: #000;
+			color: #111;
 
 			&:hover {
 				background: none;
@@ -697,7 +697,7 @@ article header {
 		margin-right: 7px;
 
 		text-indent: -999em;
-		background: #000 url(../img/github.png);
+		background: #111 url(../img/github.png);
 		background-size: $smWidth;
 
 		&:hover {
@@ -727,7 +727,7 @@ article header {
 		float: left;
 		border-width: 0 1px;
 		padding: 10px 20px;
-		background: #000;
+		background: #111;
 
 		background-color: $color;
 
@@ -747,7 +747,7 @@ article header {
 	.icon {
 		width: 50px;
 		height: 50px;
-		background: #000 url(../img/logo.png);
+		background: #111 url(../img/logo.png);
 		padding: 0;
 		margin-right: 7px;
 		text-indent: -999em;
@@ -773,7 +773,7 @@ article header {
 
 	a {
 		display: inline-block;
-		background: #000;
+		background: #111;
 		padding: 10px 20px;
 		margin-left: 7px;
 		color: #fff;
@@ -808,7 +808,7 @@ article header {
 		margin-left: 0;
 		text-indent: -999em;
 
-		background: #000 url(../img/search.png) center center no-repeat;
+		background: #111 url(../img/search.png) center center no-repeat;
 		background-size: 40px;
 	}
 
@@ -869,7 +869,7 @@ article header {
 
 	.follow-me {
 		margin-top: 50px;
-		border-top: 1px solid #000;
+		border-top: 1px solid #111;
 		padding-top: 50px;
 		text-align: center;
 	}

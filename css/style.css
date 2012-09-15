@@ -290,7 +290,7 @@ h1, h2, h3, h4, h5, h6 {
     page-break-after: avoid; } }
 body {
   background: #fff;
-  color: #000;
+  color: #111;
   font: 15px/2 Helvetica Neue, Helvetica, sans-serif;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
@@ -327,10 +327,10 @@ h1, h2, h3 {
   hyphens: manual; }
 
 a {
-  color: #000;
+  color: #111;
   text-decoration: underline; }
   a:visited {
-    color: #000; }
+    color: #111; }
   a:hover {
     color: #27aae2;
     text-decoration: none; }
@@ -340,7 +340,7 @@ q, blockquote {
 
 blockquote {
   margin: 20px 0;
-  border-left: 5px solid #000;
+  border-left: 5px solid #111;
   padding-left: 20px; }
   blockquote footer {
     margin: 10px 0 10px 20px;
@@ -404,7 +404,7 @@ textarea {
   width: 300px;
   padding: 10px;
   border: 1px solid #aaa;
-  color: #000; }
+  color: #111; }
   input[type="text"]:focus,
   input[type="url"]:focus,
   input[type="email"]:focus,
@@ -412,7 +412,7 @@ textarea {
   input[type="number"]:focus,
   input[type="search"]:focus,
   textarea:focus {
-    border-color: #000; }
+    border-color: #111; }
 
 textarea {
   height: 150px;
@@ -429,7 +429,7 @@ input[type="search"] {
 .button,
 input[type="submit"] {
   display: inline-block;
-  background: #000;
+  background: #111;
   border: 0;
   padding: 10px 25px;
   margin: 10px 0;
@@ -514,7 +514,7 @@ hr,
 #post-nav:after {
   display: block;
   content: "";
-  border-top: 1px solid #000; }
+  border-top: 1px solid #111; }
 
 article header {
   position: relative;
@@ -541,7 +541,7 @@ article header {
       display: inline-block;
       padding: 0 11px;
       text-decoration: none;
-      background: #000;
+      background: #111;
       color: #fff; }
       article header .categories a:visited {
         color: #fff; }
@@ -569,7 +569,7 @@ article header {
     display: inline-block;
     padding: 0 11px;
     text-decoration: none;
-    background: #000;
+    background: #111;
     color: #fff;
     margin-bottom: 4px; }
     .tags a:visited {
@@ -589,7 +589,7 @@ article header {
     display: inline-block;
     padding: 0 11px;
     text-decoration: none;
-    background: #000;
+    background: #111;
     color: #fff; }
     .readmore a:visited {
       color: #fff; }
@@ -618,7 +618,7 @@ article header {
   margin: 100px 0 30px;
   padding-bottom: 20px; }
   #comments + hr {
-    border-top-color: #000;
+    border-top-color: #111;
     margin-top: -10px; }
   #comments .children {
     margin-left: 100px; }
@@ -671,7 +671,7 @@ article header {
   position: relative; }
 
 .comment + hr {
-  border-top-color: #000; }
+  border-top-color: #111; }
 
 .avatar {
   position: absolute;
@@ -707,7 +707,7 @@ article header {
     display: inline-block;
     padding: 0 11px;
     text-decoration: none;
-    background: #000;
+    background: #111;
     color: #fff; }
     .reply a:visited {
       color: #fff; }
@@ -758,7 +758,7 @@ article header {
       display: inline-block;
       padding: 0 11px;
       text-decoration: none;
-      background: #000;
+      background: #111;
       color: #fff; }
       #post-nav li a:visited,
       #post-nav li .current:visited {
@@ -772,7 +772,7 @@ article header {
         float: none; }
     #post-nav li .current {
       background: none;
-      color: #000; }
+      color: #111; }
       #post-nav li .current:hover {
         background: none; }
 
@@ -807,7 +807,7 @@ article header {
     height: 32px;
     margin-right: 7px;
     text-indent: -999em;
-    background: black url(../img/github.png);
+    background: #111111 url(../img/github.png);
     background-size: 32px; }
     .social-media-links a:hover {
       background-color: #27aae2; }
@@ -825,7 +825,7 @@ article header {
     float: left;
     border-width: 0 1px;
     padding: 10px 20px;
-    background: #000;
+    background: #111;
     background-color: #27aae2;
     color: #fff;
     font-weight: bold;
@@ -837,7 +837,7 @@ article header {
   #logo .icon {
     width: 50px;
     height: 50px;
-    background: black url(../img/logo.png);
+    background: #111111 url(../img/logo.png);
     padding: 0;
     margin-right: 7px;
     text-indent: -999em; }
@@ -853,7 +853,7 @@ article header {
     float: left; }
   #nav a {
     display: inline-block;
-    background: #000;
+    background: #111;
     padding: 10px 20px;
     margin-left: 7px;
     color: #fff;
@@ -876,7 +876,7 @@ article header {
     padding: 9px;
     margin-left: 0;
     text-indent: -999em;
-    background: black url(../img/search.png) center center no-repeat;
+    background: #111111 url(../img/search.png) center center no-repeat;
     background-size: 40px; }
   #search form {
     -webkit-transition: width 0.2s ease-out;
@@ -915,7 +915,7 @@ article header {
     overflow: hidden; }
   .footer .follow-me {
     margin-top: 50px;
-    border-top: 1px solid #000;
+    border-top: 1px solid #111;
     padding-top: 50px;
     text-align: center; }
 
