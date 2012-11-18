@@ -837,7 +837,7 @@ article header {
   #logo .icon {
     width: 50px;
     height: 50px;
-    background: #111111 url(../img/logo.png);
+    background: #111111 url(../img/logo.svg);
     padding: 0;
     margin-right: 7px;
     text-indent: -999em; }
