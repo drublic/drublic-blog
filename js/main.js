@@ -140,8 +140,8 @@
 				return;
 			}
 
-			// When last request is five second ago
-			if (time + 5000 < e.timeStamp) {
+			// When last request is a second ago
+			if (time + 1000 < e.timeStamp) {
 				time = e.timeStamp;
 
 				// Request Ajax
@@ -165,6 +165,10 @@
 					$('.comment-preview').html('Sorry, request failed.');
 				});
 			}
+		}).on('blur', function () {
+			setTimeout(function () {
+				$('#comment').trigger('keyup');
+			}, 1000);
 		});
 	}());
 
