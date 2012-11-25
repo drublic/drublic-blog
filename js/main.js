@@ -127,6 +127,48 @@
 	}
 
 
+	// Live preview for comments
+	(function () {
+		var time = new Date().getTime();
+
+		$('#comment').on('keyup', function (e) {
+			var request,
+			    comment = $(this).val();
+
+			// Don't request anything if comment is empty
+			if (comment === "") {
+				return;
+			}
+
+			// When last request is five second ago
+			if (time + 5000 < e.timeStamp) {
+				time = e.timeStamp;
+
+				// Request Ajax
+				request = $.ajax({
+					type: 'POST',
+					url: 'https://api.github.com/markdown',
+					data: JSON.stringify({
+						"text": comment
+					})
+				}).done(function (html) {
+
+					// Inject HTML if necessary
+					if ($('.respond-preview').length < 1) {
+						$('#respond').after('<div class="comment respond-preview"><h3>Preview:</h3><div class="comment-preview"></div>');
+					}
+
+					// Inject comment
+					$('.comment-preview').html(html);
+				}).fail(function () {
+					$('.respond-preview').remove();
+					$('.comment-preview').html('Sorry, request failed.');
+				});
+			}
+		});
+	}());
+
+
 
 
 }(jQuery));
