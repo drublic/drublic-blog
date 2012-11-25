@@ -294,18 +294,30 @@ remove_action( 'wp_head', 'feed_links'); // Display the links to the general fee
 
 if ( !function_exists( 'drublic_preprocess_comment' ) ) :
 function drublic_preprocess_comment( $comment ) {
-  // Replace all appereances of __ and ** with <i>
-  $comment['comment_content'] = preg_replace( '/__(.*?)__/is', '<b>$1</b>', $comment['comment_content'] );
-  $comment['comment_content'] = preg_replace( '/\*\*(.*?)\*\*/is', '<strong>$1</strong>', $comment['comment_content'] );
 
-  // Replace all appereances of _ and * with <i> and <em>
-  $comment['comment_content'] = preg_replace( '/_(.*?)_/is', '<i>$1</i>', $comment['comment_content'] );
-  $comment['comment_content'] = preg_replace( '/\*(.*?)\*/is', '<em>$1</em>', $comment['comment_content'] );
+	// set POST variables
+	$url = 'https://api.github.com/markdown';
+	$fields = array(
+		'text' => $comment['comment_content']
+	);
+	$fields_string = json_encode($fields);
 
-  // Replace all appereances of ` with <code>
-  $comment['comment_content'] = preg_replace( '/`(.*?)`/is', '<code>$1</code>', $comment['comment_content'] );
+	// open connection
+	$ch = curl_init();
 
-  return $comment;
+	// set the url, number of POST vars, POST data
+	curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch, CURLOPT_POST, count($fields));
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_string);
+
+	// execute post
+	$comment['comment_content'] = curl_exec($ch);
+
+	// close connection
+	curl_close($ch);
+
+	return $comment;
 }
 endif;
 add_filter('preprocess_comment', 'drublic_preprocess_comment');
