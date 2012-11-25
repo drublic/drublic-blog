@@ -433,6 +433,7 @@ input[type="submit"] {
   border: 0;
   padding: 10px 25px;
   margin: 10px 0;
+  border-radius: 2px;
   text-decoration: none;
   color: #fff;
   white-space: nowrap;
@@ -463,16 +464,14 @@ textarea,
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  -webkit-backface-visibility: hidden; }
+  transition: all 0.3s ease-out; }
 
 .content-widget {
   -webkit-transition: all 0.1s ease-out;
   -moz-transition: all 0.1s ease-out;
   -ms-transition: all 0.1s ease-out;
   -o-transition: all 0.1s ease-out;
-  transition: all 0.1s ease-out;
-  -webkit-backface-visibility: hidden; }
+  transition: all 0.1s ease-out; }
 
 #overlay {
   position: fixed;
@@ -532,17 +531,17 @@ article header {
   article header .categories {
     float: right; }
     article header .categories a {
-      -webkit-transition: background 0.2s linear;
-      -moz-transition: background 0.2s linear;
-      -ms-transition: background 0.2s linear;
-      -o-transition: background 0.2s linear;
-      transition: background 0.2s linear;
-      -webkit-backface-visibility: hidden;
+      -webkit-transition: background 0.1s linear;
+      -moz-transition: background 0.1s linear;
+      -ms-transition: background 0.1s linear;
+      -o-transition: background 0.1s linear;
+      transition: background 0.1s linear;
       display: inline-block;
       padding: 0 11px;
       text-decoration: none;
       background: #111;
-      color: #fff; }
+      color: #fff;
+      border-radius: 2px; }
       article header .categories a:visited {
         color: #fff; }
       article header .categories a:hover {
@@ -560,17 +559,17 @@ article header {
 .tags {
   margin-top: 50px; }
   .tags a {
-    -webkit-transition: background 0.2s linear;
-    -moz-transition: background 0.2s linear;
-    -ms-transition: background 0.2s linear;
-    -o-transition: background 0.2s linear;
-    transition: background 0.2s linear;
-    -webkit-backface-visibility: hidden;
+    -webkit-transition: background 0.1s linear;
+    -moz-transition: background 0.1s linear;
+    -ms-transition: background 0.1s linear;
+    -o-transition: background 0.1s linear;
+    transition: background 0.1s linear;
     display: inline-block;
     padding: 0 11px;
     text-decoration: none;
     background: #111;
     color: #fff;
+    border-radius: 2px;
     margin-bottom: 4px; }
     .tags a:visited {
       color: #fff; }
@@ -580,17 +579,17 @@ article header {
 .readmore {
   text-align: right; }
   .readmore a {
-    -webkit-transition: background 0.2s linear;
-    -moz-transition: background 0.2s linear;
-    -ms-transition: background 0.2s linear;
-    -o-transition: background 0.2s linear;
-    transition: background 0.2s linear;
-    -webkit-backface-visibility: hidden;
+    -webkit-transition: background 0.1s linear;
+    -moz-transition: background 0.1s linear;
+    -ms-transition: background 0.1s linear;
+    -o-transition: background 0.1s linear;
+    transition: background 0.1s linear;
     display: inline-block;
     padding: 0 11px;
     text-decoration: none;
     background: #111;
-    color: #fff; }
+    color: #fff;
+    border-radius: 2px; }
     .readmore a:visited {
       color: #fff; }
     .readmore a:hover {
@@ -698,17 +697,17 @@ article header {
 .reply {
   text-align: right; }
   .reply a {
-    -webkit-transition: background 0.2s linear;
-    -moz-transition: background 0.2s linear;
-    -ms-transition: background 0.2s linear;
-    -o-transition: background 0.2s linear;
-    transition: background 0.2s linear;
-    -webkit-backface-visibility: hidden;
+    -webkit-transition: background 0.1s linear;
+    -moz-transition: background 0.1s linear;
+    -ms-transition: background 0.1s linear;
+    -o-transition: background 0.1s linear;
+    transition: background 0.1s linear;
     display: inline-block;
     padding: 0 11px;
     text-decoration: none;
     background: #111;
-    color: #fff; }
+    color: #fff;
+    border-radius: 2px; }
     .reply a:visited {
       color: #fff; }
     .reply a:hover {
@@ -749,17 +748,17 @@ article header {
     display: inline; }
     #post-nav li a,
     #post-nav li .current {
-      -webkit-transition: background 0.2s linear;
-      -moz-transition: background 0.2s linear;
-      -ms-transition: background 0.2s linear;
-      -o-transition: background 0.2s linear;
-      transition: background 0.2s linear;
-      -webkit-backface-visibility: hidden;
+      -webkit-transition: background 0.1s linear;
+      -moz-transition: background 0.1s linear;
+      -ms-transition: background 0.1s linear;
+      -o-transition: background 0.1s linear;
+      transition: background 0.1s linear;
       display: inline-block;
       padding: 0 11px;
       text-decoration: none;
       background: #111;
-      color: #fff; }
+      color: #fff;
+      border-radius: 2px; }
       #post-nav li a:visited,
       #post-nav li .current:visited {
         color: #fff; }
@@ -806,6 +805,7 @@ article header {
     width: 32px;
     height: 32px;
     margin-right: 7px;
+    border-radius: 2px;
     text-indent: -999em;
     background: #111111 url(../img/github.png);
     background-size: 32px; }
@@ -826,6 +826,7 @@ article header {
     border-width: 0 1px;
     padding: 10px 20px;
     background: #111;
+    border-radius: 2px;
     background-color: #27aae2;
     color: #fff;
     font-weight: bold;
@@ -858,7 +859,8 @@ article header {
     padding: 10px 20px;
     margin-left: 7px;
     color: #fff;
-    text-decoration: none; }
+    text-decoration: none;
+    border-radius: 2px; }
     #nav a:visited {
       color: #fff; }
     #nav a:hover {
@@ -885,7 +887,6 @@ article header {
     -ms-transition: width 0.2s ease-out;
     -o-transition: width 0.2s ease-out;
     transition: width 0.2s ease-out;
-    -webkit-backface-visibility: hidden;
     float: right;
     width: 0;
     background: #27aae2;
