@@ -141,7 +141,7 @@
 			}
 
 			// When last request is a second ago
-			if (time + 1000 < e.timeStamp) {
+			if (time + 300 < e.timeStamp) {
 				time = e.timeStamp;
 
 				// Request Ajax
