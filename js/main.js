@@ -147,10 +147,10 @@
 				// Request Ajax
 				request = $.ajax({
 					type: 'POST',
-					url: 'https://api.github.com/markdown',
-					data: JSON.stringify({
-						"text": comment
-					})
+					url: '?markdown',
+					data: {
+						'text': comment
+					}
 				}).done(function (html) {
 
 					// Inject HTML if necessary

@@ -292,37 +292,17 @@ remove_action( 'wp_head', 'feed_links'); // Display the links to the general fee
 
 
 
+require('functions/markdown-lib.php');
+
 if ( !function_exists( 'drublic_preprocess_comment' ) ) :
 function drublic_preprocess_comment( $comment ) {
-
-	// set POST variables
-	$url = 'https://api.github.com/markdown';
-	$fields = array(
-		'text' => $comment['comment_content']
-	);
-	$fields_string = json_encode($fields);
-
-	// open connection
-	$ch = curl_init();
-
-	// set the url, number of POST vars, POST data
-	curl_setopt($ch, CURLOPT_URL, $url);
-	curl_setopt($ch, CURLOPT_POST, count($fields));
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	curl_setopt($ch, CURLOPT_POSTFIELDS, $fields_string);
-
-	// execute post
-	$comment['comment_content'] = curl_exec($ch);
-
-	// close connection
-	curl_close($ch);
-
+	$comment['comment_content'] = Markdown($comment['comment_content']);
 	return $comment;
 }
 endif;
 add_filter('preprocess_comment', 'drublic_preprocess_comment');
 
-
+require('ajax/markdown.php');
 
 require('functions/includes.php');
 
