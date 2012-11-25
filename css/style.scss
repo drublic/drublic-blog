@@ -900,49 +900,6 @@ article header {
 
 
 
-// Markdown
-#markdown {
-	display: none;
-	position: fixed;
-	top: 50px;
-	left: 50%;
-	z-index: 102;
-
-	width: 500px;
-	margin: 0 -270px;
-	border: 1px solid #ddd;
-	padding: 0 20px 10px;
-
-	background: #fff;
-	box-shadow: 0 0 30px rgba(0,0,0,.5);
-
-	.close {
-		float: right;
-		height: 24px;
-		padding: 0 5px;
-		margin-right: -7px;
-		font-family: Georgia, "Times New Roman", serif;
-		font-style: italic;
-	}
-}
-
-.ruleset {
-	padding-top: 10px;
-	border-top: 1px solid #ddd;
-	margin-top: 10px;
-	line-height: 1.2;
-
-	&:last-child {
-		padding-bottom: 10px;
-		border-bottom: 1px solid #ddd;
-		margin-bottom: 20px;
-	}
-}
-
-
-
-
-
 @import 'mobile';
 
 

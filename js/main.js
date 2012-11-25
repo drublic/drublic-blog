@@ -18,8 +18,6 @@
 		if ($('#overlay').length > 0) {
 			$('#overlay').fadeOut();
 		}
-
-		$('#markdown').fadeOut();
 	}
 
 
@@ -80,22 +78,6 @@
 		// Close
 		} else if ( hash.substr( 0, 7 ) === "#/close") {
 			closeOverlay();
-
-		// Markdown rules
-		} else if ( hash === "#/markdown" ) {
-
-			if ( $('#markdown').size() > 0 ) {
-				showOverlay('markdown');
-				$('#markdown').fadeIn();
-
-			} else {
-				$.get( '?get_markdown', function( data ) {
-					$('body').append( data );
-					showOverlay('markdown');
-
-					$('#markdown').fadeIn();
-				});
-			}
 		}
 	});
 
@@ -138,7 +120,7 @@
 
 
 	// Enable share-buttons
-	if ($('#share-post').size() > 0) {
+	if ($('#share-post').length > 0) {
 		$('#share-post').before( $('#share-post').html() );
 		$.getScript("https://apis.google.com/js/plusone.js");
 		$.getScript("http://platform.twitter.com/widgets.js");

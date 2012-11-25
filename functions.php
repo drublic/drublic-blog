@@ -13,7 +13,7 @@
  * Used to set the width of images and content. Should be equal to the width the theme
  * is designed for, generally via the style.css stylesheet.
  */
- 
+
 /** Tell WordPress to run twentyten_setup() when the 'after_setup_theme' hook is run. */
 add_action( 'after_setup_theme', 'twentyten_setup' );
 
@@ -173,12 +173,12 @@ function twentyten_comment( $comment, $args, $depth ) {
 	?>
 	<div <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
 		<div class="avatar"><?php echo get_avatar( $comment, 64 ); ?></div>
-		
+
 		<p class="author"><cite><?php comment_author_link() ?></cite></p>
 
 		<time><a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><?php comment_date() ?> - <?php comment_time(); ?></a></time>
     <?php print edit_comment_link( '(Edit)' ) ?>
-    
+
 		<?php if ( $comment->comment_approved == '0' ) : ?>
 			<p class="comment-awaiting-moderation"><em><?php _e( 'Your comment is awaiting moderation.', 'twentyten' ); ?></em></p>
 		<?php endif; ?>
@@ -191,7 +191,7 @@ function twentyten_comment( $comment, $args, $depth ) {
 	<?php
 			break;
 		case 'pingback'  :
-		
+
 	?>
 	<div class="pingback">
 		<p><?php _e( 'Pingback:', 'twentyten' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( '(Edit)', 'twentyten' ), ' ' ); ?></p>
@@ -262,7 +262,7 @@ function drublic_comment_form() {
                           '<label for="comment">' . _x( 'Comment', 'noun' ) . '</label>' .
                           '<textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea>' .
                         '</fieldset>',
-    'comment_notes_before' => '<p>Remember what your mother told you: Be friendly. <small>Your email address will not be published.</small><br>There are <a href="#/markdown">some Markdown-Goodies</a> available.',
+    'comment_notes_before' => '<p>Remember what your mother told you: Be friendly. <small>Your email address will not be published.</small><br><a href="http://daringfireball.net/projects/markdown/">Markdown-Goodies</a> available.',
     'comment_notes_after' => '',
     'title_reply' => __('Leave a Comment')
   ) );
@@ -297,11 +297,11 @@ function drublic_preprocess_comment( $comment ) {
   // Replace all appereances of __ and ** with <i>
   $comment['comment_content'] = preg_replace( '/__(.*?)__/is', '<b>$1</b>', $comment['comment_content'] );
   $comment['comment_content'] = preg_replace( '/\*\*(.*?)\*\*/is', '<strong>$1</strong>', $comment['comment_content'] );
-  
+
   // Replace all appereances of _ and * with <i> and <em>
   $comment['comment_content'] = preg_replace( '/_(.*?)_/is', '<i>$1</i>', $comment['comment_content'] );
   $comment['comment_content'] = preg_replace( '/\*(.*?)\*/is', '<em>$1</em>', $comment['comment_content'] );
-  
+
   // Replace all appereances of ` with <code>
   $comment['comment_content'] = preg_replace( '/`(.*?)`/is', '<code>$1</code>', $comment['comment_content'] );
 
@@ -309,17 +309,6 @@ function drublic_preprocess_comment( $comment ) {
 }
 endif;
 add_filter('preprocess_comment', 'drublic_preprocess_comment');
-
-
-
-
-
-
-// Markdown-Text
-if ( isset( $_GET['get_markdown'] ) ) {
-  include ( 'ajax/markdown.php' );
-}
-
 
 
 
