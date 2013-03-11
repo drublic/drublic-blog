@@ -107,7 +107,7 @@
 				<li class="rss"><a href="http://feeds.feedburner.com/drublic">Subscribe to Feed</a></li><li
 					class="github"><a href="https://github.com/drublic">Github</a></li><li
 					class="twitter"><a href="https://twitter.com/drublic">Twitter</a></li><li
-					class="google-plus"><a href="https://plus.google.com/112019818423540363330/posts">Google+</a></li>
+					class="google-plus"><a href="https://plus.google.com/112019818423540363330?rel=author">Google+</a></li>
 			</ul>
 		</header>
 
