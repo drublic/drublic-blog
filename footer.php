@@ -29,6 +29,18 @@
 	<script defer src="<?php bloginfo( 'template_url' ); ?>/js/main.js"></script>
 	<!-- end scripts-->
 
+	<!-- AdPacks.com Ad Code -->
+	<script type="text/javascript">
+		(function(){
+			var bsa = document.createElement('script');
+				bsa.type = 'text/javascript';
+				bsa.async = true;
+				bsa.src = '//s3.buysellads.com/ac/bsa.js';
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(bsa);
+		}());
+	</script>
+	<!-- End AdPacks.com Ad Code -->
+
 	<!-- Piwik -->
 	<script>
 		var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.drublic.de/" : "http://piwik.drublic.de/");

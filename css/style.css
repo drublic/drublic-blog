@@ -776,7 +776,6 @@ article header {
         background: none; }
 
 #header {
-  position: relative;
   max-width: 45em;
   margin: 7px auto 0; }
   #header:before, #header:after {
@@ -925,6 +924,56 @@ article header {
   opacity: 0; }
   .js img.show {
     opacity: 1; }
+
+.bling-bling {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 300px;
+  border: 1px solid #aaa;
+  background: #f5f5f5;
+  padding: 10px;
+  line-height: 1.4;
+  font-size: 0.8em;
+  overflow: hidden;
+  border-radius: 2px; }
+  .bling-bling:hover {
+    -webkit-box-shadow: 0 0 5px #aaa;
+    box-shadow: 0 0 5px #aaa; }
+  .bling-bling img {
+    float: left;
+    margin: 0 1em 0 0; }
+  .bling-bling a {
+    text-decoration: none;
+    color: #111; }
+    .bling-bling a:visited, .bling-bling a:hover {
+      color: #111; }
+  .bling-bling .bsa_it_t {
+    display: block;
+    font-size: 1.2em;
+    padding-bottom: 5px; }
+  .bling-bling .bsa_it_p {
+    float: right;
+    font-size: 0.9em;
+    padding-top: 3px; }
+  @media screen and (max-width: 84em) {
+    .bling-bling {
+      width: 125px; }
+      .bling-bling img {
+        float: none;
+        display: block;
+        margin: 0 0 1em;
+        width: 100%;
+        height: auto; } }
+  @media screen and (max-width: 64em) {
+    .bling-bling {
+      position: relative;
+      right: 0;
+      float: right;
+      margin: 0 0 1em 1em; } }
+  @media screen and (max-width: 34em) {
+    .bling-bling {
+      display: none; } }
 
 .error404 {
   margin-bottom: 100px; }
