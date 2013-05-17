@@ -942,6 +942,7 @@ article header {
     box-shadow: 0 0 5px #aaa; }
   .bling-bling img {
     float: left;
+    opacity: 1;
     margin: 0 1em 0 0; }
   .bling-bling a {
     text-decoration: none;
