@@ -61,7 +61,7 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/style.css">
+	<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/style-12e.css">
 
 	<!-- Feed -->
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
