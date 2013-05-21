@@ -954,6 +954,8 @@ article header {
     font-size: 1.2em;
     padding-bottom: 5px; }
   .bling-bling .bsa_it_p {
+    display: none; }
+  .bling-bling .link {
     float: right;
     font-size: 0.9em;
     padding-top: 3px; }
