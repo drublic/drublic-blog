@@ -9,32 +9,19 @@
  * @since drublic-blog 1.0
  */
 ?>
-<!DOCTYPE html>
+<!doctype html>
 <html class="no-js" lang="en">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 
 	<!--
-             _            _     _ _
-          __| |_ __ _   _| |__ | (_) ___
-         / _` | '__| | | | '_ \| | |/ __|
-        | (_| | |  | |_| | |_) | | | (__
-         \__,_|_|   \__,_|_.__/|_|_|\___|
-
         Feel free to view and copy my source-code if you want to.
-        Contact me if you have questions and check out the GitHub- Repo:
+        Contact me if you have questions and check out the GitHub-Repo:
         https://github.com/drublic/drublic-blog
 
         This is under MIT licence, so take it!
-
-        Thanks for visiting,
-        Hans
-
 	-->
-
-	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-			 Remove this if you use the .htaccess -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 	<title><?php
 	// Print the <title> tag based on what is being viewed.
@@ -56,12 +43,13 @@
 
 	?></title>
 
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/style-3f1.css">
+	<link rel="stylesheet" href="//drublic.de/css/main.css">
+	<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/style.css">
 
 	<!-- Feed -->
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
@@ -81,39 +69,44 @@
 
 <body <?php body_class(); ?>>
 
-	<div id="container">
-		<header id="header">
-			<div id="logo">
-				<a href="<?php echo home_url( '/' ); ?>" class="icon">&#x25B5;</a>
-				<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">/drublic<span class="visuallyhidden"> - <?php bloginfo( 'description' ); ?></span></a>
-			</div>
+	<header class="site-header" role="banner">
+		<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="visuallyhidden">/drublic - <?php bloginfo( 'description' ); ?></a>
 
-			<nav id="nav">
-				<div class="visuallyhidden"><a href="#main">Skip to content</a></div>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+		<nav class="site-navigation" role="navigation">
+			<a href="#content" class="visuallyhidden">Skip to Content</a>
 
-				<div id="search">
-					<a href="#/search" title="Try searching&hellip;" class="search-icon">Search</a>
+			<a href="#!" class="navigation-target" id="navigation"></a>
 
-					<form action="<?php bloginfo( 'home' ); ?>/" method="post">
-						<label for="s">Search the articles</label>
-						<input type="search" id="s" name="s">
-						<input type="submit" id="submit-search" name="submit-search" value="Search">
-					</form>
-				</div>
-			</nav>
-
-			<ul class="social-media-links">
-				<li class="rss"><a href="http://feeds.feedburner.com/drublic">Subscribe to Feed</a></li><li
-					class="github"><a href="https://github.com/drublic">Github</a></li><li
-					class="twitter"><a href="https://twitter.com/drublic">Twitter</a></li><li
-					class="google-plus"><a href="https://plus.google.com/112019818423540363330?rel=author">Google+</a></li>
+			<ul>
+				<li class="site-logo" itemscope itemtype="http://schema.org/Organization">
+					<a href="//drublic.de/" title="Go to the home page" itemprop="url">∆</a>
+					<img src="//drublic.de/logo.svg" itemprop="logo">
+				</li>
+				<li><a href="//drublic.de/resume/" title="Read more about me">About</a></li>
+				<li class="is-active"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?> - <?php bloginfo( 'description' ); ?>">Blog</a></li>
+				<li><a href="//drublic.de/#work" title="View some of the work I do">Work</a></li>
+				<li><a href="//drublic.de/#hire-me" title="I do client work and propably would love to work with you">Hire me</a></li>
+				<li><a href="//drublic.de/#contact" title="Contact me if you have any questions">Contact</a></li>
 			</ul>
-		</header>
 
-		<div id="main" role="main">
+			<a href="#navigation" class="navigation-toggle">☰</a>
+		</nav>
 
-			<div class="bling-bling">
-				<script type="text/javascript" src="http://cdn.adpacks.com/adpacks.js?legacyid=1286691&zoneid=1386&key=f9595f19d8c79ead2bfaf64d7b4f4b6e&serve=C6SD52Y&placement=drublicde&circle=dev" id="_adpacks_js"></script>
-			</div>
+		<div class="search" id="search">
+			<a href="#/search" title="Try searching&hellip;" class="search-icon">Search</a>
+
+			<form action="<?php bloginfo( 'home' ); ?>/" method="post">
+				<label for="s">Search the articles</label>
+				<input type="search" id="s" name="s">
+				<input type="submit" id="submit-search" name="submit-search" value="Search">
+			</form>
+		</div>
+	</header>
+
+
+	<div id="main" class="site-main" role="main">
+
+		<div class="bling-bling">
+			<script type="text/javascript" src="http://cdn.adpacks.com/adpacks.js?legacyid=1286691&zoneid=1386&key=f9595f19d8c79ead2bfaf64d7b4f4b6e&serve=C6SD52Y&placement=drublicde&circle=dev" id="_adpacks_js"></script>
+		</div>
 

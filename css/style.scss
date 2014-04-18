@@ -1,7 +1,3 @@
-/* Import CSS fires for build script */
-@import 'h5bp';
-
-
 @mixin rotate($deg) {
 		-webkit-transform: rotateY($deg);
 		-moz-transform: rotateY($deg);
@@ -25,32 +21,6 @@
 	background:      -o-linear-gradient(top, $col1, $col2);
 	background:         linear-gradient(to bottom, $col1, $col2);
 }
-
-
-
-body {
-	background: #fff;
-	color: #111;
-	font: 15px/2 Helvetica Neue, Helvetica, sans-serif;
-	-webkit-hyphens: auto;
-	   -moz-hyphens: auto;
-	        hyphens: auto;
-}
-
-
-// Selected Text
-::-moz-selection {
-	background: #b3d4fc;
-	color: #fff;
-	text-shadow: none;
-}
-
-::selection {
-	background: #b3d4fc;
-	color: #fff;
-	text-shadow: none;
-}
-
 
 
 $smWidth: 32px;
@@ -82,15 +52,6 @@ $color: #27aae2;
 
 
 // Headlines
-h1 {
-	font-size: 3em;
-}
-
-h2 {
-	font-size: 2em;
-	margin-top: 20px;
-}
-
 h3 {
 	font-size: 1.5em;
 	margin-top: 18px;
@@ -108,24 +69,10 @@ h1, h2, h3 {
 }
 
 
-
-
-// Links
-a {
-	color: #111;
-	text-decoration: underline;
-
-	&:visited {
-		color: #111;
-	}
-
-	&:hover {
-		color: $color;
-		text-decoration: none;
-	}
+hr {
+	margin-top: 3em;
+	margin-bottom: 3em;
 }
-
-
 
 
 
@@ -222,8 +169,8 @@ textarea:focus {
 }
 
 input[type="search"] {
-	-webkit-appearance: textfield;
-	padding: 10px 0;
+	-webkit-appearance: none;
+	padding: 10px;
 }
 
 
@@ -264,30 +211,6 @@ input[type="submit"] {
 
 
 
-
-// Transitions
-input[type="text"],
-input[type="url"],
-input[type="email"],
-input[type="password"],
-input[type="number"],
-input[type="search"],
-textarea,
-.js img {
-	@include transition(all, 0.3s, ease-out);
-}
-.content-widget {
-	@include transition(all, 0.1s, ease-out);
-}
-
-
-
-
-
-
-
-
-
 // Overlay
 #overlay {
 	position: fixed;
@@ -325,34 +248,16 @@ textarea,
 }
 
 
-
-// Container
-#main {
-	margin: 0 auto;
-	width: 45em;
-
-	ul {
-		margin-bottom: 1em;
-	}
-}
-
-
-
-
-
-
-
 // Articles
 article {
 	margin: 4em 0 2em;
 }
 
 hr,
-.page-title:after,
-#post-nav:after {
+.page-title:after {
 	display: block;
 	content: "";
-	border-top: 1px solid #111;
+	border-top: 1px solid #aaa;
 }
 
 article header {
@@ -593,11 +498,6 @@ article header {
 #post-nav {
 	margin: 10px 0 30px;
 
-	&:after {
-		margin-top: 10px;
-		border-bottom-color: #b9b8ae;
-	}
-
 	.prev {
 		float: right;
 	}
@@ -642,173 +542,20 @@ article header {
 }
 
 
-
-
-
-// Header
-#header {
-	max-width: 45em;
-	margin: 7px auto 0;
-
-	&:before, &:after {
-		display: table;
-		content: '';
-	}
-
-	&:after {
-		clear: both;
-	}
-
-	.inner {
-
-		&:before, &:after {
-			display: table;
-			content: '';
-		}
-		&:after {
-			clear: both;
-		}
-	}
-}
-
-// Social Media Links
-.social-media-links {
-	list-style: none;
-	margin: 0;
-
-	&:before {
-		display: table;
-		content: " ";
-		clear: both;
-	};
-
-	li {
-		display: inline;
-	}
-
-	a {
-		position: relative;
-		display: inline-block;
-
-		width: $smWidth;
-		height: $smWidth;
-
-		margin-right: 7px;
-		border-radius: 2px;
-
-		text-indent: -999em;
-		background: #111 url(../img/github.png);
-		background-size: $smWidth;
-
-		&:hover {
-			background-color: $color;
-		}
-	}
-
-	.twitter a {
-		background-image: url(../img/twitter.png);
-	}
-	.google-plus a {
-		background-image: url(../img/google-plus.png);
-	}
-	.rss a {
-		background-image: url(../img/feed.png);;
-	}
-
-}
-
-
-// Logo
-#logo {
-	float: left;
-	margin-bottom: 7px;
-
-	a {
-		float: left;
-		border-width: 0 1px;
-		padding: 10px 20px;
-		background: #111;
-		border-radius: 2px;
-
-		background-color: $color;
-
-		color: #fff;
-		font-weight: bold;
-		text-decoration: none;
-
-		&:visited {
-			color: #fff;
-		}
-
-		&:hover {
-			background-color: $color;
-		}
-	}
-
-	.icon {
-		width: 50px;
-		height: 50px;
-		background: #111 url(../img/logo.svg);
-		background-size: 50px 50px;
-		padding: 0;
-		margin-right: 7px;
-		text-indent: -999em;
-	}
-}
-
-// Main navigation
-#nav {
-	float: right;
-	overflow: hidden;
-
-	> div {
-		display: inline;
-
-		ul {
-			display: inline;
-		}
-	}
-
-	li {
-		float: left;
-	}
-
-	a {
-		display: inline-block;
-		background: #111;
-		padding: 10px 20px;
-		margin-left: 7px;
-		color: #fff;
-		text-decoration: none;
-		border-radius: 2px;
-
-		&:visited {
-			color: #fff;
-		}
-
-		&:hover {
-			background-color: $color;
-		}
-	}
-
-	.current-menu-item a {
-		background: $color;
-	}
-}
-
-
 // Search
-#search {
-	display: inline-block;
-	margin-left: 7px;
+.search {
+	position: absolute;
+	top: 32px;
+	right: 7px;
 
 	.search-icon {
 		position: relative;
 		float: right;
-		width: $smWidth;
-		height: $smWidth;
-		padding: 9px;
+		width: 32px;
+		height: 32px;
+		padding: 10px;
 		margin-left: 0;
+		border-radius: 2px;
 		text-indent: -999em;
 
 		background: #111 url(../img/search.png) center center no-repeat;
@@ -816,22 +563,21 @@ article header {
 	}
 
 	form {
-		@include transition(width, 0.2s, ease-out);
+		@include transition(max-width, 0.3s, ease-out);
 
 		float: right;
-		width: 0;
-		background: $color;
+		max-width: 0;
 
 		overflow: hidden;
 	}
 
 	&.active {
-		.search-icon {
-			background-color: $color;
+		form {
+			max-width: 10000px;
 		}
 
-		form {
-			width: 207px;
+		.search-icon {
+			background-color: $color;
 		}
 	}
 
@@ -842,62 +588,59 @@ article header {
 	}
 
 	input[type="search"] {
-		width: 200px;
 		border: 7px solid $color;
-		border-width: 7px 0 6px;
-		margin: 0 0 0 7px;
+		margin-right: 7px;
+		border-radius: 2px;
+	}
+
+	@media (max-width: 38em) {
+		top: 7px;
+		right: auto;
+		left: 7px;
+
+		&.active {
+			form {
+				float: none;
+				max-width: none;
+			}
+		}
+
+		.search-icon {
+			float: left;
+			padding: 4px;
+		}
+
+		input[type="search"] {
+			border-width: 4px;
+			margin-left: 4px;
+			margin-right: 0;
+			padding: 7px;
+			font-size: 16px;
+			max-width: 50%;
+		}
 	}
 }
 
-
-
-
-
-
-// Footer
-.footer {
-	padding: 10px 0 100px;
-	width: 45em;
+.site-main {
+	max-width: 50em;
+	padding: 7em 2em 0;
 	margin: 0 auto;
 
-	.author-image {
-		float: left;
-		margin-right: 2em;
+	ul {
+		margin-bottom: 1em;
 	}
 
-	.follow-me,
-	.widget_text {
-		overflow: hidden;
-	}
-
-	.follow-me {
-		margin-top: 50px;
-		border-top: 1px solid #111;
-		padding-top: 50px;
-		text-align: center;
+	@media (max-width: 43em) {
+		padding-left: 1em;
+		padding-right: 1em;
 	}
 }
-
-
-
-
-
-
-// Images
-.js img {
-	opacity: 0;
-
-	&.show {
-		opacity: 1;
-	}
-}
-
 
 
 // Ads
 .bling-bling {
 	position: absolute;
-	top: 7px;
+	top: 127px;
 	right: 7px;
 
 	width: 300px;
@@ -958,8 +701,9 @@ article header {
 		}
 	}
 
-	@media screen and (max-width: 64em) {
+	@media screen and (max-width: 74em) {
 		position: relative;
+		top: 4em;
 		right: 0;
 		float: right;
 		margin: 0 0 1em 1em;
@@ -973,9 +717,6 @@ article header {
 
 // 404-Page
 .error404 { margin-bottom: 100px; }
-
-
-
 
 @import 'mobile';
 

@@ -1,12 +1,6 @@
 // iPad
 @media screen and (max-width: 48em) {
 
-	body {
-		   -moz-text-size-adjust: auto;
-		-webkit-text-size-adjust: auto;
-		    -ms-text-size-adjust: auto;
-	}
-
 	// Images
 	img {
 		max-width: 100%;
@@ -16,16 +10,6 @@
 	img[width] {
 		max-width: 100% !important;
 		height: auto !important;
-	}
-
-
-	// Header, Main and Footer
-	#header,
-	#main,
-	.footer {
-		width: auto;
-		max-width: 48em;
-		margin: 7px 2em 0;
 	}
 
 	// Comments form
@@ -45,10 +29,6 @@
 @media screen and (max-width: 40em) {
 	#comment {
 		max-width: 300px;
-	}
-
-	#search.active form {
-		width: 142px;
 	}
 }
 
@@ -82,15 +62,6 @@
 		margin: 3em 0 1em;
 	}
 
-
-	// Header, Main and Footer
-	#header,
-	#main,
-	.footer {
-		margin: 7px 1.5em 0;
-	}
-
-
 	article {
 		margin: 2em 0 1em;
 
@@ -104,40 +75,10 @@
 		}
 	}
 
-	#search form {
-		position: absolute;
-		right: 50px;
-	}
-
 }
 
 
 @media only screen and (max-width: 480px) {
-	#logo a,
-	#nav a {
-		padding: 5px 10px;
-	}
-
-	#search {
-		.search-icon {
-			padding: 4px;
-		}
-
-		form {
-			right: 40px;
-		}
-
-		input[type="search"] {
-			border-width: 6px 0 5px;
-			padding: 6px 0;
-			width: 147px;
-
-			&::-webkit-search-cancel-button {
-				display: none;
-			}
-		}
-	}
-
 	#respond input,
 	#respond textarea {
 		width: 100%;
