@@ -69,27 +69,27 @@
 
 <body <?php body_class(); ?>>
 
-	<header class="site-header" role="banner">
-		<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="visuallyhidden">/drublic - <?php bloginfo( 'description' ); ?></a>
+	<header class="header">
 
-		<nav class="site-navigation" role="navigation">
+		<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home" class="visuallyhidden">/drublic - <?php bloginfo( 'description' ); ?></a>
+		<h1 role="banner">Front-End Development and Architecture</h1>
+		<p>Hans Christian Reinl &ndash; @drublic</p>
+
+		<nav class="header__navigation" role="navigation">
 			<a href="#content" class="visuallyhidden">Skip to Content</a>
 
-			<a href="#!" class="navigation-target" id="navigation"></a>
+			<a href="#!" class="header__navigation__target" id="navigation"></a>
 
 			<ul>
-				<li class="site-logo" itemscope itemtype="http://schema.org/Organization">
-					<a href="//drublic.de/" title="Go to the home page" itemprop="url">∆</a>
-					<img src="//drublic.de/logo.svg" itemprop="logo">
-				</li>
+				<li><a href="//drublic.de/" title="@drublic - Front-End Architecture">Home</a></li>
 				<li><a href="//drublic.de/resume/" title="Read more about me">About</a></li>
 				<li class="is-active"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?> - <?php bloginfo( 'description' ); ?>">Blog</a></li>
-				<li><a href="//drublic.de/#work" title="View some of the work I do">Work</a></li>
+				<li><a href="//drublic.de/#work" title="View some of the work I do">Portfolio</a></li>
 				<li><a href="//drublic.de/#hire-me" title="I do client work and propably would love to work with you">Hire me</a></li>
 				<li><a href="//drublic.de/#contact" title="Contact me if you have any questions">Contact</a></li>
 			</ul>
 
-			<a href="#navigation" class="navigation-toggle">☰</a>
+			<a href="#navigation" class="header__navigation__toggle">☰</a>
 		</nav>
 
 		<div class="search" id="search">

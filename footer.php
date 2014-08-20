@@ -9,10 +9,10 @@
 ?>
 	</div>
 
-	<footer class="site-footer">
+	<footer class="footer">
 		<img src="//drublic.de/img/me.jpg" class="le-me">
 
-		<div class="follow-me">
+		<div class="footer__follow">
 			<a href="https://twitter.com/drublic" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @drublic</a>
 		</div>
 
