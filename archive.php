@@ -26,20 +26,20 @@ get_header(); ?>
 ?>
 
 			<h1 class="page-title">
-<?php if ( is_day() ) : ?>
+			<?php if ( is_day() ) : ?>
 				<?php printf( __( 'Daily Archives: <span>%s</span>', 'twentyten' ), get_the_date() ); ?>
-<?php elseif ( is_month() ) : ?>
+			<?php elseif ( is_month() ) : ?>
 				<?php printf( __( 'Monthly Archives: <span>%s</span>', 'twentyten' ), get_the_date( 'F Y' ) ); ?>
-<?php elseif ( is_year() ) : ?>
+			<?php elseif ( is_year() ) : ?>
 				<?php printf( __( 'Yearly Archives: <span>%s</span>', 'twentyten' ), get_the_date( 'Y' ) ); ?>
-<?php else : ?>
+			<?php else : ?>
 				<?php _e( 'Blog Archives', 'twentyten' ); ?>
-<?php endif; ?>
+			<?php endif; ?>
 			</h1>
 
-  <?php
-    rewind_posts();
-    get_template_part( 'loop', 'archive' );
-  ?>
+	<?php
+		rewind_posts();
+		get_template_part( 'loop', 'archive' );
+	?>
 
 <?php get_footer(); ?>
