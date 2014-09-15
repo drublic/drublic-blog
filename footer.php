@@ -10,13 +10,13 @@
 	</div>
 
 	<footer class="footer">
-		<img src="//drublic.de/img/me.jpg" class="le-me">
+		<img src="//drublic.de/img/me.jpg" class="footer__me">
 
 		<div class="footer__follow">
-			<a href="https://twitter.com/drublic" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @drublic</a>
+			<a href="//twitter.com/drublic" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @drublic</a>
 		</div>
 
-		<p>Made with love. <?php print date('Y'); ?>. Köln, Germany. <a href="//drublic.de/#imprint" title="Who does this stuff?">Legal</a>.</p>
+		<p>Made with love. <?php print date('Y'); ?>. Cologne, Germany. <a href="//drublic.de/#imprint" title="Who does this stuff?">Legal</a>.</p>
 
 		<ul class="social-media-links">
 			<li class="rss"><a href="http://feeds.feedburner.com/drublic">Subscribe to Feed</a></li>
