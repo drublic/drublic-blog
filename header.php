@@ -48,7 +48,7 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="//drublic.de/css/main.css">
+	<link rel="stylesheet" href="//drublic.de/dist/3.0.0/c.css">
 	<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/style.css">
 
 	<!-- Feed -->

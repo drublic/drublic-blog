@@ -33,7 +33,7 @@
 	<?php wp_footer(); ?>
 
 	<script src="<?php bloginfo( 'template_url' ); ?>/js/main.js"></script>
-	<script src="//drublic.de/js/main.js"></script>
+	<script src="//drublic.de/dist/3.0.0/c.js"></script>
 
 	<script>
 		!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
