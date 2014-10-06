@@ -22,13 +22,8 @@
 	background:         linear-gradient(to bottom, $col1, $col2);
 }
 
-
 $smWidth: 32px;
-
 $color: #27aae2;
-
-
-
 
 @mixin tag {
 	@include transition(background, 0.1s, linear);
@@ -48,8 +43,6 @@ $color: #27aae2;
 		background: $color;
 	}
 }
-
-
 
 // Headlines
 h3 {
@@ -636,91 +629,7 @@ article header {
 	}
 }
 
-
-// Ads
-.bling-bling {
-	position: absolute;
-	top: 127px;
-	right: 7px;
-
-	width: 300px;
-	border: 1px solid #aaa;
-	background: #f5f5f5;
-	padding: 10px;
-	line-height: 1.4;
-	font-size: 0.8em;
-	overflow: hidden;
-	border-radius: 2px;
-
-	&:hover {
-		-webkit-box-shadow: 0 0 5px #aaa;
-		box-shadow: 0 0 5px #aaa;
-	}
-
-	img {
-		float: left;
-		opacity: 1;
-		margin: 0 1em 0 0;
-	}
-
-	a {
-		text-decoration: none;
-		color: #111;
-
-		&:visited,
-		&:hover {
-			color: #111;
-		}
-	}
-
-	.bsa_it_t {
-		display: block;
-		font-size: 1.2em;
-		padding-bottom: 5px;
-	}
-
-	.bsa_it_p {
-		display: none;
-	}
-
-	.link {
-		float: right;
-		font-size: 0.9em;
-		padding-top: 3px;
-	}
-
-	@media screen and (max-width: 84em) {
-		width: 125px;
-
-		img {
-			float: none;
-			display: block;
-			margin: 0 0 1em;
-			width: 100%;
-			height: auto;
-		}
-	}
-
-	@media screen and (max-width: 74em) {
-		position: relative;
-		top: 4em;
-		right: 0;
-		float: right;
-		margin: 0 0 1em 1em;
-	}
-
-	@media screen and (max-width: 34em) {
-		display: none;
-	}
-}
-
-
 // 404-Page
 .error404 { margin-bottom: 100px; }
 
 @import 'mobile';
-
-
-
-
-

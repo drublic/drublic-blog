@@ -105,8 +105,3 @@
 
 
 	<div id="main" class="site-main" role="main">
-
-		<div class="bling-bling">
-			<script src="//cdn.adpacks.com/adpacks.js?legacyid=1286691&zoneid=1386&key=f9595f19d8c79ead2bfaf64d7b4f4b6e&serve=C6SI42Y&placement=drublicde&circle=dev" id="_adpacks_js"></script>
-		</div>
-
